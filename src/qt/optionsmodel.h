@@ -28,7 +28,6 @@ public:
         Fee,               // qint64
         ReserveBalance,    // qint64
         DisplayUnit,       // BitcoinUnits::Unit
-        DetachDatabases,   // bool
         Language,          // QString
         CoinControlFeatures, // bool
         OptionIDRowCount,
