@@ -31,7 +31,7 @@ BOOST_AUTO_TEST_CASE(util_criticalsection)
 }
 
 BOOST_AUTO_TEST_CASE(util_MedianFilter)
-{    
+{
     CMedianFilter<int> filter(5, 15);
 
     BOOST_CHECK_EQUAL(filter.median(), 15);
@@ -56,10 +56,10 @@ BOOST_AUTO_TEST_CASE(util_MedianFilter)
 }
 
 static const unsigned char ParseHex_expected[65] = {
-    0x04, 0x67, 0x8a, 0xfd, 0xb0, 0xfe, 0x55, 0x48, 0x27, 0x19, 0x67, 0xf1, 0xa6, 0x71, 0x30, 0xb7, 
-    0x10, 0x5c, 0xd6, 0xa8, 0x28, 0xe0, 0x39, 0x09, 0xa6, 0x79, 0x62, 0xe0, 0xea, 0x1f, 0x61, 0xde, 
-    0xb6, 0x49, 0xf6, 0xbc, 0x3f, 0x4c, 0xef, 0x38, 0xc4, 0xf3, 0x55, 0x04, 0xe5, 0x1e, 0xc1, 0x12, 
-    0xde, 0x5c, 0x38, 0x4d, 0xf7, 0xba, 0x0b, 0x8d, 0x57, 0x8a, 0x4c, 0x70, 0x2b, 0x6b, 0xf1, 0x1d, 
+    0x04, 0x67, 0x8a, 0xfd, 0xb0, 0xfe, 0x55, 0x48, 0x27, 0x19, 0x67, 0xf1, 0xa6, 0x71, 0x30, 0xb7,
+    0x10, 0x5c, 0xd6, 0xa8, 0x28, 0xe0, 0x39, 0x09, 0xa6, 0x79, 0x62, 0xe0, 0xea, 0x1f, 0x61, 0xde,
+    0xb6, 0x49, 0xf6, 0xbc, 0x3f, 0x4c, 0xef, 0x38, 0xc4, 0xf3, 0x55, 0x04, 0xe5, 0x1e, 0xc1, 0x12,
+    0xde, 0x5c, 0x38, 0x4d, 0xf7, 0xba, 0x0b, 0x8d, 0x57, 0x8a, 0x4c, 0x70, 0x2b, 0x6b, 0xf1, 0x1d,
     0x5f
 };
 BOOST_AUTO_TEST_CASE(util_ParseHex)
@@ -123,13 +123,13 @@ BOOST_AUTO_TEST_CASE(util_ParseParameters)
     BOOST_CHECK(mapArgs.empty() && mapMultiArgs.empty());
 
     ParseParameters(5, (char**)argv_test);
-    // expectation: -ignored is ignored (program name argument), 
+    // expectation: -ignored is ignored (program name argument),
     // -a, -b and -ccc end up in map, -d ignored because it is after
     // a non-option argument (non-GNU option parsing)
     BOOST_CHECK(mapArgs.size() == 3 && mapMultiArgs.size() == 3);
-    BOOST_CHECK(mapArgs.count("-a") && mapArgs.count("-b") && mapArgs.count("-ccc") 
+    BOOST_CHECK(mapArgs.count("-a") && mapArgs.count("-b") && mapArgs.count("-ccc")
                 && !mapArgs.count("f") && !mapArgs.count("-d"));
-    BOOST_CHECK(mapMultiArgs.count("-a") && mapMultiArgs.count("-b") && mapMultiArgs.count("-ccc") 
+    BOOST_CHECK(mapMultiArgs.count("-a") && mapMultiArgs.count("-b") && mapMultiArgs.count("-ccc")
                 && !mapMultiArgs.count("f") && !mapMultiArgs.count("-d"));
 
     BOOST_CHECK(mapArgs["-a"] == "" && mapArgs["-ccc"] == "multiple");
@@ -154,10 +154,10 @@ BOOST_AUTO_TEST_CASE(util_GetArg)
     BOOST_CHECK_EQUAL(GetArg("inttest1", -1), 12345);
     BOOST_CHECK_EQUAL(GetArg("inttest2", -1), 81985529216486895LL);
     BOOST_CHECK_EQUAL(GetArg("inttest3", -1), -1);
-    BOOST_CHECK_EQUAL(GetBoolArg("booltest1"), true);
-    BOOST_CHECK_EQUAL(GetBoolArg("booltest2"), false);
-    BOOST_CHECK_EQUAL(GetBoolArg("booltest3"), false);
-    BOOST_CHECK_EQUAL(GetBoolArg("booltest4"), true);
+    BOOST_CHECK_EQUAL(GetBoolArg("booltest1", false), true);
+    BOOST_CHECK_EQUAL(GetBoolArg("booltest2", false), false);
+    BOOST_CHECK_EQUAL(GetBoolArg("booltest3", false), false);
+    BOOST_CHECK_EQUAL(GetBoolArg("booltest4", false), true);
 }
 
 BOOST_AUTO_TEST_CASE(util_WildcardMatch)
@@ -259,6 +259,126 @@ BOOST_AUTO_TEST_CASE(util_IsHex)
     BOOST_CHECK(!IsHex("eleven"));
     BOOST_CHECK(!IsHex("00xx00"));
     BOOST_CHECK(!IsHex("0x0000"));
+}
+
+BOOST_AUTO_TEST_CASE(util_seed_insecure_rand)
+{
+    // Expected results for the determinstic seed.
+    const uint32_t exp_vals[11] = {  91632771U,1889679809U,3842137544U,3256031132U,
+                                   1761911779U, 489223532U,2692793790U,2737472863U,
+                                   2796262275U,1309899767U,840571781U};
+    // Expected 0s in rand()%(idx+2) for the determinstic seed.
+    const int exp_count[9] = {5013,3346,2415,1972,1644,1386,1176,1096,1009};
+    int i;
+    int count=0;
+
+    seed_insecure_rand();
+
+    //Does the non-determistic rand give us results that look too like the determinstic one?
+    for (i=0;i<10;i++)
+    {
+        int match = 0;
+        uint32_t rval = insecure_rand();
+        for (int j=0;j<11;j++)match |= rval==exp_vals[j];
+        count += match;
+    }
+    // sum(binomial(10,i)*(11/(2^32))^i*(1-(11/(2^32)))^(10-i),i,0,4) ~= 1-1/2^134.73
+    // So _very_ unlikely to throw a false failure here.
+    BOOST_CHECK(count<=4);
+
+    for (int mod=2;mod<11;mod++)
+    {
+        int mask = 1;
+        // Really rough binomal confidence approximation.
+        int err = 30*10000./mod*sqrt((1./mod*(1-1./mod))/10000.);
+        //mask is 2^ceil(log2(mod))-1
+        while(mask<mod-1)mask=(mask<<1)+1;
+
+        count = 0;
+        //How often does it get a zero from the uniform range [0,mod)?
+        for (i=0;i<10000;i++)
+        {
+            uint32_t rval;
+            do{
+                rval=insecure_rand()&mask;
+            }while(rval>=(uint32_t)mod);
+            count += rval==0;
+        }
+        BOOST_CHECK(count<=10000/mod+err);
+        BOOST_CHECK(count>=10000/mod-err);
+    }
+
+    seed_insecure_rand(true);
+
+    for (i=0;i<11;i++)
+    {
+        BOOST_CHECK_EQUAL(insecure_rand(),exp_vals[i]);
+    }
+
+    for (int mod=2;mod<11;mod++)
+    {
+        count = 0;
+        for (i=0;i<10000;i++) count += insecure_rand()%mod==0;
+        BOOST_CHECK_EQUAL(count,exp_count[mod-2]);
+    }
+}
+
+static int nCounter = 0;
+
+static void Count()
+{
+    ++nCounter;
+    MilliSleep(10);
+}
+
+static void CountWithArg(int arg)
+{
+    nCounter += arg;
+    MilliSleep(10);
+}
+
+BOOST_AUTO_TEST_CASE(util_loop_forever1)
+{
+    boost::thread_group threadGroup;
+
+    threadGroup.create_thread(boost::bind(&LoopForever<void (*)()>, "count", &Count, 1));
+    MilliSleep(1);
+    threadGroup.interrupt_all();
+    BOOST_CHECK_EQUAL(nCounter, 1);
+    nCounter = 0;
+}
+
+BOOST_AUTO_TEST_CASE(util_loop_forever2)
+{
+    boost::thread_group threadGroup;
+
+    boost::function<void()> f = boost::bind(&CountWithArg, 11);
+    threadGroup.create_thread(boost::bind(&LoopForever<boost::function<void()> >, "count11", f, 11));
+    MilliSleep(1);
+    threadGroup.interrupt_all();
+    BOOST_CHECK_EQUAL(nCounter, 11);
+    nCounter = 0;
+}
+
+BOOST_AUTO_TEST_CASE(util_threadtrace1)
+{
+    boost::thread_group threadGroup;
+
+    threadGroup.create_thread(boost::bind(&TraceThread<void (*)()>, "count11", &Count));
+    threadGroup.join_all();
+    BOOST_CHECK_EQUAL(nCounter, 1);
+    nCounter = 0;
+}
+
+BOOST_AUTO_TEST_CASE(util_threadtrace2)
+{
+    boost::thread_group threadGroup;
+
+    boost::function<void()> f = boost::bind(&CountWithArg, 11);
+    threadGroup.create_thread(boost::bind(&TraceThread<boost::function<void()> >, "count11", f));
+    threadGroup.join_all();
+    BOOST_CHECK_EQUAL(nCounter, 11);
+    nCounter = 0;
 }
 
 BOOST_AUTO_TEST_SUITE_END()
