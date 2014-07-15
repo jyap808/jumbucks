@@ -304,7 +304,7 @@ bool CTransaction::IsStandard() const
             return false;
         if (!txin.scriptSig.IsPushOnly())
             return false;
-        if (fEnforceCanonical && !txin.scriptSig.HasCanonicalPushes()) {
+        if (!txin.scriptSig.HasCanonicalPushes()) {
             return false;
         }
     }
@@ -325,7 +325,7 @@ bool CTransaction::IsStandard() const
                 return false;
             nTxnOut++;
         }
-        if (fEnforceCanonical && !txout.scriptPubKey.HasCanonicalPushes()) {
+        if (!txout.scriptPubKey.HasCanonicalPushes()) {
             return false;
         }
     }
