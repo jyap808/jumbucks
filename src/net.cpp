@@ -678,9 +678,6 @@ bool CNode::ReceiveMsgBytes(const char *pch, unsigned int nBytes)
 
         pch += handled;
         nBytes -= handled;
-
-        if (msg.complete())
-            msg.nTime = GetTimeMicros();
     }
 
     return true;
