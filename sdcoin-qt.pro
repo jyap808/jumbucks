@@ -25,6 +25,23 @@ OBJECTS_DIR = build
 MOC_DIR = build
 UI_DIR = build
 
+build_macosx64 {
+    BOOST_LIB_SUFFIX=-mt
+    BOOST_INCLUDE_PATH=/usr/local/include/boost
+    BOOST_LIB_PATH=/usr/local/lib
+
+    BDB_INCLUDE_PATH=/usr/local/opt/berkeley-db4/include
+
+    OPENSSL_INCLUDE_PATH=/usr/local/opt/openssl/include
+    OPENSSL_LIB_PATH=/usr/local/opt/openssl/lib
+
+    MINIUPNPC_INCLUDE_PATH=/usr/local/opt/miniupnpc/include
+
+    QRENCODE_INCLUDE_PATH=/usr/local/opt/qrencode/include
+
+    DEFINES += IS_ARCH_64
+}
+
 # use: qmake "RELEASE=1"
 contains(RELEASE, 1) {
     # Mac: compile for maximum compatibility (10.5, 32-bit)
