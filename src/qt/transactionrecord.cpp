@@ -38,7 +38,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
         //
         BOOST_FOREACH(const CTxOut& txout, wtx.vout)
         {
-            if(wallet->IsMine(txout))
+            if (wallet->IsMine(txout))
             {
                 TransactionRecord sub(hash, nTime);
                 CTxDestination address;
@@ -81,12 +81,28 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
     {
         bool fAllFromMe = true;
         BOOST_FOREACH(const CTxIn& txin, wtx.vin)
-            fAllFromMe = fAllFromMe && wallet->IsMine(txin);
+        {
+            if (wallet->IsMine(txin))
+                continue;
+            fAllFromMe = false;
+            break;
+        };
 
         bool fAllToMe = true;
         BOOST_FOREACH(const CTxOut& txout, wtx.vout)
-            fAllToMe = fAllToMe && wallet->IsMine(txout);
-
+        {
+            opcodetype firstOpCode;
+            CScript::const_iterator pc = txout.scriptPubKey.begin();
+            if (txout.scriptPubKey.GetOp(pc, firstOpCode)
+                && firstOpCode == OP_RETURN)
+                continue;
+            if (wallet->IsMine(txout))
+                continue;
+            
+            fAllToMe = false;
+            break;
+        };
+        
         if (fAllFromMe && fAllToMe)
         {
             // Payment to self
@@ -107,8 +123,14 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
                 const CTxOut& txout = wtx.vout[nOut];
                 TransactionRecord sub(hash, nTime);
                 sub.idx = parts.size();
+                
+                opcodetype firstOpCode;
+                CScript::const_iterator pc = txout.scriptPubKey.begin();
+                if (txout.scriptPubKey.GetOp(pc, firstOpCode)
+                    && firstOpCode == OP_RETURN)
+                    continue;
 
-                if(wallet->IsMine(txout))
+                if (wallet->IsMine(txout))
                 {
                     // Ignore parts sent to self, as this is usually the change
                     // from a transaction sent back to our own address.
@@ -174,12 +196,12 @@ void TransactionRecord::updateStatus(const CWalletTx &wtx)
     status.depth = wtx.GetDepthInMainChain();
     status.cur_num_blocks = nBestHeight;
 
-    if (!IsFinalTx(wtx, nBestHeight + 1))
+    if (!wtx.IsFinal())
     {
         if (wtx.nLockTime < LOCKTIME_THRESHOLD)
         {
             status.status = TransactionStatus::OpenUntilBlock;
-            status.open_for = wtx.nLockTime - nBestHeight;
+            status.open_for = nBestHeight - wtx.nLockTime;
         }
         else
         {
