@@ -1,9 +1,9 @@
-Building SDCoin
+Building ShadowCoin
 
-See doc/readme-qt.rst for instructions on building SDCoin QT,
+See doc/readme-qt.rst for instructions on building ShadowCoin QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of SDCoin.
+implementation of ShadowCoin.
 
-See doc/build-*.txt for instructions on building sdcoind,
+See doc/build-*.txt for instructions on building shadowcoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of SDCoin.
+implementation of ShadowCoin.

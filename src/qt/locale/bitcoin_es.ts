@@ -3,24 +3,24 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About SDCoin</source>
-        <translation>Acerca de SDCoin</translation>
+        <source>About ShadowCoin</source>
+        <translation>Acerca de ShadowCoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;SDCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;SDCoin&lt;/b&gt; versión</translation>
+        <source>&lt;b&gt;ShadowCoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;ShadowCoin&lt;/b&gt; versión</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The SDCoin developers</source>
+Copyright © 2014 The ShadowCoin developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The SDCoin developers</translation>
+Copyright © 2014 The ShadowCoin developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -70,8 +70,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your SDCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Estas son las direcciones de SDCoin para recibir pagos. Es posible que desee dar una diferente a cada remitente para que pueda realizar un seguimiento de quien te está pagando.</translation>
+        <source>These are your ShadowCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Estas son las direcciones de ShadowCoin para recibir pagos. Es posible que desee dar una diferente a cada remitente para que pueda realizar un seguimiento de quien te está pagando.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -85,8 +85,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a SDCoin address</source>
-        <translation>Firmar un mensaje para demostrar que es dueño de su dirección de SDCoin</translation>
+        <source>Sign a message to prove you own a ShadowCoin address</source>
+        <translation>Firmar un mensaje para demostrar que es dueño de su dirección de ShadowCoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -100,8 +100,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified SDCoin address</source>
-        <translation>Verifique el mensaje para asegurarse que fue firmado por una dirección específica de SDCoin</translation>
+        <source>Verify a message to ensure it was signed with a specified ShadowCoin address</source>
+        <translation>Verifique el mensaje para asegurarse que fue firmado por una dirección específica de ShadowCoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -268,8 +268,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-58"/>
-        <source>SDCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>SDCoin cerrará para terminar el proceso de encriptación. Recuerde que la encriptación de su monedero no puede proteger completamente que sus monedas sean robadas por malware infectando su computadora.</translation>
+        <source>ShadowCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>ShadowCoin cerrará para terminar el proceso de encriptación. Recuerde que la encriptación de su monedero no puede proteger completamente que sus monedas sean robadas por malware infectando su computadora.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -382,8 +382,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about SDCoin</source>
-        <translation>Mostrar información sobre SDCoin</translation>
+        <source>Show information about ShadowCoin</source>
+        <translation>Mostrar información sobre ShadowCoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -432,13 +432,13 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a SDCoin address</source>
-        <translation>Enviar monedas a una dirección de SDCoin</translation>
+        <source>Send coins to a ShadowCoin address</source>
+        <translation>Enviar monedas a una dirección de ShadowCoin</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for SDCoin</source>
-        <translation>Modificar las opciones de configuración para SDCoin</translation>
+        <source>Modify configuration options for ShadowCoin</source>
+        <translation>Modificar las opciones de configuración para ShadowCoin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -477,8 +477,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-200"/>
-        <source>SDCoin</source>
-        <translation>SDCoin</translation>
+        <source>ShadowCoin</source>
+        <translation>ShadowCoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -487,8 +487,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About SDCoin</source>
-        <translation>Acerca de SDCoin</translation>
+        <source>&amp;About ShadowCoin</source>
+        <translation>Acerca de ShadowCoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -544,13 +544,13 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>SDCoin client</source>
-        <translation>Cliente SDCoin</translation>
+        <source>ShadowCoin client</source>
+        <translation>Cliente ShadowCoin</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to SDCoin network</source>
-        <translation><numerusform>%n conexión activa a la red SDCoin</numerusform><numerusform>%n conexiones activas a la red SDCoin</numerusform></translation>
+        <source>%n active connection(s) to ShadowCoin network</source>
+        <translation><numerusform>%n conexión activa a la red ShadowCoin</numerusform><numerusform>%n conexiones activas a la red ShadowCoin</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -664,8 +664,8 @@ Dirección: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid SDCoin address or malformed URI parameters.</source>
-        <translation>URI no se puede analizar! Esto puede ser causado por una dirección de SDCoin no válida o parámetros de URI malformados.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid ShadowCoin address or malformed URI parameters.</source>
+        <translation>URI no se puede analizar! Esto puede ser causado por una dirección de ShadowCoin no válida o parámetros de URI malformados.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -724,8 +724,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. SDCoin can no longer continue safely and will quit.</source>
-        <translation>Se ha producido un error fatal. SDCoin ya no puede continuar de forma segura y cerrará.</translation>
+        <source>A fatal error occurred. ShadowCoin can no longer continue safely and will quit.</source>
+        <translation>Se ha producido un error fatal. ShadowCoin ya no puede continuar de forma segura y cerrará.</translation>
     </message>
 </context>
 <context>
@@ -1058,8 +1058,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid SDCoin address.</source>
-        <translation>La dirección introducida &quot;%1&quot; no es una dirección válida de SDCoin.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid ShadowCoin address.</source>
+        <translation>La dirección introducida &quot;%1&quot; no es una dirección válida de ShadowCoin.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1077,8 +1077,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>SDCoin-Qt</source>
-        <translation>SDCoin-Qt</translation>
+        <source>ShadowCoin-Qt</source>
+        <translation>ShadowCoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1150,13 +1150,13 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start SDCoin after logging in to the system.</source>
-        <translation>Iniciar SDCoin automáticamente después de entrar en el sistema.</translation>
+        <source>Automatically start ShadowCoin after logging in to the system.</source>
+        <translation>Iniciar ShadowCoin automáticamente después de entrar en el sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start SDCoin on system login</source>
-        <translation>&amp;Iniciar SDCoin al inicio del sistema</translation>
+        <source>&amp;Start ShadowCoin on system login</source>
+        <translation>&amp;Iniciar ShadowCoin al inicio del sistema</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1175,8 +1175,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the SDCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto de cliente SDCoin en el router. Esto sólo funciona cuando el router es compatible con UPnP y está habilitado.</translation>
+        <source>Automatically open the ShadowCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto de cliente ShadowCoin en el router. Esto sólo funciona cuando el router es compatible con UPnP y está habilitado.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1185,8 +1185,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the SDCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Conéctese a la red de SDCoin a través de un SOCKS proxy (e.g. cuando se conecta a través de Tor)</translation>
+        <source>Connect to the ShadowCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Conéctese a la red de ShadowCoin a través de un SOCKS proxy (e.g. cuando se conecta a través de Tor)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1260,8 +1260,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting SDCoin.</source>
-        <translation>El idioma del interfaz de usuario se puede configurar aquí. Esta configuración se aplicará después de reiniciar SDCoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting ShadowCoin.</source>
+        <translation>El idioma del interfaz de usuario se puede configurar aquí. Esta configuración se aplicará después de reiniciar ShadowCoin.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1275,8 +1275,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show SDCoin addresses in the transaction list or not.</source>
-        <translation>Tanto para mostrar direcciones de SDCoin en la lista de transacciones o no.</translation>
+        <source>Whether to show ShadowCoin addresses in the transaction list or not.</source>
+        <translation>Tanto para mostrar direcciones de ShadowCoin en la lista de transacciones o no.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1322,8 +1322,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting SDCoin.</source>
-        <translation>Esta configuración se aplicará después de reiniciar SDCoin.</translation>
+        <source>This setting will take effect after restarting ShadowCoin.</source>
+        <translation>Esta configuración se aplicará después de reiniciar ShadowCoin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1341,8 +1341,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SDCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar fuera de fecha. Su monedera se sincroniza automáticamente con la red SDCoin después de que se establece una conexión, pero este proceso no se ha completado todavía.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ShadowCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar fuera de fecha. Su monedera se sincroniza automáticamente con la red ShadowCoin después de que se establece una conexión, pero este proceso no se ha completado todavía.</translation>
     </message>
     <message>
         <location line="-160"/>
@@ -1557,8 +1557,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the SDCoin-Qt help message to get a list with possible SDCoin command-line options.</source>
-        <translation>Mostrar el mensaje de ayuda de SDCoin-Qt para obtener una lista con las posibles opciones de línea de comandos para SDCoin.</translation>
+        <source>Show the ShadowCoin-Qt help message to get a list with possible ShadowCoin command-line options.</source>
+        <translation>Mostrar el mensaje de ayuda de ShadowCoin-Qt para obtener una lista con las posibles opciones de línea de comandos para ShadowCoin.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1577,13 +1577,13 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>SDCoin - Debug window</source>
-        <translation>SDCoin - Ventana de depuración</translation>
+        <source>ShadowCoin - Debug window</source>
+        <translation>ShadowCoin - Ventana de depuración</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>SDCoin Core</source>
-        <translation>Núcleo SDCoin</translation>
+        <source>ShadowCoin Core</source>
+        <translation>Núcleo ShadowCoin</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1592,8 +1592,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the SDCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Abre el archivo de registro de SDCoin del directorio de datos actual. Esto puede tardar algunos segundos para archivos grandes.</translation>
+        <source>Open the ShadowCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Abre el archivo de registro de ShadowCoin del directorio de datos actual. Esto puede tardar algunos segundos para archivos grandes.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1602,8 +1602,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the SDCoin RPC console.</source>
-        <translation>Bienvenido a la consola RPC de SDCoin</translation>
+        <source>Welcome to the ShadowCoin RPC console.</source>
+        <translation>Bienvenido a la consola RPC de ShadowCoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1761,8 +1761,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Introduce una dirección SDCoin (p.ej. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Introduce una dirección ShadowCoin (p.ej. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1861,8 +1861,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid SDCoin address</source>
-        <translation>ADVERTENCIA: Dirección SDCoin inválida</translation>
+        <source>WARNING: Invalid ShadowCoin address</source>
+        <translation>ADVERTENCIA: Dirección ShadowCoin inválida</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1935,8 +1935,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Introduce una dirección SDCoin (p.ej. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Introduce una dirección ShadowCoin (p.ej. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
 </context>
 <context>
@@ -1996,8 +1996,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this SDCoin address</source>
-        <translation>Firma el mensaje para demostrar que posees esta dirección SDCoin.</translation>
+        <source>Sign the message to prove you own this ShadowCoin address</source>
+        <translation>Firma el mensaje para demostrar que posees esta dirección ShadowCoin.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2028,8 +2028,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified SDCoin address</source>
-        <translation>Verifique el mensaje para asegurarse de que se firmó con la dirección SDCoin especificada.</translation>
+        <source>Verify the message to ensure it was signed with the specified ShadowCoin address</source>
+        <translation>Verifique el mensaje para asegurarse de que se firmó con la dirección ShadowCoin especificada.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2039,8 +2039,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Introduce una dirección SDCoin (p.ej SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Introduce una dirección ShadowCoin (p.ej SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2049,8 +2049,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter SDCoin signature</source>
-        <translation>Introduce la firma SDCoin</translation>
+        <source>Enter ShadowCoin signature</source>
+        <translation>Introduce la firma ShadowCoin</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2620,8 +2620,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>SDCoin version</source>
-        <translation>versión SDCoin</translation>
+        <source>ShadowCoin version</source>
+        <translation>versión ShadowCoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2630,8 +2630,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or sdcoind</source>
-        <translation>Envía un comando a -server o sdcoind</translation>
+        <source>Send command to -server or shadowcoind</source>
+        <translation>Envía un comando a -server o shadowcoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2653,13 +2653,13 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: sdcoin.conf)</source>
-        <translation>Especifica un archivo de configuración (por defecto: sdcoin.conf)</translation>
+        <source>Specify configuration file (default: shadowcoin.conf)</source>
+        <translation>Especifica un archivo de configuración (por defecto: shadowcoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: sdcoind.pid)</source>
-        <translation>Especifica un archivo pid (por defecto: sdcoind.pid)</translation>
+        <source>Specify pid file (default: shadowcoind.pid)</source>
+        <translation>Especifica un archivo pid (por defecto: shadowcoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2811,8 +2811,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong SDCoin will not work properly.</source>
-        <translation>Advertencia: Verifique que la fecha y hora del equipo sean correctas! Si su reloj es erróneo SDCoin no funcionará correctamente.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong ShadowCoin will not work properly.</source>
+        <translation>Advertencia: Verifique que la fecha y hora del equipo sean correctas! Si su reloj es erróneo ShadowCoin no funcionará correctamente.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -3002,24 +3002,24 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=sdcoinrpc
+rpcuser=shadowcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, debe establecer un rpcpassword en el fichero de configuración:
 %s
 Se recomienda utilizar la siguiente contraseña aleatoria:
-rpcuser=sdcoinrpc
+rpcuser=shadowcoinrpc
 rpcpassword=%s
 (no necesita recordar este password)
 El nombre de usuario y contraseña no debe ser el mismo.
 Si no existe el archivo, créelo con permisos de sólo lectura para el dueño.
 También se recomienda establecer alertnotify para ser notificado de los problemas;
-por ejemplo: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.com
+por ejemplo: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3151,13 +3151,13 @@ por ejemplo: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  SDCoin is probably already running.</source>
-        <translation>No se puede obtener un bloqueo en el directorio de datos %s. SDCoin probablemente ya esté en funcionamiento.</translation>
+        <source>Cannot obtain a lock on data directory %s.  ShadowCoin is probably already running.</source>
+        <translation>No se puede obtener un bloqueo en el directorio de datos %s. ShadowCoin probablemente ya esté en funcionamiento.</translation>
     </message>
     <message>
         <location line="-98"/>
-        <source>SDCoin</source>
-        <translation>SDCoin</translation>
+        <source>ShadowCoin</source>
+        <translation>ShadowCoin</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -3191,13 +3191,13 @@ por ejemplo: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of SDCoin</source>
-        <translation>Error cargando wallet.dat: El monedero requiere una nueva versión de SDCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of ShadowCoin</source>
+        <translation>Error cargando wallet.dat: El monedero requiere una nueva versión de ShadowCoin</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart SDCoin to complete</source>
-        <translation>El monedero necesita ser reescrito: reinicie SDCoin para completar</translation>
+        <source>Wallet needed to be rewritten: restart ShadowCoin to complete</source>
+        <translation>El monedero necesita ser reescrito: reinicie ShadowCoin para completar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3266,8 +3266,8 @@ por ejemplo: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. SDCoin is probably already running.</source>
-        <translation>No se puede enlazar a %s en este equipo. SDCoin probablemente ya esté en funcionamiento.</translation>
+        <source>Unable to bind to %s on this computer. ShadowCoin is probably already running.</source>
+        <translation>No se puede enlazar a %s en este equipo. ShadowCoin probablemente ya esté en funcionamiento.</translation>
     </message>
     <message>
         <location line="-97"/>

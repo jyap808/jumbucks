@@ -73,6 +73,9 @@ private:
     QLabel *labelConnectionsIcon;
     QLabel *labelBlocksIcon;
     QLabel *progressBarLabel;
+    QLabel *mainIcon;
+    QToolBar *mainToolbar;
+    QToolBar *secondaryToolbar;
     QProgressBar *progressBar;
 
     QMenuBar *appMenuBar;
@@ -137,6 +140,9 @@ public slots:
     */
     void askFee(qint64 nFeeRequired, bool *payFee);
     void handleURI(QString strURI);
+
+    void mainToolbarOrientation(Qt::Orientation orientation);
+    void secondaryToolbarOrientation(Qt::Orientation orientation);
 
 private slots:
     /** Switch to overview (home) page */

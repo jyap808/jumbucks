@@ -3,20 +3,20 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About SDCoin</source>
-        <translation>O SDCoin</translation>
+        <source>About ShadowCoin</source>
+        <translation>O ShadowCoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;SDCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;SDCoin&lt;/b&gt; verzija</translation>
+        <source>&lt;b&gt;ShadowCoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;ShadowCoin&lt;/b&gt; verzija</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The SDCoin developers</source>
+Copyright © 2014 The ShadowCoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -64,8 +64,8 @@ Ta proizvod vključuje softver razvit s strani projekta OpenSSL za uporabo v Ope
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your SDCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>To so vaši SDCoin naslovi za prejemanje plačil. Priporočeno je da vsakemu pošiljatelju namenite drugega in tako dobite večji pregled nad svojimi nakazili.</translation>
+        <source>These are your ShadowCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>To so vaši ShadowCoin naslovi za prejemanje plačil. Priporočeno je da vsakemu pošiljatelju namenite drugega in tako dobite večji pregled nad svojimi nakazili.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -79,8 +79,8 @@ Ta proizvod vključuje softver razvit s strani projekta OpenSSL za uporabo v Ope
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a SDCoin address</source>
-        <translation>Podpišite sporočilo, kot dokazilo lastništva SDCoin naslova</translation>
+        <source>Sign a message to prove you own a ShadowCoin address</source>
+        <translation>Podpišite sporočilo, kot dokazilo lastništva ShadowCoin naslova</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -94,8 +94,8 @@ Ta proizvod vključuje softver razvit s strani projekta OpenSSL za uporabo v Ope
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified SDCoin address</source>
-        <translation>Potrdi sporočilo, da zagotovite, da je bilo podpisano z izbranim SDCoin naslovom</translation>
+        <source>Verify a message to ensure it was signed with a specified ShadowCoin address</source>
+        <translation>Potrdi sporočilo, da zagotovite, da je bilo podpisano z izbranim ShadowCoin naslovom</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -262,8 +262,8 @@ Ta proizvod vključuje softver razvit s strani projekta OpenSSL za uporabo v Ope
     </message>
     <message>
         <location line="-58"/>
-        <source>SDCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>SDCoin se bo sedaj zaprl, da dokonča proces šifriranje. Pomnite, da tudi šifriranje vaše denarnice ne more v celoti zaščititi vaših kovancev pred krajo z zlonamernimi programi in računalniškimi virusi, če ti okužijo vaš računalnik.</translation>
+        <source>ShadowCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>ShadowCoin se bo sedaj zaprl, da dokonča proces šifriranje. Pomnite, da tudi šifriranje vaše denarnice ne more v celoti zaščititi vaših kovancev pred krajo z zlonamernimi programi in računalniškimi virusi, če ti okužijo vaš računalnik.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -376,8 +376,8 @@ Ta proizvod vključuje softver razvit s strani projekta OpenSSL za uporabo v Ope
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about SDCoin</source>
-        <translation>Pokaži informacije o SDCoin</translation>
+        <source>Show information about ShadowCoin</source>
+        <translation>Pokaži informacije o ShadowCoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -426,13 +426,13 @@ Ta proizvod vključuje softver razvit s strani projekta OpenSSL za uporabo v Ope
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a SDCoin address</source>
-        <translation>Pošlji kovance na SDCoin naslov</translation>
+        <source>Send coins to a ShadowCoin address</source>
+        <translation>Pošlji kovance na ShadowCoin naslov</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for SDCoin</source>
-        <translation>Spremeni nastavitve za SDCoin</translation>
+        <source>Modify configuration options for ShadowCoin</source>
+        <translation>Spremeni nastavitve za ShadowCoin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -471,8 +471,8 @@ Ta proizvod vključuje softver razvit s strani projekta OpenSSL za uporabo v Ope
     </message>
     <message>
         <location line="-200"/>
-        <source>SDCoin</source>
-        <translation>SDCoin</translation>
+        <source>ShadowCoin</source>
+        <translation>ShadowCoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -481,8 +481,8 @@ Ta proizvod vključuje softver razvit s strani projekta OpenSSL za uporabo v Ope
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About SDCoin</source>
-        <translation>&amp;O SDCoin</translation>
+        <source>&amp;About ShadowCoin</source>
+        <translation>&amp;O ShadowCoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -538,13 +538,13 @@ Ta proizvod vključuje softver razvit s strani projekta OpenSSL za uporabo v Ope
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>SDCoin client</source>
-        <translation>SDCoin program</translation>
+        <source>ShadowCoin client</source>
+        <translation>ShadowCoin program</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to SDCoin network</source>
-        <translation><numerusform>%n aktivne povezave na SDCoin omrežje</numerusform><numerusform>%n aktivnih povezav na SDCoin omrežje</numerusform><numerusform>%n aktivnih povezav na SDCoin omrežje</numerusform><numerusform>%n aktivnih povezav na SDCoin omrežje</numerusform></translation>
+        <source>%n active connection(s) to ShadowCoin network</source>
+        <translation><numerusform>%n aktivne povezave na ShadowCoin omrežje</numerusform><numerusform>%n aktivnih povezav na ShadowCoin omrežje</numerusform><numerusform>%n aktivnih povezav na ShadowCoin omrežje</numerusform><numerusform>%n aktivnih povezav na ShadowCoin omrežje</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -658,8 +658,8 @@ Naslov: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid SDCoin address or malformed URI parameters.</source>
-        <translation>URI ne more biti razčlenjen! To se lahko zgodi zaradi neveljavnega SDCoin naslova ali slabih parametrov URI.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid ShadowCoin address or malformed URI parameters.</source>
+        <translation>URI ne more biti razčlenjen! To se lahko zgodi zaradi neveljavnega ShadowCoin naslova ali slabih parametrov URI.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -718,8 +718,8 @@ Naslov: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. SDCoin can no longer continue safely and will quit.</source>
-        <translation>Prišlo je do usodne napake. Program SDCoin se ne more več varno nadaljevati in se bo zato zaprl. </translation>
+        <source>A fatal error occurred. ShadowCoin can no longer continue safely and will quit.</source>
+        <translation>Prišlo je do usodne napake. Program ShadowCoin se ne more več varno nadaljevati in se bo zato zaprl. </translation>
     </message>
 </context>
 <context>
@@ -1052,8 +1052,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid SDCoin address.</source>
-        <translation>Vneseni naslov &quot;%1&quot; ni veljaven SDCoin naslov.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid ShadowCoin address.</source>
+        <translation>Vneseni naslov &quot;%1&quot; ni veljaven ShadowCoin naslov.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1071,8 +1071,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>SDCoin-Qt</source>
-        <translation>SDCoin-Qt</translation>
+        <source>ShadowCoin-Qt</source>
+        <translation>ShadowCoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1144,13 +1144,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start SDCoin after logging in to the system.</source>
-        <translation>Avtomatično zaženi SDCoin ob zagonu sistema.</translation>
+        <source>Automatically start ShadowCoin after logging in to the system.</source>
+        <translation>Avtomatično zaženi ShadowCoin ob zagonu sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start SDCoin on system login</source>
-        <translation>&amp;Zaženi SDCoin ob prijavi v sistem</translation>
+        <source>&amp;Start ShadowCoin on system login</source>
+        <translation>&amp;Zaženi ShadowCoin ob prijavi v sistem</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1169,8 +1169,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the SDCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avtomatično odpri vrata na routerju za SDCoin program. To deluje le če vaš router podpira UPnP in je ta omogočen. </translation>
+        <source>Automatically open the ShadowCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avtomatično odpri vrata na routerju za ShadowCoin program. To deluje le če vaš router podpira UPnP in je ta omogočen. </translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1179,8 +1179,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the SDCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Poveži se na SDCoin omrežje skozi SOCKS proxy (npr. ko se povezujete prek Tora)</translation>
+        <source>Connect to the ShadowCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Poveži se na ShadowCoin omrežje skozi SOCKS proxy (npr. ko se povezujete prek Tora)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1254,8 +1254,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting SDCoin.</source>
-        <translation>Tu lahko nastavite jezik uporabniškega vmesnika. Nastavitve bodo pričele delovati ob ponovnem zagonu SDCoin aplikacije. </translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting ShadowCoin.</source>
+        <translation>Tu lahko nastavite jezik uporabniškega vmesnika. Nastavitve bodo pričele delovati ob ponovnem zagonu ShadowCoin aplikacije. </translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1269,8 +1269,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show SDCoin addresses in the transaction list or not.</source>
-        <translation>Izbira prikaza SDCoin naslovov v seznamu transakcij.</translation>
+        <source>Whether to show ShadowCoin addresses in the transaction list or not.</source>
+        <translation>Izbira prikaza ShadowCoin naslovov v seznamu transakcij.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1316,8 +1316,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting SDCoin.</source>
-        <translation>Ta nastavitev bo pričela delovati ob ponovnem zagonu SDCoin aplikacije</translation>
+        <source>This setting will take effect after restarting ShadowCoin.</source>
+        <translation>Ta nastavitev bo pričela delovati ob ponovnem zagonu ShadowCoin aplikacije</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1335,8 +1335,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SDCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Prikazane informacije so morda zastarele. Vaša denarnica se avtomatično sinhronizira z SDCoin omrežjem, ko je vzpostavljena povezava, toda ta proces še ni bil zaključen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ShadowCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Prikazane informacije so morda zastarele. Vaša denarnica se avtomatično sinhronizira z ShadowCoin omrežjem, ko je vzpostavljena povezava, toda ta proces še ni bil zaključen.</translation>
     </message>
     <message>
         <location line="-160"/>
@@ -1551,8 +1551,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the SDCoin-Qt help message to get a list with possible SDCoin command-line options.</source>
-        <translation>Prikaži SDCoin-Qt sporočilo za pomoč , ki prikaže vse možnosti ukazne vrstice SDCoin aplikacije</translation>
+        <source>Show the ShadowCoin-Qt help message to get a list with possible ShadowCoin command-line options.</source>
+        <translation>Prikaži ShadowCoin-Qt sporočilo za pomoč , ki prikaže vse možnosti ukazne vrstice ShadowCoin aplikacije</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1571,13 +1571,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>SDCoin - Debug window</source>
-        <translation>SDCoin - okno za odpravljanje napak</translation>
+        <source>ShadowCoin - Debug window</source>
+        <translation>ShadowCoin - okno za odpravljanje napak</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>SDCoin Core</source>
-        <translation>SDCoin jedro</translation>
+        <source>ShadowCoin Core</source>
+        <translation>ShadowCoin jedro</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1586,8 +1586,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the SDCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Odpri SDCoin datoteko zapisov odpravljanja napak iz trenutnega direktorija podatkov. Če so datoteke zapisov velike, to lahko traja nekaj sekund.</translation>
+        <source>Open the ShadowCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Odpri ShadowCoin datoteko zapisov odpravljanja napak iz trenutnega direktorija podatkov. Če so datoteke zapisov velike, to lahko traja nekaj sekund.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1596,8 +1596,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the SDCoin RPC console.</source>
-        <translation>Dobrodošli v SDCoin RPC konzoli.</translation>
+        <source>Welcome to the ShadowCoin RPC console.</source>
+        <translation>Dobrodošli v ShadowCoin RPC konzoli.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1755,8 +1755,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Vnesite SDCoin naslov (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Vnesite ShadowCoin naslov (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1855,8 +1855,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid SDCoin address</source>
-        <translation>OPOZORILO: Neveljaven SDCoin naslov</translation>
+        <source>WARNING: Invalid ShadowCoin address</source>
+        <translation>OPOZORILO: Neveljaven ShadowCoin naslov</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1929,8 +1929,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Vnesite SDCoin naslov (npr. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Vnesite ShadowCoin naslov (npr. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
 </context>
 <context>
@@ -1990,8 +1990,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this SDCoin address</source>
-        <translation>Podpišite sporočilo, kot dokazilo lastništva SDCoin naslova</translation>
+        <source>Sign the message to prove you own this ShadowCoin address</source>
+        <translation>Podpišite sporočilo, kot dokazilo lastništva ShadowCoin naslova</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2022,8 +2022,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified SDCoin address</source>
-        <translation>Potrdite sporočilo, da zagotovite, da je bilo podpisano z izbranim SDCoin naslovom</translation>
+        <source>Verify the message to ensure it was signed with the specified ShadowCoin address</source>
+        <translation>Potrdite sporočilo, da zagotovite, da je bilo podpisano z izbranim ShadowCoin naslovom</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2033,8 +2033,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Vnesite SDCoin naslov (npr. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Vnesite ShadowCoin naslov (npr. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2043,8 +2043,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter SDCoin signature</source>
-        <translation>Vnesite SDCoin podpis</translation>
+        <source>Enter ShadowCoin signature</source>
+        <translation>Vnesite ShadowCoin podpis</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2614,8 +2614,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>SDCoin version</source>
-        <translation>SDCoin različica</translation>
+        <source>ShadowCoin version</source>
+        <translation>ShadowCoin različica</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2624,8 +2624,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or sdcoind</source>
-        <translation>Pošlji ukaz na -server ali sdcoind</translation>
+        <source>Send command to -server or shadowcoind</source>
+        <translation>Pošlji ukaz na -server ali shadowcoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2644,13 +2644,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: sdcoin.conf)</source>
-        <translation>Določi konfiguracijsko datoteko (privzeto: sdcoin.conf)</translation>
+        <source>Specify configuration file (default: shadowcoin.conf)</source>
+        <translation>Določi konfiguracijsko datoteko (privzeto: shadowcoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: sdcoind.pid)</source>
-        <translation>Določi pid datoteko (privzeto: sdcoind.pid)</translation>
+        <source>Specify pid file (default: shadowcoind.pid)</source>
+        <translation>Določi pid datoteko (privzeto: shadowcoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2799,8 +2799,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong SDCoin will not work properly.</source>
-        <translation>Opozorilo: Prosimo preverite svoj datum in čas svojega računalnika! Če je vaša ura nastavljena napačno SDCoin ne bo deloval.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong ShadowCoin will not work properly.</source>
+        <translation>Opozorilo: Prosimo preverite svoj datum in čas svojega računalnika! Če je vaša ura nastavljena napačno ShadowCoin ne bo deloval.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -2989,24 +2989,24 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=sdcoinrpc
+rpcuser=shadowcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, nastaviti morate rpcgeslo v konfiguracijski datoteki: 
  %s
 Priporočeno je, da uporabite naslednje naključno geslo:
-rpcuser=sdcoinrpc
+rpcuser=shadowcoinrpc
 rpcpassword=%s
 (tega gesla si vam ni potrebno zapomniti)
 Uporabniško ime in geslo NE SMETA biti ista. 
 Če datoteka ne obstaja, jo ustvarite z lastniškimi dovoljenji za datoteke. 
 Prav tako je priporočeno, da nastavite alernotify, tkako da vas opozori na probleme;
-na primer: alertnotify=echo %%s | mail -s &quot;SDCoin Alarm&quot; admin@foo.com
+na primer: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alarm&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3131,13 +3131,13 @@ na primer: alertnotify=echo %%s | mail -s &quot;SDCoin Alarm&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  SDCoin is probably already running.</source>
-        <translation>Ni bilo mogoče najti podatkovnega imenika %s. Aplikacija SDCoin je verjetno že zagnana.</translation>
+        <source>Cannot obtain a lock on data directory %s.  ShadowCoin is probably already running.</source>
+        <translation>Ni bilo mogoče najti podatkovnega imenika %s. Aplikacija ShadowCoin je verjetno že zagnana.</translation>
     </message>
     <message>
         <location line="-98"/>
-        <source>SDCoin</source>
-        <translation>SDCoin</translation>
+        <source>ShadowCoin</source>
+        <translation>ShadowCoin</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -3171,13 +3171,13 @@ na primer: alertnotify=echo %%s | mail -s &quot;SDCoin Alarm&quot; admin@foo.com
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of SDCoin</source>
-        <translation>Napaka pri nalaganju wallet.dat: denarnica zahteva novejšo verzijo SDCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of ShadowCoin</source>
+        <translation>Napaka pri nalaganju wallet.dat: denarnica zahteva novejšo verzijo ShadowCoin</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart SDCoin to complete</source>
-        <translation>Denarnica mora biti prepisana: ponovno odprite SDCoin za dokončanje</translation>
+        <source>Wallet needed to be rewritten: restart ShadowCoin to complete</source>
+        <translation>Denarnica mora biti prepisana: ponovno odprite ShadowCoin za dokončanje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3246,8 +3246,8 @@ na primer: alertnotify=echo %%s | mail -s &quot;SDCoin Alarm&quot; admin@foo.com
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. SDCoin is probably already running.</source>
-        <translation>Navezava v %s  na tem računalniku ni mogoča SDCoin aplikacija je verjetno že zagnana.</translation>
+        <source>Unable to bind to %s on this computer. ShadowCoin is probably already running.</source>
+        <translation>Navezava v %s  na tem računalniku ni mogoča ShadowCoin aplikacija je verjetno že zagnana.</translation>
     </message>
     <message>
         <location line="-97"/>

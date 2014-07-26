@@ -532,7 +532,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
 void ThreadFlushWalletDB(void* parg)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("sdcoin-wallet");
+    RenameThread("shadowcoin-wallet");
 
     const string& strFile = ((const string*)parg)[0];
     static bool fOneThread;

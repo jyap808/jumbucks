@@ -3,23 +3,23 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About SDCoin</source>
-        <translation>Over SDCoin</translation>
+        <source>About ShadowCoin</source>
+        <translation>Over ShadowCoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;SDCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;SDCoin&lt;/b&gt; versie</translation>
+        <source>&lt;b&gt;ShadowCoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;ShadowCoin&lt;/b&gt; versie</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The SDCoin developers</source>
+Copyright © 2014 The ShadowCoin developers</source>
         <translation>Copyright © 2009-2014 De Bitcoin ontwikkelaars
 Copyright © 2012-2014 De NovaCoin ontwikkelaars
-Copyright © 2014 De SDCoin ontwikkelaars</translation>
+Copyright © 2014 De ShadowCoin ontwikkelaars</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -66,8 +66,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your SDCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dit zijn al jou SDCoin adressen om betalingen mee te ontvangen. Je kunt iedere verzender een apart adres geven zodat je kunt volgen wie jou betaald.</translation>
+        <source>These are your ShadowCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Dit zijn al jou ShadowCoin adressen om betalingen mee te ontvangen. Je kunt iedere verzender een apart adres geven zodat je kunt volgen wie jou betaald.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -81,8 +81,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a SDCoin address</source>
-        <translation>Teken een bericht om te bewijzen dat je een SDCoin adres bezit.</translation>
+        <source>Sign a message to prove you own a ShadowCoin address</source>
+        <translation>Teken een bericht om te bewijzen dat je een ShadowCoin adres bezit.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -96,8 +96,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified SDCoin address</source>
-        <translation>Verifieer een bericht om zeker te zijn dat deze is ondertekend met een specifiek SDCoin adres</translation>
+        <source>Verify a message to ensure it was signed with a specified ShadowCoin address</source>
+        <translation>Verifieer een bericht om zeker te zijn dat deze is ondertekend met een specifiek ShadowCoin adres</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -264,8 +264,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-58"/>
-        <source>SDCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>SDCoin zal nu sluiten om het versleutel proces te voltooien. Onthou dat het versleutelen van je portemonnee je niet volledig beschermt tegen diefstal van munten door malware op je computer.</translation>
+        <source>ShadowCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>ShadowCoin zal nu sluiten om het versleutel proces te voltooien. Onthou dat het versleutelen van je portemonnee je niet volledig beschermt tegen diefstal van munten door malware op je computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -378,8 +378,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about SDCoin</source>
-        <translation>Toon informatie over SDCoin</translation>
+        <source>Show information about ShadowCoin</source>
+        <translation>Toon informatie over ShadowCoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -428,13 +428,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a SDCoin address</source>
-        <translation>Verstuur munten naar een SDCoin adres</translation>
+        <source>Send coins to a ShadowCoin address</source>
+        <translation>Verstuur munten naar een ShadowCoin adres</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for SDCoin</source>
-        <translation>Verander configuratie opties voor SDCoin</translation>
+        <source>Modify configuration options for ShadowCoin</source>
+        <translation>Verander configuratie opties voor ShadowCoin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -473,8 +473,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-200"/>
-        <source>SDCoin</source>
-        <translation>SDCoin</translation>
+        <source>ShadowCoin</source>
+        <translation>ShadowCoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -483,8 +483,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About SDCoin</source>
-        <translation>&amp;Over SDCoin</translation>
+        <source>&amp;About ShadowCoin</source>
+        <translation>&amp;Over ShadowCoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -540,13 +540,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>SDCoin client</source>
-        <translation>SDCoin client</translation>
+        <source>ShadowCoin client</source>
+        <translation>ShadowCoin client</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to SDCoin network</source>
-        <translation><numerusform>%n actieve verbinding naar SDCoin netwerk</numerusform><numerusform>%n actieve verbindingen naar SDCoin netwerk</numerusform></translation>
+        <source>%n active connection(s) to ShadowCoin network</source>
+        <translation><numerusform>%n actieve verbinding naar ShadowCoin netwerk</numerusform><numerusform>%n actieve verbindingen naar ShadowCoin netwerk</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -660,8 +660,8 @@ Adres: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid SDCoin address or malformed URI parameters.</source>
-        <translation>URI kan niet ontleedt worden! Mogelijke oorzaken zijn een ongeldig SDCoin adres of incorrecte URI parameters.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid ShadowCoin address or malformed URI parameters.</source>
+        <translation>URI kan niet ontleedt worden! Mogelijke oorzaken zijn een ongeldig ShadowCoin adres of incorrecte URI parameters.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -720,8 +720,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. SDCoin can no longer continue safely and will quit.</source>
-        <translation>Een fatale fout . SDCoin kan niet langer veilig doorgaan en sluit af.</translation>
+        <source>A fatal error occurred. ShadowCoin can no longer continue safely and will quit.</source>
+        <translation>Een fatale fout . ShadowCoin kan niet langer veilig doorgaan en sluit af.</translation>
     </message>
 </context>
 <context>
@@ -1054,8 +1054,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid SDCoin address.</source>
-        <translation>Het ingevoerde adres &quot;%1&quot; is geen geldig SDCoin adres.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid ShadowCoin address.</source>
+        <translation>Het ingevoerde adres &quot;%1&quot; is geen geldig ShadowCoin adres.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1073,8 +1073,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>SDCoin-Qt</source>
-        <translation>SDCoin-Qt</translation>
+        <source>ShadowCoin-Qt</source>
+        <translation>ShadowCoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1146,13 +1146,13 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start SDCoin after logging in to the system.</source>
-        <translation>Automatisch starten van SDCoin na inloggen van het systeem.</translation>
+        <source>Automatically start ShadowCoin after logging in to the system.</source>
+        <translation>Automatisch starten van ShadowCoin na inloggen van het systeem.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start SDCoin on system login</source>
-        <translation>&amp;Start SDCoin bij systeem aanmelding</translation>
+        <source>&amp;Start ShadowCoin on system login</source>
+        <translation>&amp;Start ShadowCoin bij systeem aanmelding</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1171,8 +1171,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the SDCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>De SDCoin client poort automatisch openen op de router. Dit werkt alleen wanneer uw router UPnP ondersteunt en deze is ingeschakeld.</translation>
+        <source>Automatically open the ShadowCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>De ShadowCoin client poort automatisch openen op de router. Dit werkt alleen wanneer uw router UPnP ondersteunt en deze is ingeschakeld.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1181,8 +1181,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the SDCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Verbinding maken met het SDCoin netwerk via een SOCKS proxy (bijvoorbeeld als U gebruik maakt van Tor)</translation>
+        <source>Connect to the ShadowCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Verbinding maken met het ShadowCoin netwerk via een SOCKS proxy (bijvoorbeeld als U gebruik maakt van Tor)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1256,8 +1256,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting SDCoin.</source>
-        <translation>De user interface-taal kan hier ingesteld worden. Deze instelling word toegepast na SDCoin opnieuw op te starten.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting ShadowCoin.</source>
+        <translation>De user interface-taal kan hier ingesteld worden. Deze instelling word toegepast na ShadowCoin opnieuw op te starten.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1271,8 +1271,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show SDCoin addresses in the transaction list or not.</source>
-        <translation>SDCoin adressen in de transactielijst weergeven of niet</translation>
+        <source>Whether to show ShadowCoin addresses in the transaction list or not.</source>
+        <translation>ShadowCoin adressen in de transactielijst weergeven of niet</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1318,8 +1318,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting SDCoin.</source>
-        <translation>Deze instelling word toegepast na een restart van SDCoin.</translation>
+        <source>This setting will take effect after restarting ShadowCoin.</source>
+        <translation>Deze instelling word toegepast na een restart van ShadowCoin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1337,8 +1337,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SDCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn, Je portemonnee synchroniseerd automatisch met het SDCoin netwerk nadat er verbindig is gemaakt, maar dit proces is nog niet voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ShadowCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn, Je portemonnee synchroniseerd automatisch met het ShadowCoin netwerk nadat er verbindig is gemaakt, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <location line="-160"/>
@@ -1553,8 +1553,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the SDCoin-Qt help message to get a list with possible SDCoin command-line options.</source>
-        <translation>Laat het SDCoin-QT help bericht zien om een lijst te krijgen met mogelijke SDCoin command-regel opties.</translation>
+        <source>Show the ShadowCoin-Qt help message to get a list with possible ShadowCoin command-line options.</source>
+        <translation>Laat het ShadowCoin-QT help bericht zien om een lijst te krijgen met mogelijke ShadowCoin command-regel opties.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1573,13 +1573,13 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>SDCoin - Debug window</source>
-        <translation>SDCoin - Debugscherm</translation>
+        <source>ShadowCoin - Debug window</source>
+        <translation>ShadowCoin - Debugscherm</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>SDCoin Core</source>
-        <translation>SDCoin Kern</translation>
+        <source>ShadowCoin Core</source>
+        <translation>ShadowCoin Kern</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1588,8 +1588,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the SDCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open het SDCoin debug log bestand van de huidige data map. Dit kan een paar seconden duren voor grote log bestanden.</translation>
+        <source>Open the ShadowCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open het ShadowCoin debug log bestand van de huidige data map. Dit kan een paar seconden duren voor grote log bestanden.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1598,8 +1598,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the SDCoin RPC console.</source>
-        <translation>Welkom bij de SDCoin RPC console.</translation>
+        <source>Welcome to the ShadowCoin RPC console.</source>
+        <translation>Welkom bij de ShadowCoin RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1757,8 +1757,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Voeg een SDCoin adres in (bijv. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Voeg een ShadowCoin adres in (bijv. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1857,8 +1857,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid SDCoin address</source>
-        <translation>WAARSCHUWING: Ongeldig SDCoin adres</translation>
+        <source>WARNING: Invalid ShadowCoin address</source>
+        <translation>WAARSCHUWING: Ongeldig ShadowCoin adres</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1931,8 +1931,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Voeg een SDCoin adres in (bijv. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Voeg een ShadowCoin adres in (bijv. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
 </context>
 <context>
@@ -1992,8 +1992,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this SDCoin address</source>
-        <translation>Teken een bericht om te bewijzen dat je een SDCoin adres bezit.</translation>
+        <source>Sign the message to prove you own this ShadowCoin address</source>
+        <translation>Teken een bericht om te bewijzen dat je een ShadowCoin adres bezit.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2024,8 +2024,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified SDCoin address</source>
-        <translation>Verifieer een bericht om zeker te zijn dat deze is ondertekend met een specifiek SDCoin adres</translation>
+        <source>Verify the message to ensure it was signed with the specified ShadowCoin address</source>
+        <translation>Verifieer een bericht om zeker te zijn dat deze is ondertekend met een specifiek ShadowCoin adres</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2035,8 +2035,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Voeg een SDCoin adres in (bijv. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Voeg een ShadowCoin adres in (bijv. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2045,8 +2045,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter SDCoin signature</source>
-        <translation>Voer SDCoin handtekening in</translation>
+        <source>Enter ShadowCoin signature</source>
+        <translation>Voer ShadowCoin handtekening in</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2616,8 +2616,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>SDCoin version</source>
-        <translation>SDCoin versie</translation>
+        <source>ShadowCoin version</source>
+        <translation>ShadowCoin versie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2626,8 +2626,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or sdcoind</source>
-        <translation>Verstuur commando naar -server of sdcoind</translation>
+        <source>Send command to -server or shadowcoind</source>
+        <translation>Verstuur commando naar -server of shadowcoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2646,13 +2646,13 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: sdcoin.conf)</source>
-        <translation>Selecteer configuratie bestand (standaard: sdcoin.conf)</translation>
+        <source>Specify configuration file (default: shadowcoin.conf)</source>
+        <translation>Selecteer configuratie bestand (standaard: shadowcoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: sdcoind.pid)</source>
-        <translation>Selecteer pid bestand (standaard: sdcoin.conf)</translation>
+        <source>Specify pid file (default: shadowcoind.pid)</source>
+        <translation>Selecteer pid bestand (standaard: shadowcoin.conf)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2801,8 +2801,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong SDCoin will not work properly.</source>
-        <translation>Waarschuwing: Controleer of de datum en tijd van de computer juist zijn! Als uw klok verkeerd is SDCoin zal niet goed werken.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong ShadowCoin will not work properly.</source>
+        <translation>Waarschuwing: Controleer of de datum en tijd van de computer juist zijn! Als uw klok verkeerd is ShadowCoin zal niet goed werken.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -2991,24 +2991,24 @@ Dit betekend dat een fee van %2 is vereist.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=sdcoinrpc
+rpcuser=shadowcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, u moet een rpcpassword instellen in het configuratiebestand: 
 %s 
 Het wordt aanbevolen de volgende willekeurig wachtwoord gebruiken: 
-rpcuser = sdcoinrpc 
+rpcuser = shadowcoinrpc 
 rpcpassword = %s 
 (je hoeft niet dit wachtwoord te onthouden) 
 De gebruikersnaam en het wachtwoord MAG NIET hetzelfde zijn. 
 Als het bestand niet bestaat, maakt u met leesbare-alleen-eigenaar bestandsbeheermachtigingen.  
 Het wordt ook aanbevolen om alertnotify instellen zodat u een melding van problemen;  
-bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.com </translation>
+bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com </translation>
     </message>
     <message>
         <location line="+51"/>
@@ -3132,13 +3132,13 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;SDCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  SDCoin is probably already running.</source>
-        <translation>Kan een slot op data directory %s niet verkrijgen. SDCoin wordt waarschijnlijk al uitgevoerd.</translation>
+        <source>Cannot obtain a lock on data directory %s.  ShadowCoin is probably already running.</source>
+        <translation>Kan een slot op data directory %s niet verkrijgen. ShadowCoin wordt waarschijnlijk al uitgevoerd.</translation>
     </message>
     <message>
         <location line="-98"/>
-        <source>SDCoin</source>
-        <translation>SDCoin</translation>
+        <source>ShadowCoin</source>
+        <translation>ShadowCoin</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -3172,13 +3172,13 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;SDCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of SDCoin</source>
-        <translation>Fout bij laden van wallet.dat: Portemonnee vereist een nieuwere versie van SDCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of ShadowCoin</source>
+        <translation>Fout bij laden van wallet.dat: Portemonnee vereist een nieuwere versie van ShadowCoin</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart SDCoin to complete</source>
-        <translation>Portemonnee moet herschreven worden: herstart SDCoin om te voltooien</translation>
+        <source>Wallet needed to be rewritten: restart ShadowCoin to complete</source>
+        <translation>Portemonnee moet herschreven worden: herstart ShadowCoin om te voltooien</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3247,8 +3247,8 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;SDCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. SDCoin is probably already running.</source>
-        <translation>Niet mogelijk om %s op deze computer. SDCoin is waarschijnlijk al geopened.</translation>
+        <source>Unable to bind to %s on this computer. ShadowCoin is probably already running.</source>
+        <translation>Niet mogelijk om %s op deze computer. ShadowCoin is waarschijnlijk al geopened.</translation>
     </message>
     <message>
         <location line="-97"/>

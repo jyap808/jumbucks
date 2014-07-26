@@ -139,7 +139,7 @@ OBJS= \
     obj/smessage.o 
 
 
-all: sdcoind
+all: shadowcoind
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
 DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
@@ -181,11 +181,11 @@ obj/x11hash/%.o: x11hash/%.c
 		-e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	rm -f $(@:%.o=%.d)
 
-sdcoind: $(OBJS:obj/%=obj/%)
+shadowcoind: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f sdcoind
+	-rm -f shadowcoind
 	-rm -f obj/*.o
 	-rm -f obj/*.P
 	-rm -f obj/build.h

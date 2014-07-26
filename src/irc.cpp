@@ -189,7 +189,7 @@ bool GetIPFromIRC(SOCKET hSocket, string strMyName, CNetAddr& ipRet)
 void ThreadIRCSeed(void* parg)
 {
     // Make this thread recognisable as the IRC seeding thread
-    RenameThread("sdcoin-ircseed");
+    RenameThread("shadowcoin-ircseed");
 
     try
     {
@@ -307,7 +307,7 @@ void ThreadIRCSeed2(void* parg)
             Send(hSocket, "WHO #sdcoinTEST\r");
         } else
         {
-            // randomly join #sdcoin00-#sdcoin05
+            // randomly join #shadowcoin00-#shadowcoin05
             //int channel_number = GetRandInt(5);
 
             // Channel number is always 0 for initial release

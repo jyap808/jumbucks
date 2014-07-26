@@ -3,12 +3,12 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About SDCoin</source>
+        <source>About ShadowCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;SDCoin&lt;/b&gt; version</source>
+        <source>&lt;b&gt;ShadowCoin&lt;/b&gt; version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -16,7 +16,7 @@
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The SDCoin developers</source>
+Copyright © 2014 The ShadowCoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -59,7 +59,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your SDCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <source>These are your ShadowCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -74,7 +74,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a SDCoin address</source>
+        <source>Sign a message to prove you own a ShadowCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -89,7 +89,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified SDCoin address</source>
+        <source>Verify a message to ensure it was signed with a specified ShadowCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -257,7 +257,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-58"/>
-        <source>SDCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <source>ShadowCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -371,7 +371,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about SDCoin</source>
+        <source>Show information about ShadowCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -421,12 +421,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a SDCoin address</source>
+        <source>Send coins to a ShadowCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for SDCoin</source>
+        <source>Modify configuration options for ShadowCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -466,7 +466,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-200"/>
-        <source>SDCoin</source>
+        <source>ShadowCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -476,7 +476,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About SDCoin</source>
+        <source>&amp;About ShadowCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -533,12 +533,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>SDCoin client</source>
+        <source>ShadowCoin client</source>
         <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to SDCoin network</source>
+        <source>%n active connection(s) to ShadowCoin network</source>
         <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
@@ -653,7 +653,7 @@ Adresa:%4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid SDCoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid ShadowCoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -713,7 +713,7 @@ Adresa:%4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. SDCoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. ShadowCoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1033,7 +1033,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid SDCoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid ShadowCoin address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1052,7 +1052,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>SDCoin-Qt</source>
+        <source>ShadowCoin-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1125,12 +1125,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start SDCoin after logging in to the system.</source>
+        <source>Automatically start ShadowCoin after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start SDCoin on system login</source>
+        <source>&amp;Start ShadowCoin on system login</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1150,7 +1150,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the SDCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the ShadowCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1160,7 +1160,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the SDCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the ShadowCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1235,7 +1235,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting SDCoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting ShadowCoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1250,7 +1250,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show SDCoin addresses in the transaction list or not.</source>
+        <source>Whether to show ShadowCoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1297,7 +1297,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting SDCoin.</source>
+        <source>This setting will take effect after restarting ShadowCoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1316,7 +1316,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SDCoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ShadowCoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1532,7 +1532,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the SDCoin-Qt help message to get a list with possible SDCoin command-line options.</source>
+        <source>Show the ShadowCoin-Qt help message to get a list with possible ShadowCoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1552,12 +1552,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>SDCoin - Debug window</source>
+        <source>ShadowCoin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>SDCoin Core</source>
+        <source>ShadowCoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1567,7 +1567,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the SDCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the ShadowCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1577,7 +1577,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the SDCoin RPC console.</source>
+        <source>Welcome to the ShadowCoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1736,7 +1736,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1836,7 +1836,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid SDCoin address</source>
+        <source>WARNING: Invalid ShadowCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1910,7 +1910,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1971,7 +1971,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this SDCoin address</source>
+        <source>Sign the message to prove you own this ShadowCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2003,7 +2003,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified SDCoin address</source>
+        <source>Verify the message to ensure it was signed with the specified ShadowCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2014,7 +2014,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a SDCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2024,7 +2024,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter SDCoin signature</source>
+        <source>Enter ShadowCoin signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2595,7 +2595,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>SDCoin version</source>
+        <source>ShadowCoin version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2605,7 +2605,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or sdcoind</source>
+        <source>Send command to -server or shadowcoind</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2625,12 +2625,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: sdcoin.conf)</source>
+        <source>Specify configuration file (default: shadowcoin.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: sdcoind.pid)</source>
+        <source>Specify pid file (default: shadowcoind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2780,7 +2780,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong SDCoin will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong ShadowCoin will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2969,13 +2969,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=sdcoinrpc
+rpcuser=shadowcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -3101,12 +3101,12 @@ for example: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  SDCoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s.  ShadowCoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="-98"/>
-        <source>SDCoin</source>
+        <source>ShadowCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3141,12 +3141,12 @@ for example: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of SDCoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of ShadowCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart SDCoin to complete</source>
+        <source>Wallet needed to be rewritten: restart ShadowCoin to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3216,7 +3216,7 @@ for example: alertnotify=echo %%s | mail -s &quot;SDCoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. SDCoin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. ShadowCoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
