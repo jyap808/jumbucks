@@ -44,6 +44,8 @@ private:
     QAction *copyFromAddressAction;
     QAction *copyToAddressAction;
     QAction *deleteAction;
+    QString replyFromAddress;
+    QString replyToAddress;
     MessageViewDelegate *msgdelegate;
 
 private slots:

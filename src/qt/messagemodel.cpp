@@ -61,8 +61,6 @@ public:
                 //throw runtime_error("Could not open DB.");
                 return;
 
-            uint32_t nMessages = 0;
-
             unsigned char chKey[18];
 
             SecMsgStored smsgStored;
@@ -93,7 +91,6 @@ public:
                                                       (char*)&msg.vchMessage[0]),
                                     true);
                 }
-                nMessages++;
             };
 
             delete it;
@@ -103,7 +100,7 @@ public:
             while (dbSmsg.NextSmesg(it, sPrefix, chKey, smsgStored))
             {
                 uint32_t nPayload = smsgStored.vchMessage.size() - SMSG_HDR_LEN;
-                if (SecureMsgDecrypt(false, smsgStored.sAddrTo, &smsgStored.vchMessage[0], &smsgStored.vchMessage[SMSG_HDR_LEN], nPayload, msg) == 0)
+                if (SecureMsgDecrypt(false, smsgStored.sAddrOutbox, &smsgStored.vchMessage[0], &smsgStored.vchMessage[SMSG_HDR_LEN], nPayload, msg) == 0)
                 {
                     label = parent->getWalletModel()->getAddressTableModel()->labelForAddress(QString::fromStdString(msg.sFromAddress));
 
@@ -120,7 +117,6 @@ public:
                                                       (char*)&msg.vchMessage[0]),
                                     true);
                 }
-                nMessages++;
             };
 
             delete it;
@@ -173,7 +169,7 @@ public:
         QDateTime received_datetime;
 
         uint32_t nPayload = smsgStored.vchMessage.size() - SMSG_HDR_LEN;
-        if (SecureMsgDecrypt(false, smsgStored.sAddrTo, &smsgStored.vchMessage[0], &smsgStored.vchMessage[SMSG_HDR_LEN], nPayload, msg) == 0)
+        if (SecureMsgDecrypt(false, smsgStored.sAddrOutbox, &smsgStored.vchMessage[0], &smsgStored.vchMessage[SMSG_HDR_LEN], nPayload, msg) == 0)
         {
             label = parent->getWalletModel()->getAddressTableModel()->labelForAddress(QString::fromStdString(msg.sFromAddress));
 

@@ -91,7 +91,6 @@ MessagePage::MessagePage(QWidget *parent) :
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     ui->deleteButton->setIcon(QIcon());
 #endif
-
     // Context menu actions
     replyAction           = new QAction(ui->sendButton->text(),           this);
     copyFromAddressAction = new QAction(ui->copyFromAddressButton->text(), this);
@@ -180,6 +179,20 @@ void MessagePage::on_sendButton_clicked()
     if(indexes.isEmpty())
         return;
 
+    std::string sError;
+    std::string sendTo  = replyToAddress.toStdString();
+    std::string message = ui->messageEdit->toPlainText().toStdString();
+    std::string addFrom = replyFromAddress.toStdString();
+
+    if (SecureMsgSend(addFrom, sendTo, message, sError) != 0)
+    {
+        QMessageBox::warning(NULL, tr("Send Secure Message"),
+            tr("Send failed: %1.").arg(sError.c_str()),
+            QMessageBox::Ok, QMessageBox::Ok);
+
+        return;
+    };
+
     /*
     SendMessagesDialog dlg(SendMessagesDialog::Encrypted, SendMessagesDialog::Dialog, this);
 
@@ -198,8 +211,6 @@ void MessagePage::on_newButton_clicked()
     SendMessagesDialog dlg(SendMessagesDialog::Encrypted, SendMessagesDialog::Dialog, this);
 
     dlg.setModel(model);
-    //QModelIndex origIndex = proxyModel->mapToSource(indexes.at(0));
-    //dlg.loadRow(origIndex.row());
     dlg.exec();
 }
 
@@ -265,29 +276,19 @@ void MessagePage::selectionChanged()
         ui->messageDetails->show();
         ui->tableView->hide();
 
-        // Figure out which message was selected, and return it
-        //QModelIndexList messageColumn = table->selectionModel()->selectedRows(MessageModel::Message);
-        QModelIndexList labelColumn   = table->selectionModel()->selectedRows(MessageModel::Label);
-        //QModelIndexList typeColumn    = table->selectionModel()->selectedRows(MessageModel::Type);
-
-        //ui->listConversation->setModel(const_cast<QAbstractItemModel*>(table->selectionModel()->model()));
-        //proxyModel->mapToSource();
-
-        //foreach (QModelIndex index, messageColumn)
-        //{
-        //    ui->messageEdit->setPlainText(table->model()->data(index).toString());
-        //}
-
-        /*
-        foreach (QModelIndex index, typeColumn)
-        {
-            ui->labelType->setText(table->model()->data(index).toString());
-        }*/
+        // Figure out which message was selected
+        QModelIndexList labelColumn       = table->selectionModel()->selectedRows(MessageModel::Label);
+        QModelIndexList addressFromColumn = table->selectionModel()->selectedRows(MessageModel::FromAddress);
+        QModelIndexList addressToColumn   = table->selectionModel()->selectedRows(MessageModel::ToAddress);
 
         foreach (QModelIndex index, labelColumn)
-        {
             ui->contactLabel->setText(table->model()->data(index).toString());
-        }
+
+        foreach (QModelIndex index, addressFromColumn)
+            replyToAddress = table->model()->data(index).toString();
+
+        foreach (QModelIndex index, addressToColumn)
+            replyFromAddress = table->model()->data(index).toString();
 
         proxyModel->sort(MessageModel::ReceivedDateTime);
         proxyModel->setFilterRole(MessageModel::KeyRole);

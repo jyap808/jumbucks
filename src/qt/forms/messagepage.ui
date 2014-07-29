@@ -148,7 +148,7 @@
        <item>
         <widget class="QPushButton" name="sendButton">
          <property name="toolTip">
-          <string>Sign a message to prove you own a CinniCoin address</string>
+          <string>Sign a message to prove you own a ShadowCoin address</string>
          </property>
          <property name="text">
           <string>&amp;Send</string>

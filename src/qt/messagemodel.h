@@ -68,7 +68,7 @@ struct MessageTableEntry
     }
 };
 
-/** Interface to Cinnicoin Secure Messaging from Qt view code. */
+/** Interface to ShadowCoin Secure Messaging from Qt view code. */
 class MessageModel : public QAbstractTableModel
 {
     Q_OBJECT

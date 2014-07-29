@@ -106,7 +106,7 @@
         <x>0</x>
         <y>0</y>
         <width>830</width>
-        <height>278</height>
+        <height>279</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -231,6 +231,10 @@
       <widget class="QPushButton" name="closeButton">
        <property name="text">
         <string>&amp;Close</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../bitcoin.qrc">
+         <normaloff>:/icons/quit</normaloff>:/icons/quit</iconset>
        </property>
       </widget>
      </item>
