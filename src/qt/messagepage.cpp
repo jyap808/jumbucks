@@ -1,6 +1,7 @@
 #include "messagepage.h"
 #include "ui_messagepage.h"
 
+#include "sendmessagesdialog.h"
 #include "messagemodel.h"
 #include "bitcoingui.h"
 #include "csvmodelwriter.h"
@@ -49,9 +50,10 @@ public:
         QRect messageRect(mainRect.left()+xpad, mainRect.top()+ypad+lineheight+lineheight, mainRect.width()-xpad*2, mainRect.top()+ypad+lineheight);
 
         //icon.paint(painter, decorationRect);
+        QString label = index.data(MessageModel::LabelRole).toString();
 
         painter->setPen(option.palette.color(QPalette::Text));
-        painter->drawText(addressRect, align, index.data(MessageModel::FromAddressRole).toString());
+        painter->drawText(addressRect, align, label.isEmpty() ? index.data(MessageModel::FromAddressRole).toString() : label);
         painter->setPen(option.palette.color(QPalette::Text));
         painter->drawText(amountRect,  align, GUIUtil::dateTimeStr(index.data(MessageModel::ReceivedDateRole).toDateTime()));
         painter->setPen(option.palette.color(QPalette::Text));
@@ -188,6 +190,19 @@ void MessagePage::on_sendButton_clicked()
     */
 }
 
+void MessagePage::on_newButton_clicked()
+{
+    if(!model)
+        return;
+
+    SendMessagesDialog dlg(SendMessagesDialog::Encrypted, SendMessagesDialog::Dialog, this);
+
+    dlg.setModel(model);
+    //QModelIndex origIndex = proxyModel->mapToSource(indexes.at(0));
+    //dlg.loadRow(origIndex.row());
+    dlg.exec();
+}
+
 void MessagePage::on_copyFromAddressButton_clicked()
 {
     GUIUtil::copyEntryData(ui->tableView, MessageModel::FromAddress, Qt::DisplayRole);
@@ -208,6 +223,7 @@ void MessagePage::on_deleteButton_clicked()
     {
         table->model()->removeRow(indexes.at(0).row());
     }
+    on_backButton_clicked();
 }
 
 void MessagePage::on_backButton_clicked()
@@ -250,17 +266,17 @@ void MessagePage::selectionChanged()
         ui->tableView->hide();
 
         // Figure out which message was selected, and return it
-        QModelIndexList messageColumn = table->selectionModel()->selectedRows(MessageModel::Message);
+        //QModelIndexList messageColumn = table->selectionModel()->selectedRows(MessageModel::Message);
         QModelIndexList labelColumn   = table->selectionModel()->selectedRows(MessageModel::Label);
-        QModelIndexList typeColumn    = table->selectionModel()->selectedRows(MessageModel::Type);
+        //QModelIndexList typeColumn    = table->selectionModel()->selectedRows(MessageModel::Type);
 
         //ui->listConversation->setModel(const_cast<QAbstractItemModel*>(table->selectionModel()->model()));
         //proxyModel->mapToSource();
 
-        foreach (QModelIndex index, messageColumn)
-        {
-            ui->messageEdit->setPlainText(table->model()->data(index).toString());
-        }
+        //foreach (QModelIndex index, messageColumn)
+        //{
+        //    ui->messageEdit->setPlainText(table->model()->data(index).toString());
+        //}
 
         /*
         foreach (QModelIndex index, typeColumn)

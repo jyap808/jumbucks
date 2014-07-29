@@ -459,7 +459,7 @@ QVariant MessageModel::data(const QModelIndex &index, int role) const
     case ReceivedDateRole: return rec->received_datetime;
     case FromAddressRole:  return rec->from_address;
     case ToAddressRole:    return rec->to_address;
-    case LabelRole:        return (rec->label.isEmpty() ? tr("(no label)") : rec->label);
+    case LabelRole:        return rec->label;
     case MessageRole:      return rec->message;
     case ShortMessageRole: return rec->message; // TODO: Short message
     }

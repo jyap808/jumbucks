@@ -48,6 +48,7 @@ private:
 
 private slots:
     void on_sendButton_clicked();
+    void on_newButton_clicked();
     void on_copyFromAddressButton_clicked();
     void on_copyToAddressButton_clicked();
     void on_deleteButton_clicked();
