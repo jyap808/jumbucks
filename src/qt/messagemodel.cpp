@@ -20,8 +20,6 @@
 #include <QFont>
 #include <QColor>
 
-#include <QDebug>
-
 Q_DECLARE_METATYPE(std::vector<unsigned char>);
 
 const QString MessageModel::Sent = "Sent";
@@ -59,11 +57,9 @@ public:
 
             SecMsgDB dbSmsg;
 
-            qDebug() << "help!!!";
             if (!dbSmsg.Open("cr+"))
                 //throw runtime_error("Could not open DB.");
                 return;
-            qDebug() << "1 help!!!";
 
             uint32_t nMessages = 0;
 
@@ -148,10 +144,12 @@ public:
             sent_datetime    .setTime_t(msg.timestamp);
             received_datetime.setTime_t(smsgStored.timeReceived);
 
+            std::string sPrefix("im");
+            SecureMessage* psmsg = (SecureMessage*) &smsgStored.vchMessage[0];
             unsigned char chKey[18];
-            memset(&chKey[0], 0, 18);
-            memcpy(&chKey[0], &smsgStored.vchMessage[0] + 5, 8); // timestamp
-            memcpy(&chKey[8], &smsgStored.vchMessage[SMSG_HDR_LEN], 8);    // sample
+            memcpy(&chKey[0],  sPrefix.data(),  2);
+            memcpy(&chKey[2],  &psmsg->timestamp, 8);
+            memcpy(&chKey[10], &smsgStored.vchMessage[SMSG_HDR_LEN], 8);    // sample
 
             addMessageEntry(MessageTableEntry(chKey,
                                               MessageTableEntry::Received,
@@ -161,7 +159,7 @@ public:
                                               sent_datetime,
                                               received_datetime,
                                               (char*)&msg.vchMessage[0]),
-                            true);
+                            false);
         }
     }
 
@@ -182,10 +180,12 @@ public:
             sent_datetime    .setTime_t(msg.timestamp);
             received_datetime.setTime_t(smsgStored.timeReceived);
 
+            std::string sPrefix("sm");
+            SecureMessage* psmsg = (SecureMessage*) &smsgStored.vchMessage[0];
             unsigned char chKey[18];
-            memset(&chKey[0], 0, 18);
-            memcpy(&chKey[0], &smsgStored.vchMessage[0] + 5, 8); // timestamp
-            memcpy(&chKey[8], &smsgStored.vchMessage[SMSG_HDR_LEN], 8);    // sample
+            memcpy(&chKey[0],  sPrefix.data(),  2);
+            memcpy(&chKey[2],  &psmsg->timestamp, 8);
+            memcpy(&chKey[10], &smsgStored.vchMessage[SMSG_HDR_LEN], 8);    // sample
 
             addMessageEntry(MessageTableEntry(chKey,
                                               MessageTableEntry::Sent,
@@ -195,7 +195,7 @@ public:
                                               sent_datetime,
                                               received_datetime,
                                               (char*)&msg.vchMessage[0]),
-                            true);
+                            false);
         }
     }
 

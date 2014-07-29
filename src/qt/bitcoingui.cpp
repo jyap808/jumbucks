@@ -788,16 +788,16 @@ void BitcoinGUI::incomingMessage(const QModelIndex & parent, int start, int end)
 {
     if(!messageModel)
         return;
+
     MessageModel *mm = messageModel;
-    QString sent_datetime = mm->index(start, MessageModel::ReceivedDateTime, parent).data().toString();
-    QString from_address  = mm->index(start, MessageModel::FromAddress,      parent).data().toString();
-    QString to_address    = mm->index(start, MessageModel::ToAddress,        parent).data().toString();
-    QString message       = mm->index(start, MessageModel::Message,          parent).data().toString();
-    
-    int     type          = mm->index(start, MessageModel::TypeInt,          parent).data().toInt();
-    
-    if (type == MessageTableEntry::Received)
+
+    if (mm->index(start, MessageModel::TypeInt, parent).data().toInt() == MessageTableEntry::Received)
     {
+        QString sent_datetime = mm->index(start, MessageModel::ReceivedDateTime, parent).data().toString();
+        QString from_address  = mm->index(start, MessageModel::FromAddress,      parent).data().toString();
+        QString to_address    = mm->index(start, MessageModel::ToAddress,        parent).data().toString();
+        QString message       = mm->index(start, MessageModel::Message,          parent).data().toString();
+
         notificator->notify(Notificator::Information,
                             tr("Incoming Message"),
                             tr("Date: %1\n"

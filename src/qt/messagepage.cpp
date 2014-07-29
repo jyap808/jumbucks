@@ -36,21 +36,27 @@ public:
 
         QIcon icon = qvariant_cast<QIcon>(index.data(Qt::DecorationRole));
         QRect mainRect = option.rect;
-        QRect decorationRect(mainRect.topLeft(), QSize(DECORATION_SIZE, DECORATION_SIZE));
+        //QRect decorationRect(mainRect.topLeft(), QSize(DECORATION_SIZE, DECORATION_SIZE));
 
-        int ypad = 8;
-        int halfheight = (mainRect.height() - 2*ypad)/2;
+        int ypad = 6;
+        int xpad = 20;
+        int lineheight = 20;
+
         int align = (index.data(MessageModel::TypeRole) == 1 ? Qt::AlignLeft : Qt::AlignRight) | Qt::AlignVCenter;
-        QRect amountRect (mainRect.left(), mainRect.top()+ypad,                       mainRect.width(), halfheight);
-        QRect addressRect(mainRect.left(), mainRect.top()+ypad+halfheight,            mainRect.width(), halfheight);
-        QRect messageRect(mainRect.left(), mainRect.top()+ypad+halfheight+halfheight, mainRect.width(), halfheight);
 
-        icon.paint(painter, decorationRect);
+        QRect amountRect (mainRect.left()+xpad, mainRect.top()+ypad,                       mainRect.width()-xpad*2, mainRect.top()+ypad+lineheight);
+        QRect addressRect(mainRect.left()+xpad, mainRect.top()+ypad+lineheight,            mainRect.width()-xpad*2, mainRect.top()+ypad+lineheight);
+        QRect messageRect(mainRect.left()+xpad, mainRect.top()+ypad+lineheight+lineheight, mainRect.width()-xpad*2, mainRect.top()+ypad+lineheight);
+
+        //icon.paint(painter, decorationRect);
 
         painter->setPen(option.palette.color(QPalette::Text));
         painter->drawText(addressRect, align, index.data(MessageModel::FromAddressRole).toString());
+        painter->setPen(option.palette.color(QPalette::Text));
         painter->drawText(amountRect,  align, GUIUtil::dateTimeStr(index.data(MessageModel::ReceivedDateRole).toDateTime()));
+        painter->setPen(option.palette.color(QPalette::Text));
         painter->drawText(messageRect, align, index.data(MessageModel::MessageRole).toString());
+        //painter->drawLine(mainRect.left()+xpad, mainRect.top()+ypad+lineheight+lineheight+lineheight, mainRect.width()-xpad * 2, mainRect.top()+ypad+lineheight+lineheight+lineheight);
         painter->restore();
 
         //QString amountText = BitcoinUnits::formatWithUnit(unit, amount, true);
@@ -132,7 +138,7 @@ void MessagePage::setModel(MessageModel *model)
     proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
     ui->tableView->setModel(proxyModel);
-    ui->tableView->sortByColumn(2, Qt::DescendingOrder);
+    ui->tableView->sortByColumn(MessageModel::ReceivedDateTime, Qt::DescendingOrder);
 
     // Set column widths
     ui->tableView->horizontalHeader()->resizeSection(MessageModel::Type,             100);
@@ -267,6 +273,7 @@ void MessagePage::selectionChanged()
             ui->contactLabel->setText(table->model()->data(index).toString());
         }
 
+        proxyModel->sort(MessageModel::ReceivedDateTime);
         proxyModel->setFilterRole(MessageModel::KeyRole);
         proxyModel->setFilterFixedString(table->selectionModel()->model()->data(table->selectionModel()->selectedRows(MessageModel::Key)[0], MessageModel::KeyRole).toString());
     }

@@ -717,7 +717,6 @@ void ThreadSecureMsgPow(void* parg)
         leveldb::Iterator* it;
         {
             LOCK(cs_smsgDB);
-            SecMsgDB dbOutbox;
             
             if (!dbOutbox.Open("cr+"))
                 continue;
