@@ -592,7 +592,6 @@ void ThreadSecureMsg(void* parg)
     
     uint32_t delay = 0;
     
-    //while (!fShutdown)
     while (fSecMsgEnabled)
     {
         // shutdown thread waits 5 seconds, this should be less
@@ -706,74 +705,78 @@ void ThreadSecureMsgPow(void* parg)
     std::vector<unsigned char> vchKey;
     SecMsgStored smsgStored;
     
+    std::string sPrefix("qm");
+    unsigned char chKey[18];
+    
+    
     while (fSecMsgEnabled)
     {
         // -- sleep at end, then fSecMsgEnabled is tested on wake
+        
+        SecMsgDB dbOutbox;
+        leveldb::Iterator* it;
         {
-            //LOCK(cs_smsgDB);
-            
-            std::string sPrefix("qm");
-            unsigned char chKey[18];
-            
+            LOCK(cs_smsgDB);
             SecMsgDB dbOutbox;
             
             if (!dbOutbox.Open("cr+"))
                 continue;
             
-            
-            //printf("ThreadSecureMsgPow\n");
-            
             // -- fifo (smallest key first)
-            leveldb::Iterator* it = dbOutbox.pdb->NewIterator(leveldb::ReadOptions());
-            
-            for (;;)
+            it = dbOutbox.pdb->NewIterator(leveldb::ReadOptions());
+        }
+        // -- break up lock, SecureMsgSetHash will take long
+        
+        for (;;)
+        {
             {
-                //printf("found, %.18s\n", chKey);
-                
+                LOCK(cs_smsgDB); 
+                if (!dbOutbox.NextSmesg(it, sPrefix, chKey, smsgStored))
+                    break;
+            }
+            
+            unsigned char* pHeader = &smsgStored.vchMessage[0];
+            unsigned char* pPayload = &smsgStored.vchMessage[SMSG_HDR_LEN];
+            SecureMessage* psmsg = (SecureMessage*) pHeader;
+            
+            // -- do proof of work
+            rv = SecureMsgSetHash(pHeader, pPayload, psmsg->nPayload);
+            if (rv == 2) 
+                break; // /eave message in db, if terminated due to shutdown
+            
+            // -- message is removed here, no matter what
+            {
+                LOCK(cs_smsgDB);
+                dbOutbox.EraseSmesg(chKey);
+            }
+            if (rv != 0)
+            {
+                printf("SecMsgPow: Could not get proof of work hash, message removed.\n");
+                continue;
+            };
+            
+            // -- add to message store
+            {
+                LOCK(cs_smsg);
+                if (SecureMsgStore(pHeader, pPayload, psmsg->nPayload, true) != 0)
                 {
-                    LOCK(cs_smsgDB); // break up lock, SecureMsgSetHash will take long
-                    if (!dbOutbox.NextSmesg(it, sPrefix, chKey, smsgStored))
-                        break;
-                }
-                
-                unsigned char* pHeader = &smsgStored.vchMessage[0];
-                unsigned char* pPayload = &smsgStored.vchMessage[SMSG_HDR_LEN];
-                SecureMessage* psmsg = (SecureMessage*) pHeader;
-                
-                // -- do proof of work
-                rv = SecureMsgSetHash(pHeader, pPayload, psmsg->nPayload);
-                if (rv == 2) 
-                    break; // /eave message in db, if terminated due to shutdown
-                
-                // -- message is removed here, no matter what
-                {
-                    LOCK(cs_smsgDB);
-                    dbOutbox.EraseSmesg(chKey);
-                }
-                if (rv != 0)
-                {
-                    printf("SecMsgPow: Could not get proof of work hash, message removed.\n");
+                    printf("SecMsgPow: Could not place message in buckets, message removed.\n");
                     continue;
                 };
-                
-                // -- add to message store
-                {
-                    LOCK(cs_smsg);
-                    if (SecureMsgStore(pHeader, pPayload, psmsg->nPayload, true) != 0)
-                    {
-                        printf("SecMsgPow: Could not place message in buckets, message removed.\n");
-                        continue;
-                    };
-                }
-                
-                // -- test if message was sent to self
-                if (SecureMsgScanMessage(pHeader, pPayload, psmsg->nPayload, true) != 0)
-                {
-                    // message recipient is not this node (or failed)
-                };
+            }
+            
+            // -- test if message was sent to self
+            if (SecureMsgScanMessage(pHeader, pPayload, psmsg->nPayload, true) != 0)
+            {
+                // message recipient is not this node (or failed)
             };
+        };
+        
+        {
+            LOCK(cs_smsg);
             delete it;
         }
+        
         // -- shutdown thread waits 5 seconds, this should be less
         MilliSleep(1000); // milliseconds
     };
@@ -3223,7 +3226,7 @@ int SecureMsgSetHash(unsigned char *pHeader, unsigned char *pPayload, uint32_t n
     // -- break for HMAC_CTX_cleanup
     for (;;)
     {
-        if (fShutdown)
+        if (!fSecMsgEnabled)
            break;
         
         //psmsg->timestamp = GetTime();
@@ -3277,7 +3280,7 @@ int SecureMsgSetHash(unsigned char *pHeader, unsigned char *pPayload, uint32_t n
     
     HMAC_CTX_cleanup(&ctx);
     
-    if (fShutdown)
+    if (!fSecMsgEnabled)
     {
         if (fDebugSmsg)
             printf("SecureMsgSetHash() stopped, shutdown detected.\n");

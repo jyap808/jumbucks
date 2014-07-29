@@ -1924,15 +1924,24 @@ DBErrors CWallet::LoadWallet(bool& fFirstRunRet)
 
 bool CWallet::SetAddressBookName(const CTxDestination& address, const string& strName)
 {
-    bool fUpdated = false;
+    bool fOwned;
+    ChangeType nMode;
     {
         LOCK(cs_wallet); // mapAddressBook
         std::map<CTxDestination, std::string>::iterator mi = mapAddressBook.find(address);
-        fUpdated = mi != mapAddressBook.end();
+        nMode = (mi == mapAddressBook.end()) ? CT_NEW : CT_UPDATED;
+        fOwned = ::IsMine(*this, address);
+        
         mapAddressBook[address] = strName;
     }
-    NotifyAddressBookChanged(this, address, strName, ::IsMine(*this, address),
-                             (fUpdated ? CT_UPDATED : CT_NEW) );
+    
+    if (fOwned)
+    {
+        const CBitcoinAddress& caddress = address;
+        SecureMsgWalletKeyChanged(caddress.ToString(), strName, nMode);
+    }
+    NotifyAddressBookChanged(this, address, strName, fOwned, nMode);
+    
     if (!fFileBacked)
         return false;
     return CWalletDB(strWalletFile).WriteName(CBitcoinAddress(address).ToString(), strName);
@@ -1945,8 +1954,15 @@ bool CWallet::DelAddressBookName(const CTxDestination& address)
 
         mapAddressBook.erase(address);
     }
-
-    NotifyAddressBookChanged(this, address, "", ::IsMine(*this, address), CT_DELETED);
+    
+    bool fOwned = ::IsMine(*this, address);
+    string sName = "";
+    if (fOwned)
+    {
+        const CBitcoinAddress& caddress = address;
+        SecureMsgWalletKeyChanged(caddress.ToString(), sName, CT_DELETED);
+    }
+    NotifyAddressBookChanged(this, address, "", fOwned, CT_DELETED);
 
     if (!fFileBacked)
         return false;

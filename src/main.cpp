@@ -2744,9 +2744,7 @@ bool static AlreadyHave(CTxDB& txdb, const CInv& inv)
 // a large 4-byte int at any alignment.
 unsigned char pchMessageStart[4] = { 0xfa, 0xf2, 0xef, 0xb4 };
 
-
-
-bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
+bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, int64_t nTimeReceived)
 {
     static map<CService, CPubKey> mapReuseKey;
     RandAddSeedPerfmon();
@@ -3358,6 +3356,63 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
     }
 
 
+    else if (strCommand == "pong")
+    {
+        int64_t pingUsecEnd = nTimeReceived;
+        uint64_t nonce = 0;
+        size_t nAvail = vRecv.in_avail();
+        bool bPingFinished = false;
+        std::string sProblem;
+
+        if (nAvail >= sizeof(nonce)) {
+            vRecv >> nonce;
+
+            // Only process pong message if there is an outstanding ping (old ping without nonce should never pong)
+            if (pfrom->nPingNonceSent != 0) {
+                if (nonce == pfrom->nPingNonceSent) {
+                    // Matching pong received, this ping is no longer outstanding
+                    bPingFinished = true;
+                    int64_t pingUsecTime = pingUsecEnd - pfrom->nPingUsecStart;
+                    if (pingUsecTime > 0) {
+                        // Successful ping time measurement, replace previous
+                        pfrom->nPingUsecTime = pingUsecTime;
+                    } else {
+                        // This should never happen
+                        sProblem = "Timing mishap";
+                    }
+                } else {
+                    // Nonce mismatches are normal when pings are overlapping
+                    sProblem = "Nonce mismatch";
+                    if (nonce == 0) {
+                        // This is most likely a bug in another implementation somewhere, cancel this ping
+                        bPingFinished = true;
+                        sProblem = "Nonce zero";
+                    }
+                }
+            } else {
+                sProblem = "Unsolicited pong without ping";
+            }
+        } else {
+            // This is most likely a bug in another implementation somewhere, cancel this ping
+            bPingFinished = true;
+            sProblem = "Short payload";
+        }
+
+        if (!(sProblem.empty())) {
+            printf("pong %s %s: %s, %"PRIx64" expected, %"PRIx64" received, %zu bytes\n"
+                , pfrom->addr.ToString().c_str()
+                , pfrom->strSubVer.c_str()
+                , sProblem.c_str()
+                , pfrom->nPingNonceSent
+                , nonce
+                , nAvail);
+        }
+        if (bPingFinished) {
+            pfrom->nPingNonceSent = 0;
+        }
+    }
+
+
     else if (strCommand == "alert")
     {
         CAlert alert;
@@ -3481,7 +3536,7 @@ bool ProcessMessages(CNode* pfrom)
         {
             {
                 LOCK(cs_main);
-                fRet = ProcessMessage(pfrom, strCommand, vRecv);
+                fRet = ProcessMessage(pfrom, strCommand, vRecv, msg.nTime);
             }
             if (fShutdown)
                 break;
@@ -3529,14 +3584,33 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
         if (pto->nVersion == 0)
             return true;
 
-        // Keep-alive ping. We send a nonce of zero because we don't use it anywhere
-        // right now.
-        if (pto->nLastSend && GetTime() - pto->nLastSend > 30 * 60 && pto->vSendMsg.empty()) {
+        //
+        // Message: ping
+        //
+        bool pingSend = false;
+        if (pto->fPingQueued) {
+            // RPC ping request by user
+            pingSend = true;
+        }
+        if (pto->nPingNonceSent == 0 && pto->nPingUsecStart + PING_INTERVAL * 1000000 < GetTimeMicros()) {
+            // Ping automatically sent as a latency probe & keepalive.
+            pingSend = true;
+        }
+        if (pingSend) {
             uint64_t nonce = 0;
-            if (pto->nVersion > BIP0031_VERSION)
+            while (nonce == 0) {
+                RAND_bytes((unsigned char*)&nonce, sizeof(nonce));
+            }
+            pto->fPingQueued = false;
+            pto->nPingUsecStart = GetTimeMicros();
+            if (pto->nVersion > BIP0031_VERSION) {
+                pto->nPingNonceSent = nonce;
                 pto->PushMessage("ping", nonce);
-            else
+            } else {
+                // Peer is too old to support ping command with nonce, pong will never arrive.
+                pto->nPingNonceSent = 0;
                 pto->PushMessage("ping");
+            }
         }
 
         // Resend wallet transactions that haven't gotten in a block yet

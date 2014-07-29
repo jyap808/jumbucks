@@ -9,9 +9,11 @@
 class TransactionTableModel;
 class ClientModel;
 class WalletModel;
+class MessageModel;
 class TransactionView;
 class OverviewPage;
 class AddressBookPage;
+class MessagePage;
 class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class Notificator;
@@ -48,6 +50,11 @@ public:
         functionality.
     */
     void setWalletModel(WalletModel *walletModel);
+    /** Set the message model.
+        The message model represents encryption message database, and offers access to the list of messages, address book and sending
+        functionality.
+    */
+    void setMessageModel(MessageModel *messageModel);
 
 protected:
     void changeEvent(QEvent *e);
@@ -58,6 +65,7 @@ protected:
 private:
     ClientModel *clientModel;
     WalletModel *walletModel;
+    MessageModel *messageModel;
 
     QStackedWidget *centralWidget;
 
@@ -65,6 +73,7 @@ private:
     QWidget *transactionsPage;
     AddressBookPage *addressBookPage;
     AddressBookPage *receiveCoinsPage;
+    MessagePage *messagePage;
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
 
@@ -84,6 +93,7 @@ private:
     QAction *quitAction;
     QAction *sendCoinsAction;
     QAction *addressBookAction;
+    QAction *messageAction;
     QAction *signMessageAction;
     QAction *verifyMessageAction;
     QAction *aboutAction;
@@ -155,6 +165,8 @@ private slots:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage();
+    /** Switch to message page */
+    void gotoMessagePage();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
@@ -174,6 +186,13 @@ private slots:
         The new items are those between start and end inclusive, under the given parent item.
     */
     void incomingTransaction(const QModelIndex & parent, int start, int end);
+
+    /** Show incoming message notification for new messages.
+
+        The new items are those between start and end inclusive, under the given parent item.
+    */
+    void incomingMessage(const QModelIndex & parent, int start, int end);
+
     /** Encrypt the wallet */
     void encryptWallet(bool status);
     /** Backup the wallet */

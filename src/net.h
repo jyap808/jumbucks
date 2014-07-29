@@ -25,6 +25,10 @@ class CBlockIndex;
 extern int nBestHeight;
 
 
+/** Time between pings automatically sent out for latency probing and keepalive (in seconds). */
+static const int PING_INTERVAL = 2 * 60;
+/** Time after which to disconnect, after waiting for a ping response (or inactivity). */
+static const int TIMEOUT_INTERVAL = 20 * 60;
 
 inline unsigned int ReceiveFloodSize() { return 1000*GetArg("-maxreceivebuffer", 5*1000); }
 inline unsigned int SendBufferSize() { return 1000*GetArg("-maxsendbuffer", 1*1000); }
@@ -138,14 +142,14 @@ public:
     uint64_t nSendBytes;
     uint64_t nRecvBytes;
     int64_t nTimeConnected;
-    
     std::string addrName;
     int nVersion;
     std::string strSubVer;
     bool fInbound;
     int nStartingHeight;
-    
     int nMisbehavior;
+    double dPingTime;
+    double dPingWait;
 };
 
 
@@ -162,11 +166,14 @@ public:
     CDataStream vRecv;              // received message data
     unsigned int nDataPos;
 
+    int64_t nTime;                  // time (in microseconds) of message receipt.
+
     CNetMessage(int nTypeIn, int nVersionIn) : hdrbuf(nTypeIn, nVersionIn), vRecv(nTypeIn, nVersionIn) {
         hdrbuf.resize(24);
         in_data = false;
         nHdrPos = 0;
         nDataPos = 0;
+        nTime = 0;
     }
 
     bool complete() const
@@ -279,8 +286,18 @@ public:
     std::vector<CInv> vInventoryToSend;
     CCriticalSection cs_inventory;
     std::multimap<int64_t, CInv> mapAskFor;
-    
+
     SecMsgNode smsgData;
+
+    // Ping time measurement:
+    // The pong reply we're expecting, or 0 if no pong expected.
+    uint64_t nPingNonceSent;
+    // Time (in usec) the last ping was sent, or 0 if no ping was ever sent.
+    int64_t nPingUsecStart;
+    // Last measured round-trip time.
+    int64_t nPingUsecTime;
+    // Whether a ping is requested.
+    bool fPingQueued;
 
     CNode(SOCKET hSocketIn, CAddress addrIn, std::string addrNameIn = "", bool fInboundIn=false) : ssSend(SER_NETWORK, INIT_PROTO_VERSION), setAddrKnown(5000)
     {
@@ -314,6 +331,10 @@ public:
         nMisbehavior = 0;
         hashCheckpointKnown = 0;
         setInventoryKnown.max_size(SendBufferSize() / 1000);
+        nPingNonceSent = 0;
+        nPingUsecStart = 0;
+        nPingUsecTime = 0;
+        fPingQueued = false;
 
         // Be shy and don't send version until we hear
         if (hSocket != INVALID_SOCKET && !fInbound)

@@ -7,12 +7,15 @@
 #include "bitcoingui.h"
 #include "transactiontablemodel.h"
 #include "addressbookpage.h"
+
+#include "messagepage.h"
 #include "sendcoinsdialog.h"
 #include "signverifymessagedialog.h"
 #include "optionsdialog.h"
 #include "aboutdialog.h"
 #include "clientmodel.h"
 #include "walletmodel.h"
+#include "messagemodel.h"
 #include "editaddressdialog.h"
 #include "optionsmodel.h"
 #include "transactiondescdialog.h"
@@ -57,12 +60,46 @@
 #include <QUrl>
 #include <QStyle>
 #include <QStyleFactory>
+#include <QTextStream>
 
 #include <iostream>
 
 extern CWallet* pwalletMain;
 extern int64_t nLastCoinStakeSearchInterval;
 double GetPoSKernelPS();
+
+#define VERTICAL_TOOBAR_STYLESHEET "QToolBar {\
+border:none;\
+height:100%;\
+padding-top:20px;\
+text-align: left;\
+}\
+QToolButton {\
+min-width:180px;\
+background-color: transparent;\
+border: 1px solid #3A3939;\
+border-radius: 3px;\
+margin: 3px;\
+padding-left: 5px;\
+/*padding-right:50px;*/\
+padding-top:5px;\
+width:100%;\
+text-align: left;\
+padding-bottom:5px;\
+}\
+QToolButton:pressed {\
+background-color: #4A4949;\
+border: 1px solid silver;\
+}\
+QToolButton:hover {\
+background-color: #4A4949;\
+border: 1px solid gray;\
+}"
+#define HORIZONTAL_TOOLBAR_STYLESHEET "QToolBar {\
+    border: 1px solid #393838;\
+    background: 1px solid #302F2F;\
+    font-weight: bold;\
+}"
 
 BitcoinGUI::BitcoinGUI(QWidget *parent):
     QMainWindow(parent),
@@ -78,17 +115,26 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0),
     nWeight(0)
 {
-    resize(850, 550);
+    resize(950, 550);
     setWindowTitle(tr("ShadowCoin") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
-
-    QApplication::setStyle(QStyleFactory::create("Fusion"));
 #else
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
+
+    // TODO: Theme switching :)
+    QFile f(":qdarkstyle/style.qss");
+    if (f.exists())
+    {
+        f.open(QFile::ReadOnly | QFile::Text);
+        QTextStream ts(&f);
+        qApp->setStyleSheet(ts.readAll());
+    }
+    else
+        QApplication::setStyle(QStyleFactory::create("Fusion"));
 
     // Accept D&D of URIs
     setAcceptDrops(true);
@@ -119,6 +165,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     receiveCoinsPage = new AddressBookPage(AddressBookPage::ForEditing, AddressBookPage::ReceivingTab);
 
     sendCoinsPage = new SendCoinsDialog(this);
+    messagePage   = new MessagePage(this);
 
     signVerifyMessageDialog = new SignVerifyMessageDialog(this);
 
@@ -128,6 +175,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     centralWidget->addWidget(addressBookPage);
     centralWidget->addWidget(receiveCoinsPage);
     centralWidget->addWidget(sendCoinsPage);
+    centralWidget->addWidget(messagePage);
     setCentralWidget(centralWidget);
 
     // Create status bar
@@ -245,6 +293,12 @@ void BitcoinGUI::createActions()
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
+    messageAction = new QAction(QIcon(":/icons/edit"), tr("&Messages"), this);
+    messageAction->setToolTip(tr("View and Send Encrypted messages"));
+    messageAction->setCheckable(true);
+    messageAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
+    tabGroup->addAction(messageAction);
+
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(gotoOverviewPage()));
     connect(sendCoinsAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
@@ -255,6 +309,8 @@ void BitcoinGUI::createActions()
     connect(historyAction, SIGNAL(triggered()), this, SLOT(gotoHistoryPage()));
     connect(addressBookAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(addressBookAction, SIGNAL(triggered()), this, SLOT(gotoAddressBookPage()));
+    connect(messageAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
+    connect(messageAction, SIGNAL(triggered()), this, SLOT(gotoMessagePage()));
 
     quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
     quitAction->setToolTip(tr("Quit application"));
@@ -351,6 +407,7 @@ void BitcoinGUI::createToolBars()
     mainToolbar->addAction(receiveCoinsAction);
     mainToolbar->addAction(historyAction);
     mainToolbar->addAction(addressBookAction);
+    mainToolbar->addAction(messageAction);
 
     secondaryToolbar = addToolBar(tr("Actions toolbar"));
     secondaryToolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -358,10 +415,8 @@ void BitcoinGUI::createToolBars()
 
     connect(mainToolbar,      SIGNAL(orientationChanged(Qt::Orientation)), this, SLOT(mainToolbarOrientation(Qt::Orientation)));
     connect(secondaryToolbar, SIGNAL(orientationChanged(Qt::Orientation)), this, SLOT(secondaryToolbarOrientation(Qt::Orientation)));
-    //mainToolbar->orientationChanged(mainToolbar->orientation())
     mainToolbarOrientation(mainToolbar->orientation());
     secondaryToolbarOrientation(secondaryToolbar->orientation());
-    //secondaryToolbar->orientationChanged(secondaryToolbar->orientation());
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
@@ -431,6 +486,23 @@ void BitcoinGUI::setWalletModel(WalletModel *walletModel)
 
         // Ask for passphrase if needed
         connect(walletModel, SIGNAL(requireUnlock()), this, SLOT(unlockWallet()));
+    }
+}
+
+void BitcoinGUI::setMessageModel(MessageModel *messageModel)
+{
+    this->messageModel = messageModel;
+    if(messageModel)
+    {
+        // Report errors from message thread
+        connect(messageModel, SIGNAL(error(QString,QString,bool)), this, SLOT(error(QString,QString,bool)));
+
+        // Put transaction list in tabs
+        messagePage->setModel(messageModel);
+
+        // Balloon pop-up for new message
+        connect(messageModel, SIGNAL(rowsInserted(QModelIndex,int,int)),
+                this, SLOT(incomingMessage(QModelIndex,int,int)));
     }
 }
 
@@ -712,6 +784,33 @@ void BitcoinGUI::incomingTransaction(const QModelIndex & parent, int start, int 
     }
 }
 
+void BitcoinGUI::incomingMessage(const QModelIndex & parent, int start, int end)
+{
+    if(!messageModel)
+        return;
+    MessageModel *mm = messageModel;
+    QString sent_datetime = mm->index(start, MessageModel::ReceivedDateTime, parent).data().toString();
+    QString from_address  = mm->index(start, MessageModel::FromAddress,      parent).data().toString();
+    QString to_address    = mm->index(start, MessageModel::ToAddress,        parent).data().toString();
+    QString message       = mm->index(start, MessageModel::Message,          parent).data().toString();
+    
+    int     type          = mm->index(start, MessageModel::TypeInt,          parent).data().toInt();
+    
+    if (type == MessageTableEntry::Received)
+    {
+        notificator->notify(Notificator::Information,
+                            tr("Incoming Message"),
+                            tr("Date: %1\n"
+                               "From Address: %2\n"
+                               "To Address: %3\n"
+                               "Message: %4\n")
+                              .arg(sent_datetime)
+                              .arg(from_address)
+                              .arg(to_address)
+                              .arg(message));
+    };
+}
+
 void BitcoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
@@ -755,6 +854,15 @@ void BitcoinGUI::gotoSendCoinsPage()
 {
     sendCoinsAction->setChecked(true);
     centralWidget->setCurrentWidget(sendCoinsPage);
+
+    exportAction->setEnabled(false);
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
+}
+
+void BitcoinGUI::gotoMessagePage()
+{
+    messageAction->setChecked(true);
+    centralWidget->setCurrentWidget(messagePage);
 
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
@@ -825,26 +933,22 @@ void BitcoinGUI::mainToolbarOrientation(Qt::Orientation orientation)
     {
         mainIcon->setPixmap(QPixmap(":images/sdc-horizontal"));
         mainIcon->show();
-        mainToolbar->setStyleSheet("QToolBar { border:none;}");
+        mainToolbar->setStyleSheet(HORIZONTAL_TOOLBAR_STYLESHEET);
+        messageAction->setIconText(tr("&Messages"));
     }
     else
     {
         mainIcon->setPixmap(QPixmap(":images/sdc-vertical"));
         mainIcon->show();
-        mainToolbar->setStyleSheet("QToolBar { border:none;height:100%;padding-top:20px; text-align: left;min-width:180px;max-width:180px;} QToolBar QToolButton { padding-left:20px;padding-right:181px;padding-top:5px;padding-bottom:5px; width:100%; text-align: left;}");
+
+        mainToolbar->setStyleSheet(VERTICAL_TOOBAR_STYLESHEET);
+        messageAction->setIconText(tr("Encrypted &Messagess"));
     }
 }
 
 void BitcoinGUI::secondaryToolbarOrientation(Qt::Orientation orientation)
 {
-    if(orientation == Qt::Horizontal)
-    {
-        secondaryToolbar->setStyleSheet("QToolBar { border:none;}");
-    }
-    else
-    {
-        secondaryToolbar->setStyleSheet("QToolBar { border:none;height:100%;padding-top:20px; text-align: left;min-width:180px;max-width:180px;} QToolBar QToolButton { padding-left:20px;padding-right:181px;padding-top:5px;padding-bottom:5px; width:100%; text-align: left;}");
-    }
+    secondaryToolbar->setStyleSheet(orientation == Qt::Horizontal ? HORIZONTAL_TOOLBAR_STYLESHEET : VERTICAL_TOOBAR_STYLESHEET);
 }
 
 void BitcoinGUI::setEncryptionStatus(int status)
