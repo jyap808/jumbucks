@@ -83,7 +83,7 @@
           <item>
            <widget class="QPushButton" name="backButton">
             <property name="text">
-             <string>Back</string>
+             <string>&amp;Back</string>
             </property>
             <property name="icon">
              <iconset resource="../bitcoin.qrc">

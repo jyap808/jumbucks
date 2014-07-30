@@ -219,6 +219,10 @@ void MessagePage::on_deleteButton_clicked()
     if(!indexes.isEmpty())
     {
         list->model()->removeRow(indexes.at(0).row());
+        indexes = list->selectionModel()->selectedIndexes();
+
+        if(indexes.isEmpty())
+            on_backButton_clicked();
     }
 }
 
@@ -230,7 +234,8 @@ void MessagePage::on_backButton_clicked()
     proxyModel->setFilterRole(MessageModel::Ambiguous);
     proxyModel->setFilterFixedString("true");
 
-    ui->listConversation->clearFocus();
+    ui->listConversation->clearSelection();
+    ui->tableView->clearSelection();
     itemSelectionChanged();
     selectionChanged();
 
