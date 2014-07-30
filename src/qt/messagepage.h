@@ -58,6 +58,7 @@ private slots:
     void messageTextChanged();
     void selectionChanged();
     void itemSelectionChanged();
+    void incomingMessage();
     /** Spawn contextual menu (right mouse menu) for address book entry */
     void contextualMenu(const QPoint &point);
 

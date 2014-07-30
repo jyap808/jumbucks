@@ -156,6 +156,9 @@ void MessagePage::setModel(MessageModel *model)
     connect(ui->listConversation,                   SIGNAL(doubleClicked(QModelIndex)),                       this, SLOT(itemSelectionChanged()));
     connect(ui->messageEdit,                        SIGNAL(textChanged()),                                    this, SLOT(messageTextChanged()));
 
+    // Scroll to bottom
+    connect(model, SIGNAL(rowsInserted(QModelIndex,int,int)), this, SLOT(incomingMessage()));
+
     selectionChanged();
 }
 
@@ -327,17 +330,6 @@ void MessagePage::itemSelectionChanged()
 
         ui->tableView->hide();
 
-        // Figure out which message was selected
-        QModelIndexList indexes = list->selectionModel()->selectedIndexes();
-
-        /*
-        foreach (QModelIndex index, indexes)
-            replyToAddress = list->model()->data(index).toString();
-
-        foreach (QModelIndex index, addressToColumn)
-            replyFromAddress = list->model()->data(index).toString();
-            */
-
     }
     else
     {
@@ -352,6 +344,11 @@ void MessagePage::itemSelectionChanged()
         ui->messageDetails->hide();
         ui->messageEdit->clear();
     }
+}
+
+void MessagePage::incomingMessage()
+{
+    ui->listConversation->scrollToBottom();
 }
 
 void MessagePage::messageTextChanged()
