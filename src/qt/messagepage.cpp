@@ -11,72 +11,61 @@
 #include <QClipboard>
 #include <QMessageBox>
 #include <QMenu>
-#include <QAbstractItemDelegate>
+#include <QStyledItemDelegate>
+#include <QAbstractTextDocumentLayout>
 #include <QPainter>
-
-#include <QDebug>
 
 #define DECORATION_SIZE 64
 #define NUM_ITEMS 3
 
-class MessageViewDelegate : public QAbstractItemDelegate
+class MessageViewDelegate : public QStyledItemDelegate
 {
-    Q_OBJECT
-public:
-    MessageViewDelegate(): QAbstractItemDelegate()
-    {
-
-    }
-
-    inline void paint(QPainter *painter, const QStyleOptionViewItem &option,
-                      const QModelIndex &index ) const
-    {
-        painter->save();
-
-        //qDebug() << "Wtf" << index << index.data(MessageModel::ReceivedDateRole);
-
-        QIcon icon = qvariant_cast<QIcon>(index.data(Qt::DecorationRole));
-        QRect mainRect = option.rect;
-        //QRect decorationRect(mainRect.topLeft(), QSize(DECORATION_SIZE, DECORATION_SIZE));
-
-        int ypad = 6;
-        int xpad = 20;
-        int lineheight = 20;
-
-        int align = (index.data(MessageModel::TypeRole) == 1 ? Qt::AlignLeft : Qt::AlignRight) | Qt::AlignVCenter;
-
-        QRect amountRect (mainRect.left()+xpad, mainRect.top()+ypad,                       mainRect.width()-xpad*2, mainRect.top()+ypad+lineheight);
-        QRect addressRect(mainRect.left()+xpad, mainRect.top()+ypad+lineheight,            mainRect.width()-xpad*2, mainRect.top()+ypad+lineheight);
-        QRect messageRect(mainRect.left()+xpad, mainRect.top()+ypad+lineheight+lineheight, mainRect.width()-xpad*2, mainRect.top()+ypad+lineheight);
-
-        //icon.paint(painter, decorationRect);
-        QString label = index.data(MessageModel::LabelRole).toString();
-
-        painter->setPen(option.palette.color(QPalette::Text));
-        painter->drawText(addressRect, align, label.isEmpty() ? index.data(MessageModel::FromAddressRole).toString() : label);
-        painter->setPen(option.palette.color(QPalette::Text));
-        painter->drawText(amountRect,  align, GUIUtil::dateTimeStr(index.data(MessageModel::ReceivedDateRole).toDateTime()));
-        painter->setPen(option.palette.color(QPalette::Text));
-        painter->drawText(messageRect, align, index.data(MessageModel::MessageRole).toString());
-        //painter->drawLine(mainRect.left()+xpad, mainRect.top()+ypad+lineheight+lineheight+lineheight, mainRect.width()-xpad * 2, mainRect.top()+ypad+lineheight+lineheight+lineheight);
-        painter->restore();
-
-        //QString amountText = BitcoinUnits::formatWithUnit(unit, amount, true);
-        /*if(!confirmed)
-        {
-            amountText = QString("[") + amountText + QString("]");
-        }*/
-        //painter->drawText(amountRect, Qt::AlignRight|Qt::AlignVCenter, amountText);
-    }
-
-    inline QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
-    {
-        return QSize(DECORATION_SIZE, DECORATION_SIZE);
-    }
-
-    int unit;
-
+protected:
+    void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const;
+    QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const;
 };
+
+void MessageViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+    QStyleOptionViewItemV4 optionV4 = option;
+    initStyleOption(&optionV4, index);
+
+    QStyle *style = optionV4.widget? optionV4.widget->style() : QApplication::style();
+
+    QTextDocument doc;
+    QString align(index.data(MessageModel::TypeRole) == 1 ? "left" : "right");
+    QString html = "<p align=\"" + align + "\" style=\"color:white;\">" + index.data(MessageModel::HTMLRole).toString() + "</p>";
+    doc.setHtml(html);
+
+    /// Painting item without text
+    optionV4.text = QString();
+    style->drawControl(QStyle::CE_ItemViewItem, &optionV4, painter);
+
+    QAbstractTextDocumentLayout::PaintContext ctx;
+
+    // Highlighting text if item is selected
+    if (optionV4.state & QStyle::State_Selected)
+        ctx.palette.setColor(QPalette::Text, optionV4.palette.color(QPalette::Active, QPalette::HighlightedText));
+
+    QRect textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &optionV4);
+    doc.setTextWidth( textRect.width() );
+    painter->save();
+    painter->translate(textRect.topLeft());
+    painter->setClipRect(textRect.translated(-textRect.topLeft()));
+    doc.documentLayout()->draw(painter, ctx);
+    painter->restore();
+}
+
+QSize MessageViewDelegate::sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const
+{
+    QStyleOptionViewItemV4 options = option;
+    initStyleOption(&options, index);
+
+    QTextDocument doc;
+    doc.setHtml(index.data(MessageModel::HTMLRole).toString());
+    doc.setTextWidth(options.rect.width());
+    return QSize(doc.idealWidth(), doc.size().height() + 20);
+}
 
 #include "messagepage.moc"
 
@@ -138,8 +127,14 @@ void MessagePage::setModel(MessageModel *model)
     proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
     proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
+    proxyModel->setFilterRole(MessageModel::Ambiguous);
+    proxyModel->setFilterFixedString("true");
+
     ui->tableView->setModel(proxyModel);
     ui->tableView->sortByColumn(MessageModel::ReceivedDateTime, Qt::DescendingOrder);
+
+    ui->listConversation->setModel(proxyModel);
+    ui->listConversation->setModelColumn(MessageModel::HTML);
 
     // Set column widths
     ui->tableView->horizontalHeader()->resizeSection(MessageModel::Type,             100);
@@ -155,15 +150,13 @@ void MessagePage::setModel(MessageModel *model)
     // Hidden columns
     ui->tableView->setColumnHidden(MessageModel::Message, true);
 
-    connect(ui->tableView->selectionModel(), SIGNAL(selectionChanged(QItemSelection, QItemSelection)),
-            this, SLOT(selectionChanged()));
-    connect(ui->tableView, SIGNAL(doubleClicked(QModelIndex)),
-            this, SLOT(selectionChanged()));
+    connect(ui->tableView->selectionModel(),        SIGNAL(selectionChanged(QItemSelection, QItemSelection)), this, SLOT(selectionChanged()));
+    connect(ui->tableView,                          SIGNAL(doubleClicked(QModelIndex)),                       this, SLOT(selectionChanged()));
+    connect(ui->listConversation->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),  this, SLOT(itemSelectionChanged()));
+    connect(ui->listConversation,                   SIGNAL(doubleClicked(QModelIndex)),                       this, SLOT(itemSelectionChanged()));
+    connect(ui->messageEdit,                        SIGNAL(textChanged()),                                    this, SLOT(messageTextChanged()));
 
     selectionChanged();
-
-    ui->listConversation->setModel(proxyModel);
-    ui->listConversation->setModelColumn(MessageModel::ToAddress);
 }
 
 void MessagePage::on_sendButton_clicked()
@@ -171,17 +164,9 @@ void MessagePage::on_sendButton_clicked()
     if(!model)
         return;
 
-    if(!ui->tableView->selectionModel())
-        return;
-
-    QModelIndexList indexes = ui->tableView->selectionModel()->selectedRows();
-
-    if(indexes.isEmpty())
-        return;
-
     std::string sError;
     std::string sendTo  = replyToAddress.toStdString();
-    std::string message = ui->messageEdit->toPlainText().toStdString();
+    std::string message = ui->messageEdit->toHtml().toStdString();
     std::string addFrom = replyFromAddress.toStdString();
 
     if (SecureMsgSend(addFrom, sendTo, message, sError) != 0)
@@ -193,14 +178,9 @@ void MessagePage::on_sendButton_clicked()
         return;
     };
 
-    /*
-    SendMessagesDialog dlg(SendMessagesDialog::Encrypted, SendMessagesDialog::Dialog, this);
-
-    dlg.setModel(model);
-    QModelIndex origIndex = proxyModel->mapToSource(indexes.at(0));
-    dlg.loadRow(origIndex.row());
-    dlg.exec();
-    */
+    ui->messageEdit->setMaximumHeight(30);
+    ui->messageEdit->clear();
+    ui->listConversation->scrollToBottom();
 }
 
 void MessagePage::on_newButton_clicked()
@@ -226,19 +206,31 @@ void MessagePage::on_copyToAddressButton_clicked()
 
 void MessagePage::on_deleteButton_clicked()
 {
-    QTableView *table = ui->tableView;
-    if(!table->selectionModel())
+    QListView *list = ui->listConversation;
+
+    if(!list->selectionModel())
         return;
-    QModelIndexList indexes = table->selectionModel()->selectedRows();
+
+    QModelIndexList indexes = list->selectionModel()->selectedIndexes();
+
     if(!indexes.isEmpty())
     {
-        table->model()->removeRow(indexes.at(0).row());
+        list->model()->removeRow(indexes.at(0).row());
     }
-    on_backButton_clicked();
 }
 
 void MessagePage::on_backButton_clicked()
 {
+    model->resetFilter();
+
+    proxyModel->setFilterFixedString("");
+    proxyModel->setFilterRole(MessageModel::Ambiguous);
+    proxyModel->setFilterFixedString("true");
+
+    ui->listConversation->clearFocus();
+    itemSelectionChanged();
+    selectionChanged();
+
     ui->messageDetails->hide();
     ui->tableView->show();
     ui->newButton->setEnabled(true);
@@ -246,7 +238,6 @@ void MessagePage::on_backButton_clicked()
     ui->sendButton->setEnabled(false);
     ui->sendButton->setVisible(false);
     ui->messageEdit->setVisible(false);
-    proxyModel->setFilterFixedString("");
 }
 
 void MessagePage::selectionChanged()
@@ -273,7 +264,6 @@ void MessagePage::selectionChanged()
         ui->sendButton->setVisible(true);
         ui->messageEdit->setVisible(true);
 
-        ui->messageDetails->show();
         ui->tableView->hide();
 
         // Figure out which message was selected
@@ -291,8 +281,10 @@ void MessagePage::selectionChanged()
             replyFromAddress = table->model()->data(index).toString();
 
         proxyModel->sort(MessageModel::ReceivedDateTime);
-        proxyModel->setFilterRole(MessageModel::KeyRole);
-        proxyModel->setFilterFixedString(table->selectionModel()->model()->data(table->selectionModel()->selectedRows(MessageModel::Key)[0], MessageModel::KeyRole).toString());
+        QString filter = table->selectionModel()->model()->data(table->selectionModel()->selectedRows(MessageModel::FromAddress)[0], Qt::DisplayRole).toString();
+        proxyModel->setFilterRole(MessageModel::FromAddressRole);
+        proxyModel->setFilterFixedString(filter);
+        ui->messageDetails->show();
     }
     else
     {
@@ -307,6 +299,69 @@ void MessagePage::selectionChanged()
         ui->messageDetails->hide();
         ui->messageEdit->clear();
     }
+}
+
+void MessagePage::itemSelectionChanged()
+{
+    // Set button states based on selected tab and selection
+    QListView *list = ui->listConversation;
+    if(!list->selectionModel())
+        return;
+
+    if(list->selectionModel()->hasSelection())
+    {
+        replyAction->setEnabled(true);
+        copyFromAddressAction->setEnabled(true);
+        copyToAddressAction->setEnabled(true);
+        deleteAction->setEnabled(true);
+
+        ui->copyFromAddressButton->setEnabled(true);
+        ui->copyToAddressButton->setEnabled(true);
+        ui->deleteButton->setEnabled(true);
+
+        ui->newButton->setEnabled(false);
+        ui->newButton->setVisible(false);
+        ui->sendButton->setEnabled(true);
+        ui->sendButton->setVisible(true);
+        ui->messageEdit->setVisible(true);
+
+        ui->tableView->hide();
+
+        // Figure out which message was selected
+        QModelIndexList indexes = list->selectionModel()->selectedIndexes();
+
+        /*
+        foreach (QModelIndex index, indexes)
+            replyToAddress = list->model()->data(index).toString();
+
+        foreach (QModelIndex index, addressToColumn)
+            replyFromAddress = list->model()->data(index).toString();
+            */
+
+    }
+    else
+    {
+        ui->newButton->setEnabled(true);
+        ui->newButton->setVisible(true);
+        ui->sendButton->setEnabled(false);
+        ui->sendButton->setVisible(false);
+        ui->copyFromAddressButton->setEnabled(false);
+        ui->copyToAddressButton->setEnabled(false);
+        ui->deleteButton->setEnabled(false);
+        ui->messageEdit->hide();
+        ui->messageDetails->hide();
+        ui->messageEdit->clear();
+    }
+}
+
+void MessagePage::messageTextChanged()
+{
+    if(ui->messageEdit->toPlainText().endsWith("\n"))
+    {
+        ui->messageEdit->setMaximumHeight(80);
+        ui->messageEdit->resize(256, ui->messageEdit->document()->size().height() + 10);
+    }
+
 }
 
 void MessagePage::exportClicked()

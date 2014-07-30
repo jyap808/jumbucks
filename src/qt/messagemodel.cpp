@@ -22,6 +22,8 @@
 
 Q_DECLARE_METATYPE(std::vector<unsigned char>);
 
+QList<QString> ambiguous; /**< Specifies Ambiguous addresses */
+
 const QString MessageModel::Sent = "Sent";
 const QString MessageModel::Received = "Received";
 
@@ -438,6 +440,7 @@ QVariant MessageModel::data(const QModelIndex &index, int role) const
             case ReceivedDateTime: return rec->received_datetime;
             case Message:          return rec->message;
             case TypeInt:          return rec->type;
+            case HTML:             return rec->received_datetime.toString() + "<br>"  + (rec->label.isEmpty() ? rec->from_address : rec->label)  + "<br>" + rec->message;
             case Type:
                 switch(rec->type)
                 {
@@ -458,6 +461,19 @@ QVariant MessageModel::data(const QModelIndex &index, int role) const
     case LabelRole:        return rec->label;
     case MessageRole:      return rec->message;
     case ShortMessageRole: return rec->message; // TODO: Short message
+    case HTMLRole:         return rec->received_datetime.toString() + "<br>"  + (rec->label.isEmpty() ? rec->from_address : rec->label)  + "<br>" + rec->message;
+    case Ambiguous:
+        int it;
+
+        for (it = 0; it<ambiguous.length(); it++) {
+            if(ambiguous[it] == rec->from_address)
+                return false;
+        }
+        QString address = rec->from_address;
+        ambiguous.append(address);
+
+        return "true";
+        break;
     }
 
     return QVariant();
@@ -507,6 +523,11 @@ bool MessageModel::removeRows(int row, int count, const QModelIndex & parent)
     endRemoveRows();
 
     return true;
+}
+
+void MessageModel::resetFilter()
+{
+    ambiguous.clear();
 }
 
 void MessageModel::newMessage(const SecMsgStored &smsg)

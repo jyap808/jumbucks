@@ -55,7 +55,9 @@ private slots:
     void on_copyToAddressButton_clicked();
     void on_deleteButton_clicked();
     void on_backButton_clicked();
+    void messageTextChanged();
     void selectionChanged();
+    void itemSelectionChanged();
     /** Spawn contextual menu (right mouse menu) for address book entry */
     void contextualMenu(const QPoint &point);
 

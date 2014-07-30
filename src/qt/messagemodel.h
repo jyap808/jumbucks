@@ -99,6 +99,7 @@ public:
         Message = 6, /**< Plaintext */
         TypeInt = 7, /**< Plaintext */
         Key = 8, /**< chKey */
+        HTML = 9, /**< HTML Formatted Data */
     };
 
     /** Roles to get specific information from a message row.
@@ -122,11 +123,17 @@ public:
         /** Full Message */
         MessageRole,
         /** Short Message */
-        ShortMessageRole
+        ShortMessageRole,
+        /** HTML Formatted */
+        HTMLRole,
+        /** Ambiguous bool */
+        Ambiguous
     };
 
     static const QString Sent; /**< Specifies sent message */
     static const QString Received; /**< Specifies sent message */
+
+    //QList<QString> ambiguous; /**< Specifies Ambiguous addresses */
 
     /** @name Methods overridden from QAbstractTableModel
         @{*/
@@ -146,6 +153,8 @@ public:
 
     WalletModel *getWalletModel();
     OptionsModel *getOptionsModel();
+
+    void resetFilter();
 
     bool getAddressOrPubkey( QString &Address,  QString &Pubkey) const;
 

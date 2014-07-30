@@ -61,6 +61,7 @@
 #include <QStyle>
 #include <QStyleFactory>
 #include <QTextStream>
+#include <QTextDocument>
 
 #include <iostream>
 
@@ -797,7 +798,9 @@ void BitcoinGUI::incomingMessage(const QModelIndex & parent, int start, int end)
         QString from_address  = mm->index(start, MessageModel::FromAddress,      parent).data().toString();
         QString to_address    = mm->index(start, MessageModel::ToAddress,        parent).data().toString();
         QString message       = mm->index(start, MessageModel::Message,          parent).data().toString();
-
+        QTextDocument html;
+        html.setHtml(message);
+        QString messageText(html.toPlainText());
         notificator->notify(Notificator::Information,
                             tr("Incoming Message"),
                             tr("Date: %1\n"
@@ -807,7 +810,7 @@ void BitcoinGUI::incomingMessage(const QModelIndex & parent, int start, int end)
                               .arg(sent_datetime)
                               .arg(from_address)
                               .arg(to_address)
-                              .arg(message));
+                              .arg(messageText));
     };
 }
 
