@@ -67,7 +67,6 @@ QSize MessageViewDelegate::sizeHint ( const QStyleOptionViewItem & option, const
     return QSize(doc.idealWidth(), doc.size().height() + 20);
 }
 
-#include "messagepage.moc"
 
 MessagePage::MessagePage(QWidget *parent) :
     QWidget(parent),
@@ -106,8 +105,6 @@ MessagePage::MessagePage(QWidget *parent) :
     ui->listConversation->setIconSize(QSize(DECORATION_SIZE, DECORATION_SIZE));
     ui->listConversation->setMinimumHeight(NUM_ITEMS * (DECORATION_SIZE + 2));
     ui->listConversation->setAttribute(Qt::WA_MacShowFocusRect, false);
-
-    //connect(ui->listConversation, SIGNAL(clicked(QModelIndex)), this, SLOT(handleMessageClicked(QModelIndex)));
 }
 
 MessagePage::~MessagePage()
@@ -293,6 +290,7 @@ void MessagePage::selectionChanged()
         proxyModel->setFilterRole(MessageModel::FromAddressRole);
         proxyModel->setFilterFixedString(filter);
         ui->messageDetails->show();
+        ui->listConversation->setCurrentIndex(proxyModel->index(0, 0, QModelIndex()));
     }
     else
     {
