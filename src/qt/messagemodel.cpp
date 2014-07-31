@@ -104,7 +104,7 @@ public:
                 uint32_t nPayload = smsgStored.vchMessage.size() - SMSG_HDR_LEN;
                 if (SecureMsgDecrypt(false, smsgStored.sAddrOutbox, &smsgStored.vchMessage[0], &smsgStored.vchMessage[SMSG_HDR_LEN], nPayload, msg) == 0)
                 {
-                    label = parent->getWalletModel()->getAddressTableModel()->labelForAddress(QString::fromStdString(msg.sFromAddress));
+                    label = parent->getWalletModel()->getAddressTableModel()->labelForAddress(QString::fromStdString(smsgStored.sAddrTo));
 
                     sent_datetime    .setTime_t(msg.timestamp);
                     received_datetime.setTime_t(smsgStored.timeReceived);
@@ -173,7 +173,7 @@ public:
         uint32_t nPayload = smsgStored.vchMessage.size() - SMSG_HDR_LEN;
         if (SecureMsgDecrypt(false, smsgStored.sAddrOutbox, &smsgStored.vchMessage[0], &smsgStored.vchMessage[SMSG_HDR_LEN], nPayload, msg) == 0)
         {
-            label = parent->getWalletModel()->getAddressTableModel()->labelForAddress(QString::fromStdString(msg.sFromAddress));
+            label = parent->getWalletModel()->getAddressTableModel()->labelForAddress(QString::fromStdString(smsgStored.sAddrTo));
 
             sent_datetime    .setTime_t(msg.timestamp);
             received_datetime.setTime_t(smsgStored.timeReceived);
@@ -452,24 +452,25 @@ QVariant MessageModel::data(const QModelIndex &index, int role) const
         }
         break;
 
-    case KeyRole:          return QVariant::fromValue(rec->chKey);
-    case TypeRole:         return rec->type;
-    case SentDateRole:     return rec->sent_datetime;
-    case ReceivedDateRole: return rec->received_datetime;
-    case FromAddressRole:  return rec->from_address;
-    case ToAddressRole:    return rec->to_address;
-    case LabelRole:        return rec->label;
-    case MessageRole:      return rec->message;
-    case ShortMessageRole: return rec->message; // TODO: Short message
-    case HTMLRole:         return rec->received_datetime.toString() + "<br>"  + (rec->label.isEmpty() ? rec->from_address : rec->label)  + "<br>" + rec->message;
+    case KeyRole:           return QVariant::fromValue(rec->chKey);
+    case TypeRole:          return rec->type;
+    case SentDateRole:      return rec->sent_datetime;
+    case ReceivedDateRole:  return rec->received_datetime;
+    case FromAddressRole:   return rec->from_address;
+    case ToAddressRole:     return rec->to_address;
+    case FilterAddressRole: return (rec->type == MessageTableEntry::Sent ? rec->to_address + rec->from_address : rec->from_address + rec->to_address);
+    case LabelRole:         return rec->label;
+    case MessageRole:       return rec->message;
+    case ShortMessageRole:  return rec->message; // TODO: Short message
+    case HTMLRole:          return rec->received_datetime.toString() + "<br>"  + (rec->label.isEmpty() ? rec->from_address : rec->label)  + "<br>" + rec->message;
     case Ambiguous:
         int it;
 
         for (it = 0; it<ambiguous.length(); it++) {
-            if(ambiguous[it] == rec->from_address)
+            if(ambiguous[it] == (rec->type == MessageTableEntry::Sent ? rec->to_address + rec->from_address : rec->from_address + rec->to_address))
                 return false;
         }
-        QString address = rec->from_address;
+        QString address = (rec->type == MessageTableEntry::Sent ? rec->to_address + rec->from_address : rec->from_address + rec->to_address);
         ambiguous.append(address);
 
         return "true";

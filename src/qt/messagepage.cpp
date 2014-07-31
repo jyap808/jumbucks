@@ -123,7 +123,7 @@ void MessagePage::setModel(MessageModel *model)
     proxyModel->setDynamicSortFilter(true);
     proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
     proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
-
+    proxyModel->sort(MessageModel::ReceivedDateTime);
     proxyModel->setFilterRole(MessageModel::Ambiguous);
     proxyModel->setFilterFixedString("true");
 
@@ -275,19 +275,33 @@ void MessagePage::selectionChanged()
         QModelIndexList labelColumn       = table->selectionModel()->selectedRows(MessageModel::Label);
         QModelIndexList addressFromColumn = table->selectionModel()->selectedRows(MessageModel::FromAddress);
         QModelIndexList addressToColumn   = table->selectionModel()->selectedRows(MessageModel::ToAddress);
+        QModelIndexList typeColumn        = table->selectionModel()->selectedRows(MessageModel::TypeInt);
+
+        int type;
+
+        foreach (QModelIndex index, typeColumn)
+            type = table->model()->data(index).toInt();
 
         foreach (QModelIndex index, labelColumn)
             ui->contactLabel->setText(table->model()->data(index).toString());
 
         foreach (QModelIndex index, addressFromColumn)
-            replyToAddress = table->model()->data(index).toString();
+            if(type == MessageTableEntry::Sent)
+                replyFromAddress = table->model()->data(index).toString();
+            else
+                replyToAddress = table->model()->data(index).toString();
 
         foreach (QModelIndex index, addressToColumn)
-            replyFromAddress = table->model()->data(index).toString();
+            if(type == MessageTableEntry::Sent)
+                replyToAddress = table->model()->data(index).toString();
+            else
+                replyFromAddress = table->model()->data(index).toString();
+
+        QString filter = replyToAddress;
 
         proxyModel->sort(MessageModel::ReceivedDateTime);
-        QString filter = table->selectionModel()->model()->data(table->selectionModel()->selectedRows(MessageModel::FromAddress)[0], Qt::DisplayRole).toString();
-        proxyModel->setFilterRole(MessageModel::FromAddressRole);
+        //QString filter = replyFromAddress;
+        proxyModel->setFilterRole(MessageModel::FilterAddressRole);
         proxyModel->setFilterFixedString(filter);
         ui->messageDetails->show();
         ui->listConversation->setCurrentIndex(proxyModel->index(0, 0, QModelIndex()));

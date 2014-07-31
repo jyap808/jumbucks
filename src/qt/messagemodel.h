@@ -118,6 +118,8 @@ public:
         FromAddressRole,
         /** To Address of message */
         ToAddressRole,
+        /** Filter address related to message */
+        FilterAddressRole,
         /** Label of address related to message */
         LabelRole,
         /** Full Message */
