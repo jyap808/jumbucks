@@ -1,7 +1,7 @@
 src/*.exe
-src/sdcoin
-src/sdcoind
-src/test_sdcoin
+src/shadowcoin
+src/shadowcoind
+src/test_shadowcoin
 src/build.h
 .*.swp
 *.*~*
@@ -14,7 +14,7 @@ src/build.h
 #compilation and Qt preprocessor part
 *.qm
 Makefile
-sdcoin-qt
+shadowcoin-qt
 #resources cpp
 qrc_*.cpp
 #qt creator

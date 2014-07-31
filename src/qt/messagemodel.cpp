@@ -64,6 +64,8 @@ public:
                 return;
 
             unsigned char chKey[18];
+            std::vector<unsigned char> vchKey;
+            vchKey.resize(18);
 
             SecMsgStored smsgStored;
             MessageData msg;
@@ -82,8 +84,10 @@ public:
 
                     sent_datetime    .setTime_t(msg.timestamp);
                     received_datetime.setTime_t(smsgStored.timeReceived);
+                    
+                    memcpy(&vchKey[0], chKey, 18);
 
-                    addMessageEntry(MessageTableEntry(chKey,
+                    addMessageEntry(MessageTableEntry(vchKey,
                                                       MessageTableEntry::Received,
                                                       label,
                                                       QString::fromStdString(smsgStored.sAddrTo),
@@ -108,8 +112,10 @@ public:
 
                     sent_datetime    .setTime_t(msg.timestamp);
                     received_datetime.setTime_t(smsgStored.timeReceived);
+                    
+                    memcpy(&vchKey[0], chKey, 18);
 
-                    addMessageEntry(MessageTableEntry(chKey,
+                    addMessageEntry(MessageTableEntry(vchKey,
                                                       MessageTableEntry::Sent,
                                                       label,
                                                       QString::fromStdString(smsgStored.sAddrTo),
@@ -144,12 +150,14 @@ public:
 
             std::string sPrefix("im");
             SecureMessage* psmsg = (SecureMessage*) &smsgStored.vchMessage[0];
-            unsigned char chKey[18];
-            memcpy(&chKey[0],  sPrefix.data(),  2);
-            memcpy(&chKey[2],  &psmsg->timestamp, 8);
-            memcpy(&chKey[10], &smsgStored.vchMessage[SMSG_HDR_LEN], 8);    // sample
+            
+            std::vector<unsigned char> vchKey;
+            vchKey.resize(18);
+            memcpy(&vchKey[0],  sPrefix.data(),  2);
+            memcpy(&vchKey[2],  &psmsg->timestamp, 8);
+            memcpy(&vchKey[10], &smsgStored.vchMessage[SMSG_HDR_LEN], 8);    // sample
 
-            addMessageEntry(MessageTableEntry(chKey,
+            addMessageEntry(MessageTableEntry(vchKey,
                                               MessageTableEntry::Received,
                                               label,
                                               QString::fromStdString(smsgStored.sAddrTo),
@@ -180,12 +188,13 @@ public:
 
             std::string sPrefix("sm");
             SecureMessage* psmsg = (SecureMessage*) &smsgStored.vchMessage[0];
-            unsigned char chKey[18];
-            memcpy(&chKey[0],  sPrefix.data(),  2);
-            memcpy(&chKey[2],  &psmsg->timestamp, 8);
-            memcpy(&chKey[10], &smsgStored.vchMessage[SMSG_HDR_LEN], 8);    // sample
+            std::vector<unsigned char> vchKey;
+            vchKey.resize(18);
+            memcpy(&vchKey[0],  sPrefix.data(),  2);
+            memcpy(&vchKey[2],  &psmsg->timestamp, 8);
+            memcpy(&vchKey[10], &smsgStored.vchMessage[SMSG_HDR_LEN], 8);    // sample
 
-            addMessageEntry(MessageTableEntry(chKey,
+            addMessageEntry(MessageTableEntry(vchKey,
                                               MessageTableEntry::Sent,
                                               label,
                                               QString::fromStdString(smsgStored.sAddrTo),

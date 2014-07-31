@@ -35,7 +35,8 @@ struct MessageTableEntry
         Sent,
         Received
     };
-
+    
+    std::vector<unsigned char> chKey;
     Type type;
     QString label;
     QString to_address;
@@ -43,10 +44,9 @@ struct MessageTableEntry
     QDateTime sent_datetime;
     QDateTime received_datetime;
     QString message;
-    std::vector<unsigned char> chKey;
 
     MessageTableEntry() {}
-    MessageTableEntry(unsigned char* pKey,
+    MessageTableEntry(std::vector<unsigned char> &chKey,
                       Type type,
                       const QString &label,
                       const QString &to_address,
@@ -54,7 +54,7 @@ struct MessageTableEntry
                       const QDateTime &sent_datetime,
                       const QDateTime &received_datetime,
                       const QString &message):
-        chKey(),
+        chKey(chKey),
         type(type),
         label(label),
         to_address(to_address),
@@ -63,8 +63,6 @@ struct MessageTableEntry
         received_datetime(received_datetime),
         message(message)
     {
-        chKey.resize(18);
-        memcpy(&chKey[0], pKey, 18);
     }
 };
 
