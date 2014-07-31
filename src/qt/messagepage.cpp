@@ -170,9 +170,9 @@ void MessagePage::on_sendButton_clicked()
         return;
 
     std::string sError;
-    std::string sendTo  = replyFromAddress.toStdString();
+    std::string sendTo  = replyToAddress.toStdString();
     std::string message = ui->messageEdit->toHtml().toStdString();
-    std::string addFrom = replyToAddress.toStdString();
+    std::string addFrom = replyFromAddress.toStdString();
 
     if (SecureMsgSend(addFrom, sendTo, message, sError) != 0)
     {
