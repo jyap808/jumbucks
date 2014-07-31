@@ -75,12 +75,13 @@ MessagePage::MessagePage(QWidget *parent) :
     msgdelegate(new MessageViewDelegate())
 {
     ui->setupUi(this);
-
+    proxyModel = NULL;
+    
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     ui->deleteButton->setIcon(QIcon());
 #endif
     // Context menu actions
-    replyAction           = new QAction(ui->sendButton->text(),           this);
+    replyAction           = new QAction(ui->sendButton->text(),            this);
     copyFromAddressAction = new QAction(ui->copyFromAddressButton->text(), this);
     copyToAddressAction   = new QAction(ui->copyToAddressButton->text(),   this);
     deleteAction          = new QAction(ui->deleteButton->text(),          this);
@@ -109,6 +110,8 @@ MessagePage::MessagePage(QWidget *parent) :
 
 MessagePage::~MessagePage()
 {
+    if (proxyModel)
+        delete proxyModel;
     delete ui;
 }
 
@@ -117,7 +120,9 @@ void MessagePage::setModel(MessageModel *model)
     this->model = model;
     if(!model)
         return;
-
+    
+    if (proxyModel)
+        delete proxyModel;
     proxyModel = new QSortFilterProxyModel(this);
     proxyModel->setSourceModel(model);
     proxyModel->setDynamicSortFilter(true);
@@ -165,9 +170,9 @@ void MessagePage::on_sendButton_clicked()
         return;
 
     std::string sError;
-    std::string sendTo  = replyToAddress.toStdString();
+    std::string sendTo  = replyFromAddress.toStdString();
     std::string message = ui->messageEdit->toHtml().toStdString();
-    std::string addFrom = replyFromAddress.toStdString();
+    std::string addFrom = replyToAddress.toStdString();
 
     if (SecureMsgSend(addFrom, sendTo, message, sError) != 0)
     {
@@ -225,6 +230,7 @@ void MessagePage::on_deleteButton_clicked()
 
 void MessagePage::on_backButton_clicked()
 {
+    proxyModel->setFilterRole(false);
     proxyModel->setFilterFixedString("");
     model->resetFilter();
     proxyModel->setFilterRole(MessageModel::Ambiguous);

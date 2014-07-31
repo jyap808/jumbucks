@@ -297,7 +297,7 @@ private:
 MessageModel::MessageModel(CWallet *wallet, WalletModel *walletModel, QObject *parent) :
     QAbstractTableModel(parent), wallet(wallet), walletModel(walletModel), optionsModel(0), priv(0)
 {
-    columns << tr("Type") << tr("Sent Date Time") << tr("Recieved Date Time") << tr("Label") << tr("To Address") << tr("From Address") << tr("Message");
+    columns << tr("Type") << tr("Sent Date Time") << tr("Received Date Time") << tr("Label") << tr("To Address") << tr("From Address") << tr("Message");
 
     optionsModel = walletModel->getOptionsModel();
 
