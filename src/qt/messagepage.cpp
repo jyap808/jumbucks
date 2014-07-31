@@ -280,12 +280,12 @@ void MessagePage::selectionChanged()
         QModelIndexList labelColumn       = table->selectionModel()->selectedRows(MessageModel::Label);
         QModelIndexList addressFromColumn = table->selectionModel()->selectedRows(MessageModel::FromAddress);
         QModelIndexList addressToColumn   = table->selectionModel()->selectedRows(MessageModel::ToAddress);
-        QModelIndexList typeColumn        = table->selectionModel()->selectedRows(MessageModel::TypeInt);
+        QModelIndexList typeColumn        = table->selectionModel()->selectedRows(MessageModel::Type);
 
         int type;
 
         foreach (QModelIndex index, typeColumn)
-            type = table->model()->data(index).toInt();
+            type = (table->model()->data(index).toString() == MessageModel::Sent ? MessageTableEntry::Sent : MessageTableEntry::Received);
 
         foreach (QModelIndex index, labelColumn)
             ui->contactLabel->setText(table->model()->data(index).toString());
@@ -302,9 +302,10 @@ void MessagePage::selectionChanged()
             else
                 replyFromAddress = table->model()->data(index).toString();
 
-        QString filter = (type == MessageTableEntry::Sent ? replyToAddress + replyFromAddress : replyToAddress + replyFromAddress);;
-        //QString filter = (type == MessageTableEntry::Sent ? replyFromAddress + replyToAddress : replyToAddress + replyFromAddress);;
+        QString filter = (type == MessageTableEntry::Sent ? replyToAddress + replyFromAddress : replyToAddress + replyFromAddress);
 
+        proxyModel->setFilterRole(false);
+        proxyModel->setFilterFixedString("");
         proxyModel->sort(MessageModel::ReceivedDateTime);
         proxyModel->setFilterRole(MessageModel::FilterAddressRole);
         proxyModel->setFilterFixedString(filter);
