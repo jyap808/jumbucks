@@ -210,8 +210,18 @@ public:
     {
         // -- wallet is unlocked, can get at the private keys now
         refreshMessageTable();
+        
         parent->reset(); // reload table view
-
+        
+        if (parent->proxyModel)
+        {
+            parent->proxyModel->setFilterRole(false);
+            parent->proxyModel->setFilterFixedString("");
+            parent->resetFilter();
+            parent->proxyModel->setFilterRole(MessageModel::Ambiguous);
+            parent->proxyModel->setFilterFixedString("true");
+        }
+        
         //invalidateFilter()
     }
     
@@ -298,7 +308,9 @@ MessageModel::MessageModel(CWallet *wallet, WalletModel *walletModel, QObject *p
     QAbstractTableModel(parent), wallet(wallet), walletModel(walletModel), optionsModel(0), priv(0)
 {
     columns << tr("Type") << tr("Sent Date Time") << tr("Received Date Time") << tr("Label") << tr("To Address") << tr("From Address") << tr("Message");
-
+    
+    proxyModel = NULL;
+    
     optionsModel = walletModel->getOptionsModel();
 
     priv = new MessageTablePriv(this);
@@ -309,6 +321,9 @@ MessageModel::MessageModel(CWallet *wallet, WalletModel *walletModel, QObject *p
 
 MessageModel::~MessageModel()
 {
+    if (proxyModel)
+        delete proxyModel;
+    
     delete priv;
     unsubscribeFromCoreSignals();
 }

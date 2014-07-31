@@ -38,7 +38,7 @@ public slots:
 private:
     Ui::MessagePage *ui;
     MessageModel *model;
-    QSortFilterProxyModel *proxyModel;
+    
     QMenu *contextMenu;
     QAction *replyAction;
     QAction *copyFromAddressAction;
