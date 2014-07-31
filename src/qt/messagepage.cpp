@@ -302,10 +302,10 @@ void MessagePage::selectionChanged()
             else
                 replyFromAddress = table->model()->data(index).toString();
 
-        QString filter = replyToAddress;
+        QString filter = (type == MessageTableEntry::Sent ? replyToAddress + replyFromAddress : replyToAddress + replyFromAddress);;
+        //QString filter = (type == MessageTableEntry::Sent ? replyFromAddress + replyToAddress : replyToAddress + replyFromAddress);;
 
         proxyModel->sort(MessageModel::ReceivedDateTime);
-        //QString filter = replyFromAddress;
         proxyModel->setFilterRole(MessageModel::FilterAddressRole);
         proxyModel->setFilterFixedString(filter);
         ui->messageDetails->show();

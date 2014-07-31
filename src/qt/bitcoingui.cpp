@@ -867,8 +867,9 @@ void BitcoinGUI::gotoMessagePage()
     messageAction->setChecked(true);
     centralWidget->setCurrentWidget(messagePage);
 
-    exportAction->setEnabled(false);
+    exportAction->setEnabled(true);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
+    connect(exportAction, SIGNAL(triggered()), messagePage, SLOT(exportClicked()));
 }
 
 void BitcoinGUI::gotoSignMessageTab(QString addr)
