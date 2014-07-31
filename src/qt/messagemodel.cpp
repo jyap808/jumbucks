@@ -476,7 +476,7 @@ QVariant MessageModel::data(const QModelIndex &index, int role) const
         int it;
 
         for (it = 0; it<ambiguous.length(); it++) {
-            if(ambiguous[it] && ambiguous[it] == (rec->type == MessageTableEntry::Sent ? rec->to_address + rec->from_address : rec->from_address + rec->to_address))
+            if(ambiguous[it] == (rec->type == MessageTableEntry::Sent ? rec->to_address + rec->from_address : rec->from_address + rec->to_address))
                 return false;
         }
         QString address = (rec->type == MessageTableEntry::Sent ? rec->to_address + rec->from_address : rec->from_address + rec->to_address);
