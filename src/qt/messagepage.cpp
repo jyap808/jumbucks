@@ -302,11 +302,11 @@ void MessagePage::selectionChanged()
 
         QString filter = (type == MessageTableEntry::Sent ? replyToAddress + replyFromAddress : replyToAddress + replyFromAddress);
 
-        proxyModel->setFilterRole(false);
-        proxyModel->setFilterFixedString("");
-        proxyModel->sort(MessageModel::ReceivedDateTime);
-        proxyModel->setFilterRole(MessageModel::FilterAddressRole);
-        proxyModel->setFilterFixedString(filter);
+        model->proxyModel->setFilterRole(false);
+        model->proxyModel->setFilterFixedString("");
+        model->proxyModel->sort(MessageModel::ReceivedDateTime);
+        model->proxyModel->setFilterRole(MessageModel::FilterAddressRole);
+        model->proxyModel->setFilterFixedString(filter);
         ui->messageDetails->show();
         ui->listConversation->setCurrentIndex(model->proxyModel->index(0, 0, QModelIndex()));
     }
