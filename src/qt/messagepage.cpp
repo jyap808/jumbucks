@@ -225,14 +225,13 @@ void MessagePage::on_deleteButton_clicked()
 
 void MessagePage::on_backButton_clicked()
 {
-    model->resetFilter();
-
     proxyModel->setFilterFixedString("");
+    model->resetFilter();
     proxyModel->setFilterRole(MessageModel::Ambiguous);
     proxyModel->setFilterFixedString("true");
 
-    ui->listConversation->clearSelection();
     ui->tableView->clearSelection();
+    ui->listConversation->clearSelection();
     itemSelectionChanged();
     selectionChanged();
 
