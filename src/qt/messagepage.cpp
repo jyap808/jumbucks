@@ -75,7 +75,7 @@ MessagePage::MessagePage(QWidget *parent) :
     msgdelegate(new MessageViewDelegate())
 {
     ui->setupUi(this);
-    proxyModel = NULL;
+   
     
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     ui->deleteButton->setIcon(QIcon());
@@ -110,8 +110,6 @@ MessagePage::MessagePage(QWidget *parent) :
 
 MessagePage::~MessagePage()
 {
-    if (proxyModel)
-        delete proxyModel;
     delete ui;
 }
 
@@ -121,21 +119,21 @@ void MessagePage::setModel(MessageModel *model)
     if(!model)
         return;
     
-    if (proxyModel)
-        delete proxyModel;
-    proxyModel = new QSortFilterProxyModel(this);
-    proxyModel->setSourceModel(model);
-    proxyModel->setDynamicSortFilter(true);
-    proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
-    proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
-    proxyModel->sort(MessageModel::ReceivedDateTime);
-    proxyModel->setFilterRole(MessageModel::Ambiguous);
-    proxyModel->setFilterFixedString("true");
+    if (model->proxyModel)
+        delete model->proxyModel;
+    model->proxyModel = new QSortFilterProxyModel(this);
+    model->proxyModel->setSourceModel(model);
+    model->proxyModel->setDynamicSortFilter(true);
+    model->proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
+    model->proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    model->proxyModel->sort(MessageModel::ReceivedDateTime);
+    model->proxyModel->setFilterRole(MessageModel::Ambiguous);
+    model->proxyModel->setFilterFixedString("true");
 
-    ui->tableView->setModel(proxyModel);
+    ui->tableView->setModel(model->proxyModel);
     ui->tableView->sortByColumn(MessageModel::ReceivedDateTime, Qt::DescendingOrder);
 
-    ui->listConversation->setModel(proxyModel);
+    ui->listConversation->setModel(model->proxyModel);
     ui->listConversation->setModelColumn(MessageModel::HTML);
 
     // Set column widths
@@ -230,11 +228,11 @@ void MessagePage::on_deleteButton_clicked()
 
 void MessagePage::on_backButton_clicked()
 {
-    proxyModel->setFilterRole(false);
-    proxyModel->setFilterFixedString("");
+    model->proxyModel->setFilterRole(false);
+    model->proxyModel->setFilterFixedString("");
     model->resetFilter();
-    proxyModel->setFilterRole(MessageModel::Ambiguous);
-    proxyModel->setFilterFixedString("true");
+    model->proxyModel->setFilterRole(MessageModel::Ambiguous);
+    model->proxyModel->setFilterFixedString("true");
 
     ui->tableView->clearSelection();
     ui->listConversation->clearSelection();
@@ -302,14 +300,14 @@ void MessagePage::selectionChanged()
             else
                 replyFromAddress = table->model()->data(index).toString();
 
-        QString filter = (type == MessageTableEntry::Sent ? replyToAddress + replyFromAddress : replyToAddress + replyFromAddress);;
+        //QString filter = (type == MessageTableEntry::Sent ? replyToAddress + replyFromAddress : replyToAddress + replyFromAddress);;
         //QString filter = (type == MessageTableEntry::Sent ? replyFromAddress + replyToAddress : replyToAddress + replyFromAddress);;
-
-        proxyModel->sort(MessageModel::ReceivedDateTime);
-        proxyModel->setFilterRole(MessageModel::FilterAddressRole);
-        proxyModel->setFilterFixedString(filter);
+        QString filter = replyToAddress + replyFromAddress;
+        model->proxyModel->sort(MessageModel::ReceivedDateTime);
+        model->proxyModel->setFilterRole(MessageModel::FilterAddressRole);
+        model->proxyModel->setFilterFixedString(filter);
         ui->messageDetails->show();
-        ui->listConversation->setCurrentIndex(proxyModel->index(0, 0, QModelIndex()));
+        ui->listConversation->setCurrentIndex(model->proxyModel->index(0, 0, QModelIndex()));
     }
     else
     {
@@ -396,7 +394,7 @@ void MessagePage::exportClicked()
     CSVModelWriter writer(filename);
 
     // name, column, role
-    writer.setModel(proxyModel);
+    writer.setModel(model->proxyModel);
     writer.addColumn("Type",             MessageModel::Type,             Qt::DisplayRole);
     writer.addColumn("Label",            MessageModel::Label,            Qt::DisplayRole);
     writer.addColumn("FromAddress",      MessageModel::FromAddress,      Qt::DisplayRole);

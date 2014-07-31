@@ -7,6 +7,7 @@
 #include "allocators.h" /* for SecureString */
 #include "smessage.h"
 #include <map>
+#include <QSortFilterProxyModel>
 #include <QAbstractTableModel>
 #include <QStringList>
 #include <QDateTime>
@@ -161,7 +162,9 @@ public:
     // Send messages to a list of recipients
     StatusCode sendMessages(const QList<SendMessagesRecipient> &recipients);
     StatusCode sendMessages(const QList<SendMessagesRecipient> &recipients, const QString &addressFrom);
-
+    
+    QSortFilterProxyModel *proxyModel;
+    
 private:
     CWallet *wallet;
     WalletModel *walletModel;
