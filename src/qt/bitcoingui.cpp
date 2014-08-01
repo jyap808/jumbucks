@@ -946,7 +946,7 @@ void BitcoinGUI::mainToolbarOrientation(Qt::Orientation orientation)
         mainIcon->show();
 
         mainToolbar->setStyleSheet(VERTICAL_TOOBAR_STYLESHEET);
-        messageAction->setIconText(tr("Encrypted &Messagess"));
+        messageAction->setIconText(tr("Encrypted &Messages"));
     }
 }
 
