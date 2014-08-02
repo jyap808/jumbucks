@@ -16,6 +16,7 @@ class QSortFilterProxyModel;
 class QMenu;
 class QModelIndex;
 class MessageViewDelegate;
+class MRichTextEdit;
 QT_END_NAMESPACE
 
 
@@ -32,6 +33,9 @@ public:
 
     void setModel(MessageModel *model);
 
+private:
+    void setupTextActions();
+
 public slots:
     void exportClicked();
 
@@ -47,6 +51,7 @@ private:
     QString replyFromAddress;
     QString replyToAddress;
     MessageViewDelegate *msgdelegate;
+    MRichTextEdit *messageTextEdit;
 
 private slots:
     void on_sendButton_clicked();

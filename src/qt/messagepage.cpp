@@ -2,6 +2,7 @@
 #include "ui_messagepage.h"
 
 #include "sendmessagesdialog.h"
+#include "mrichtextedit.h"
 #include "messagemodel.h"
 #include "bitcoingui.h"
 #include "csvmodelwriter.h"
@@ -14,6 +15,9 @@
 #include <QStyledItemDelegate>
 #include <QAbstractTextDocumentLayout>
 #include <QPainter>
+
+#include <QToolBar>
+#include <QMenu>
 
 #define DECORATION_SIZE 64
 #define NUM_ITEMS 3
@@ -72,7 +76,8 @@ MessagePage::MessagePage(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MessagePage),
     model(0),
-    msgdelegate(new MessageViewDelegate())
+    msgdelegate(new MessageViewDelegate()),
+    messageTextEdit(new MRichTextEdit())
 {
     ui->setupUi(this);
    
@@ -145,7 +150,7 @@ void MessagePage::setModel(MessageModel *model)
     ui->tableView->horizontalHeader()->resizeSection(MessageModel::SentDateTime,     170);
     ui->tableView->horizontalHeader()->resizeSection(MessageModel::ReceivedDateTime, 170);
 
-    ui->messageEdit->setMaximumHeight(30);
+    //ui->messageEdit->setMinimumHeight(100);
 
     // Hidden columns
     ui->tableView->setColumnHidden(MessageModel::Message, true);
@@ -154,7 +159,7 @@ void MessagePage::setModel(MessageModel *model)
     connect(ui->tableView,                          SIGNAL(doubleClicked(QModelIndex)),                       this, SLOT(selectionChanged()));
     connect(ui->listConversation->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),  this, SLOT(itemSelectionChanged()));
     connect(ui->listConversation,                   SIGNAL(doubleClicked(QModelIndex)),                       this, SLOT(itemSelectionChanged()));
-    connect(ui->messageEdit,                        SIGNAL(textChanged()),                                    this, SLOT(messageTextChanged()));
+    //connect(ui->messageEdit,                        SIGNAL(textChanged()),                                    this, SLOT(messageTextChanged()));
 
     // Scroll to bottom
     connect(model, SIGNAL(rowsInserted(QModelIndex,int,int)), this, SLOT(incomingMessage()));
@@ -181,7 +186,7 @@ void MessagePage::on_sendButton_clicked()
         return;
     };
 
-    ui->messageEdit->setMaximumHeight(30);
+    //ui->messageEdit->setMaximumHeight(30);
     ui->messageEdit->clear();
     ui->listConversation->scrollToBottom();
 }
@@ -374,11 +379,12 @@ void MessagePage::incomingMessage()
 
 void MessagePage::messageTextChanged()
 {
+    /*
     if(ui->messageEdit->toPlainText().endsWith("\n"))
     {
         ui->messageEdit->setMaximumHeight(80);
         ui->messageEdit->resize(256, ui->messageEdit->document()->size().height() + 10);
-    }
+    }*/
 
 }
 
