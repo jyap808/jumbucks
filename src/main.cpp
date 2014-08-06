@@ -310,21 +310,28 @@ bool CTransaction::IsStandard() const
     }
 
     unsigned int nDataOut = 0;
+    unsigned int nTxnOut = 0;
+    
     txnouttype whichType;
     BOOST_FOREACH(const CTxOut& txout, vout) {
         if (!::IsStandard(txout.scriptPubKey, whichType))
             return false;
         if (whichType == TX_NULL_DATA)
+        {
             nDataOut++;
-        if (txout.nValue == 0)
-            return false;
+        } else
+        {
+            if (txout.nValue == 0)
+                return false;
+            nTxnOut++;
+        }
         if (fEnforceCanonical && !txout.scriptPubKey.HasCanonicalPushes()) {
             return false;
         }
     }
 
-    // only one OP_RETURN txout is permitted
-    if (nDataOut > 1) {
+    // only one OP_RETURN txout per txn out is permitted
+    if (nDataOut > nTxnOut) {
         return false;
     }
 

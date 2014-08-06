@@ -16,6 +16,7 @@
 
 #include "keystore.h"
 #include "bignum.h"
+#include "stealth.h"
 
 typedef std::vector<unsigned char> valtype;
 
@@ -57,7 +58,7 @@ public:
  *  * CScriptID: TX_SCRIPTHASH destination
  *  A CTxDestination is the internal data type encoded in a CBitcoinAddress
  */
-typedef boost::variant<CNoDestination, CKeyID, CScriptID> CTxDestination;
+typedef boost::variant<CNoDestination, CKeyID, CScriptID, CStealthAddress> CTxDestination;
 
 const char* GetTxnOutputType(txnouttype t);
 

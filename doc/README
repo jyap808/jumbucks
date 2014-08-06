@@ -1,4 +1,4 @@
-ShadowCoin 0.9.0.0
+ShadowCoin
 
 Copyright (c) 2014 ShadowCoin Developers
 Copyright (c) 2014 BlackCoin Developers
