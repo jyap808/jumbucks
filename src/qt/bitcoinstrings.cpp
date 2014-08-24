@@ -10,14 +10,14 @@ QT_TRANSLATE_NOOP("bitcoin-core", ""
 "%s, you must set a rpcpassword in the configuration file:\n"
 " %s\n"
 "It is recommended you use the following random password:\n"
-"rpcuser=shadowcoinrpc\n"
+"rpcuser=coinmarketscoinrpc\n"
 "rpcpassword=%s\n"
 "(you do not need to remember this password)\n"
 "The username and password MUST NOT be the same.\n"
 "If the file does not exist, create it with owner-readable-only file "
 "permissions.\n"
 "It is also recommended to set alertnotify so you are notified of problems;\n"
-"for example: alertnotify=echo %%s | mail -s \"ShadowCoin Alert\" admin@foo."
+"for example: alertnotify=echo %%s | mail -s \"CoinmarketsCoin Alert\" admin@foo."
 "com\n"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Error"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
@@ -30,16 +30,16 @@ QT_TRANSLATE_NOOP("bitcoin-core", ""
 "%s\n"
 "If the file does not exist, create it with owner-readable-only file "
 "permissions."),
-QT_TRANSLATE_NOOP("bitcoin-core", "ShadowCoin version"),
+QT_TRANSLATE_NOOP("bitcoin-core", "CoinmarketsCoin version"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Usage:"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Send command to -server or shadowcoind"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Send command to -server or coinmarketscoind"),
 QT_TRANSLATE_NOOP("bitcoin-core", "List commands"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Get help for a command"),
-QT_TRANSLATE_NOOP("bitcoin-core", "ShadowCoin"),
+QT_TRANSLATE_NOOP("bitcoin-core", "CoinmarketsCoin"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Options:"),
 QT_TRANSLATE_NOOP("bitcoin-core", "This help message"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Specify configuration file (default: shadowcoin.conf)"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Specify pid file (default: shadowcoind.pid)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Specify configuration file (default: coinmarketscoin.conf)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Specify pid file (default: coinmarketscoind.pid)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Specify data directory"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Specify wallet file (within data directory)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Set database cache size in megabytes (default: 25)"),
@@ -134,7 +134,7 @@ QT_TRANSLATE_NOOP("bitcoin-core", ""
 QT_TRANSLATE_NOOP("bitcoin-core", "Invalid amount for -mininput=<amount>: '%s'"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Wallet %s resides outside data directory %s."),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
-"Cannot obtain a lock on data directory %s.  ShadowCoin is probably already "
+"Cannot obtain a lock on data directory %s.  CoinmarketsCoin is probably already "
 "running."),
 QT_TRANSLATE_NOOP("bitcoin-core", "Verifying database integrity..."),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
@@ -161,8 +161,8 @@ QT_TRANSLATE_NOOP("bitcoin-core", "Error loading wallet.dat: Wallet corrupted"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Warning: error reading wallet.dat! All keys read correctly, but transaction "
 "data or address book entries might be missing or incorrect."),
-QT_TRANSLATE_NOOP("bitcoin-core", "Error loading wallet.dat: Wallet requires newer version of ShadowCoin"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Wallet needed to be rewritten: restart ShadowCoin to complete"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error loading wallet.dat: Wallet requires newer version of CoinmarketsCoin"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Wallet needed to be rewritten: restart CoinmarketsCoin to complete"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Error loading wallet.dat"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Cannot downgrade wallet"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Cannot initialize keypool"),
@@ -174,7 +174,7 @@ QT_TRANSLATE_NOOP("bitcoin-core", "Loading addresses..."),
 QT_TRANSLATE_NOOP("bitcoin-core", "Error: could not start node"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Done loading"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
-"Unable to bind to %s on this computer. ShadowCoin is probably already running."),
+"Unable to bind to %s on this computer. CoinmarketsCoin is probably already running."),
 QT_TRANSLATE_NOOP("bitcoin-core", "Unable to bind to %s on this computer (bind returned error %d, %s)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Error: Wallet locked, unable to create transaction  "),
 QT_TRANSLATE_NOOP("bitcoin-core", "Error: Wallet unlocked for staking only, unable to create transaction."),
@@ -191,7 +191,7 @@ QT_TRANSLATE_NOOP("bitcoin-core", "Invalid amount"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Insufficient funds"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Warning: Please check that your computer's date and time are correct! If "
-"your clock is wrong ShadowCoin will not work properly."),
+"your clock is wrong CoinmarketsCoin will not work properly."),
 QT_TRANSLATE_NOOP("bitcoin-core", "Warning: This version is obsolete, upgrade required!"),
 QT_TRANSLATE_NOOP("bitcoin-core", "WARNING: syncronized checkpoint violation detected, but skipped!"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Warning: Disk space is low!"),

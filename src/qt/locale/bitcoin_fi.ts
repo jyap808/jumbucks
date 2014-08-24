@@ -3,20 +3,20 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About ShadowCoin</source>
-        <translation>Tietoa ShadowCoinista</translation>
+        <source>About CoinmarketsCoin</source>
+        <translation>Tietoa CoinmarketsCoinista</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;ShadowCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;ShadowCoin&lt;/b&gt; versio</translation>
+        <source>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; versio</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The ShadowCoin developers</source>
+Copyright © 2014 The CoinmarketsCoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -65,8 +65,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your ShadowCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Nämä ovat ShadowCoin-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
+        <source>These are your CoinmarketsCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Nämä ovat CoinmarketsCoin-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -80,8 +80,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a ShadowCoin address</source>
-        <translation>Allekirjoita viesti osoittaaksesi ShadowCoin-osoitteesi omistajuus</translation>
+        <source>Sign a message to prove you own a CoinmarketsCoin address</source>
+        <translation>Allekirjoita viesti osoittaaksesi CoinmarketsCoin-osoitteesi omistajuus</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -95,8 +95,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified ShadowCoin address</source>
-        <translation>Vahvista viesti varmistaaksesi että kyseinen ShadowCoin-osoitteesi on allekirjoittanut sen</translation>
+        <source>Verify a message to ensure it was signed with a specified CoinmarketsCoin address</source>
+        <translation>Vahvista viesti varmistaaksesi että kyseinen CoinmarketsCoin-osoitteesi on allekirjoittanut sen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -263,8 +263,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-58"/>
-        <source>ShadowCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>ShadowCoin-ohjelma sulkee itsensä päättääkseen salauksen luonnin. Muista, että lompakon salaaminen ei täysin turvaa kolikoitasi haittaohjelmien aiheuttamien varkauksien uhalta.</translation>
+        <source>CoinmarketsCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>CoinmarketsCoin-ohjelma sulkee itsensä päättääkseen salauksen luonnin. Muista, että lompakon salaaminen ei täysin turvaa kolikoitasi haittaohjelmien aiheuttamien varkauksien uhalta.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -377,8 +377,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about ShadowCoin</source>
-        <translation>Näytä tietoja ShadowCoinista</translation>
+        <source>Show information about CoinmarketsCoin</source>
+        <translation>Näytä tietoja CoinmarketsCoinista</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -427,13 +427,13 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a ShadowCoin address</source>
-        <translation>Lähetä kolikkoja ShadowCoin osoitteeseen</translation>
+        <source>Send coins to a CoinmarketsCoin address</source>
+        <translation>Lähetä kolikkoja CoinmarketsCoin osoitteeseen</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for ShadowCoin</source>
-        <translation>Mukauta ShadowCoinin konfigurointiasetuksia</translation>
+        <source>Modify configuration options for CoinmarketsCoin</source>
+        <translation>Mukauta CoinmarketsCoinin konfigurointiasetuksia</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -472,8 +472,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="-200"/>
-        <source>ShadowCoin</source>
-        <translation>ShadowCoin</translation>
+        <source>CoinmarketsCoin</source>
+        <translation>CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -482,8 +482,8 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About ShadowCoin</source>
-        <translation>&amp;Tietoa ShadowCoinista</translation>
+        <source>&amp;About CoinmarketsCoin</source>
+        <translation>&amp;Tietoa CoinmarketsCoinista</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -539,13 +539,13 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>ShadowCoin client</source>
-        <translation>ShadowCoin-asiakas</translation>
+        <source>CoinmarketsCoin client</source>
+        <translation>CoinmarketsCoin-asiakas</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to ShadowCoin network</source>
-        <translation><numerusform>%n aktiivinen yhteys ShadowCoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä ShadowCoin-verkkoon</numerusform></translation>
+        <source>%n active connection(s) to CoinmarketsCoin network</source>
+        <translation><numerusform>%n aktiivinen yhteys CoinmarketsCoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä CoinmarketsCoin-verkkoon</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -658,8 +658,8 @@ Osoite: %4</translation>
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid ShadowCoin address or malformed URI parameters.</source>
-        <translation>URI-merkkijonoa ei voida jäsentää! Tämä voi johtua väärästä ShadowCoin-osoitteesta tai väärässä muodossa olevista URI-parametreistä.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid CoinmarketsCoin address or malformed URI parameters.</source>
+        <translation>URI-merkkijonoa ei voida jäsentää! Tämä voi johtua väärästä CoinmarketsCoin-osoitteesta tai väärässä muodossa olevista URI-parametreistä.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -718,8 +718,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. ShadowCoin can no longer continue safely and will quit.</source>
-        <translation>Vakava virhe kohdattu. ShadowCoin-ohjelma ei voi enää jatkaa turvallisesti ja sulkee itsensä.</translation>
+        <source>A fatal error occurred. CoinmarketsCoin can no longer continue safely and will quit.</source>
+        <translation>Vakava virhe kohdattu. CoinmarketsCoin-ohjelma ei voi enää jatkaa turvallisesti ja sulkee itsensä.</translation>
     </message>
 </context>
 <context>
@@ -1052,8 +1052,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid ShadowCoin address.</source>
-        <translation>Syöttämäsi osoite &quot;%1&quot; ei ole hyväksytty ShadowCoin-osoite.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid CoinmarketsCoin address.</source>
+        <translation>Syöttämäsi osoite &quot;%1&quot; ei ole hyväksytty CoinmarketsCoin-osoite.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1071,8 +1071,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>ShadowCoin-Qt</source>
-        <translation>ShadowCoin-Qt</translation>
+        <source>CoinmarketsCoin-Qt</source>
+        <translation>CoinmarketsCoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1144,13 +1144,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start ShadowCoin after logging in to the system.</source>
-        <translation>Käynnistä ShadowCoin-asiakasohjelma automaattisesti kun olet kirjautunut järjestelmään.</translation>
+        <source>Automatically start CoinmarketsCoin after logging in to the system.</source>
+        <translation>Käynnistä CoinmarketsCoin-asiakasohjelma automaattisesti kun olet kirjautunut järjestelmään.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start ShadowCoin on system login</source>
-        <translation>%Käynnistä ShadowCoin-asiakasohjelma kirjautuessasi</translation>
+        <source>&amp;Start CoinmarketsCoin on system login</source>
+        <translation>%Käynnistä CoinmarketsCoin-asiakasohjelma kirjautuessasi</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1169,8 +1169,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the ShadowCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa ShadowCoin-asiakkaalle automaattisesti portti reitittimestä. Tämä toimii vain, kun reitittimesi tukee UPnP:tä ja se on aktivoituna.</translation>
+        <source>Automatically open the CoinmarketsCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa CoinmarketsCoin-asiakkaalle automaattisesti portti reitittimestä. Tämä toimii vain, kun reitittimesi tukee UPnP:tä ja se on aktivoituna.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1179,8 +1179,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the ShadowCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Yhdistä ShadowCoin-verkkoon SOCKS-välityspalvelimen lävitse. (esim. yhdistettäessä Tor:n läpi).</translation>
+        <source>Connect to the CoinmarketsCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Yhdistä CoinmarketsCoin-verkkoon SOCKS-välityspalvelimen lävitse. (esim. yhdistettäessä Tor:n läpi).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1254,8 +1254,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting ShadowCoin.</source>
-        <translation>Käyttöliittymän kieli voidaan valita tästä. Tämä asetus tulee voimaan vasta ShadowCoin-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting CoinmarketsCoin.</source>
+        <translation>Käyttöliittymän kieli voidaan valita tästä. Tämä asetus tulee voimaan vasta CoinmarketsCoin-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1269,8 +1269,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show ShadowCoin addresses in the transaction list or not.</source>
-        <translation>Näytä tai piilota ShadowCoin-osoitteet rahansiirtolistassa.</translation>
+        <source>Whether to show CoinmarketsCoin addresses in the transaction list or not.</source>
+        <translation>Näytä tai piilota CoinmarketsCoin-osoitteet rahansiirtolistassa.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1316,8 +1316,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting ShadowCoin.</source>
-        <translation>Tämä asetus tulee voimaan vasta ShadowCoin-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+        <source>This setting will take effect after restarting CoinmarketsCoin.</source>
+        <translation>Tämä asetus tulee voimaan vasta CoinmarketsCoin-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1335,8 +1335,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ShadowCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti ShadowCoin-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CoinmarketsCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti CoinmarketsCoin-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
     </message>
     <message>
         <location line="-160"/>
@@ -1551,8 +1551,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the ShadowCoin-Qt help message to get a list with possible ShadowCoin command-line options.</source>
-        <translation>Näytä ShadowCoin-Qt:n avustusohje saadaksesi listan käytettävistä ShadowCoinin komentokehotteen määritteistä.</translation>
+        <source>Show the CoinmarketsCoin-Qt help message to get a list with possible CoinmarketsCoin command-line options.</source>
+        <translation>Näytä CoinmarketsCoin-Qt:n avustusohje saadaksesi listan käytettävistä CoinmarketsCoinin komentokehotteen määritteistä.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1571,13 +1571,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>ShadowCoin - Debug window</source>
-        <translation>ShadowCoin - Debug-ikkuna</translation>
+        <source>CoinmarketsCoin - Debug window</source>
+        <translation>CoinmarketsCoin - Debug-ikkuna</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>ShadowCoin Core</source>
-        <translation>ShadowCoinin ydin</translation>
+        <source>CoinmarketsCoin Core</source>
+        <translation>CoinmarketsCoinin ydin</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1586,8 +1586,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the ShadowCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Avaa ShadowCoin-asiakasohjelman debug-lokitiedosto nykyisestä hakemistostaan. Tämä voi kestää muutaman sekunnin avattaessa suuria lokitiedostoja.</translation>
+        <source>Open the CoinmarketsCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Avaa CoinmarketsCoin-asiakasohjelman debug-lokitiedosto nykyisestä hakemistostaan. Tämä voi kestää muutaman sekunnin avattaessa suuria lokitiedostoja.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1596,8 +1596,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the ShadowCoin RPC console.</source>
-        <translation>Tervetuloa ShadowCoinin RPC-konsoliin.</translation>
+        <source>Welcome to the CoinmarketsCoin RPC console.</source>
+        <translation>Tervetuloa CoinmarketsCoinin RPC-konsoliin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1670,8 +1670,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 SDC</source>
-        <translation>123.456 SDC {0.00 ?}</translation>
+        <source>0.00 JBS</source>
+        <translation>123.456 JBS {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1740,8 +1740,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 SDC</source>
-        <translation>123.456 SDC</translation>
+        <source>123.456 JBS</source>
+        <translation>123.456 JBS</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1755,8 +1755,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Syötä ShadowCoin-osoite (esim. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a CoinmarketsCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Syötä CoinmarketsCoin-osoite (esim. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1855,8 +1855,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid ShadowCoin address</source>
-        <translation>VAROITUS: Epäkelpo ShadowCoin-osoite</translation>
+        <source>WARNING: Invalid CoinmarketsCoin address</source>
+        <translation>VAROITUS: Epäkelpo CoinmarketsCoin-osoite</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1929,8 +1929,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Syötä ShadowCoin-osoite (esim. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a CoinmarketsCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Syötä CoinmarketsCoin-osoite (esim. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
 </context>
 <context>
@@ -1990,8 +1990,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this ShadowCoin address</source>
-        <translation>Allekirjoita viesti vahvistaaksesi, että omistat tämän ShadowCoin-osoitteen</translation>
+        <source>Sign the message to prove you own this CoinmarketsCoin address</source>
+        <translation>Allekirjoita viesti vahvistaaksesi, että omistat tämän CoinmarketsCoin-osoitteen</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2022,8 +2022,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified ShadowCoin address</source>
-        <translation>Vahvista viesti varmistaaksesi että se on allekirjoitettu kyseisellä ShadowCoin-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified CoinmarketsCoin address</source>
+        <translation>Vahvista viesti varmistaaksesi että se on allekirjoitettu kyseisellä CoinmarketsCoin-osoitteella</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2033,8 +2033,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Syötä ShadowCoin-osoite (esim. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a CoinmarketsCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Syötä CoinmarketsCoin-osoite (esim. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2043,8 +2043,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter ShadowCoin signature</source>
-        <translation>Syötä ShadowCoin-allekirjoitus</translation>
+        <source>Enter CoinmarketsCoin signature</source>
+        <translation>Syötä CoinmarketsCoin-allekirjoitus</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2614,8 +2614,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>ShadowCoin version</source>
-        <translation>ShadowCoinin versio</translation>
+        <source>CoinmarketsCoin version</source>
+        <translation>CoinmarketsCoinin versio</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2624,8 +2624,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or shadowcoind</source>
-        <translation>Syötä komento kohteeseen -server tai shadowcoind</translation>
+        <source>Send command to -server or coinmarketscoind</source>
+        <translation>Syötä komento kohteeseen -server tai coinmarketscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2644,13 +2644,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: shadowcoin.conf)</source>
-        <translation>Määritä asetustiedosto (oletus: shadowcoin.conf)</translation>
+        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
+        <translation>Määritä asetustiedosto (oletus: coinmarketscoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: shadowcoind.pid)</source>
-        <translation>Määritä prosessitiedosto (oletus: shadowcoind.pid)</translation>
+        <source>Specify pid file (default: coinmarketscoind.pid)</source>
+        <translation>Määritä prosessitiedosto (oletus: coinmarketscoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2799,8 +2799,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong ShadowCoin will not work properly.</source>
-        <translation>Varoitus: Tarkista, että tietokoneesi aika ja päivämäärä ovat oikeassa! Jos kellosi on väärässä, ShadowCoin ei toimi oikein.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CoinmarketsCoin will not work properly.</source>
+        <translation>Varoitus: Tarkista, että tietokoneesi aika ja päivämäärä ovat oikeassa! Jos kellosi on väärässä, CoinmarketsCoin ei toimi oikein.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -2989,23 +2989,23 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=shadowcoinrpc
+rpcuser=coinmarketscoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;CoinmarketsCoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, sinun on asetettava rpcpassword asetustiedostoon:
 %s
 On suositeltavaa, että käytät seuraavaa arvottua salasanaa:
-rpcuser=shadowcoinrpc
+rpcuser=coinmarketscoinrpc
 rpcpassword=%s
 (Sinun ei tarvitse muistaa tätä salasanaa)
 Käyttäjänimen ja salasanan EI TULE OLLA SAMOJA.
 Jos tiedostoa ei ole olemassa, luo se asettaen samalla omistajan lukuoikeudet.
-On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; esimerkiksi: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com
+On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; esimerkiksi: alertnotify=echo %%s | mail -s &quot;CoinmarketsCoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3130,13 +3130,13 @@ On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; e
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  ShadowCoin is probably already running.</source>
-        <translation>Ei voida saavuttaa lukkoa datatiedostossa %s. ShadowCoin-asiakasohjelma on ehkä jo käynnissä.</translation>
+        <source>Cannot obtain a lock on data directory %s.  CoinmarketsCoin is probably already running.</source>
+        <translation>Ei voida saavuttaa lukkoa datatiedostossa %s. CoinmarketsCoin-asiakasohjelma on ehkä jo käynnissä.</translation>
     </message>
     <message>
         <location line="-98"/>
-        <source>ShadowCoin</source>
-        <translation>ShadowCoin</translation>
+        <source>CoinmarketsCoin</source>
+        <translation>CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -3170,13 +3170,13 @@ On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; e
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of ShadowCoin</source>
-        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Lompakko tarvitsee uudemman version ShadowCoin-asiakasohjelmasta</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of CoinmarketsCoin</source>
+        <translation>Virhe ladattaessa wallet.dat-tiedostoa: Lompakko tarvitsee uudemman version CoinmarketsCoin-asiakasohjelmasta</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart ShadowCoin to complete</source>
-        <translation>Lompakko on kirjoitettava uudelleen: käynnistä ShadowCoin-asiakasohjelma uudelleen päättääksesi toiminnon</translation>
+        <source>Wallet needed to be rewritten: restart CoinmarketsCoin to complete</source>
+        <translation>Lompakko on kirjoitettava uudelleen: käynnistä CoinmarketsCoin-asiakasohjelma uudelleen päättääksesi toiminnon</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3245,8 +3245,8 @@ On myös suositeltavaa asettaa alertnotify jolloin olet tiedotettu ongelmista; e
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. ShadowCoin is probably already running.</source>
-        <translation>Ei voitu liittää %s tällä tietokoneella. ShadowCoin-asiakasohjelma on jo ehkä päällä.</translation>
+        <source>Unable to bind to %s on this computer. CoinmarketsCoin is probably already running.</source>
+        <translation>Ei voitu liittää %s tällä tietokoneella. CoinmarketsCoin-asiakasohjelma on jo ehkä päällä.</translation>
     </message>
     <message>
         <location line="-97"/>

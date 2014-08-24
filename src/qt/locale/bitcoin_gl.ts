@@ -3,20 +3,20 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About ShadowCoin</source>
-        <translation>Acerca de ShadowCoin</translation>
+        <source>About CoinmarketsCoin</source>
+        <translation>Acerca de CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;ShadowCoin&lt;/b&gt; version</source>
-        <translation>Versión &lt;b&gt;ShadowCoin&lt;/b&gt; .</translation>
+        <source>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; version</source>
+        <translation>Versión &lt;b&gt;CoinmarketsCoin&lt;/b&gt; .</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The ShadowCoin developers</source>
+Copyright © 2014 The CoinmarketsCoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -64,8 +64,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your ShadowCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Estas son as túas dIreccións de ShadowCoin para recibir os pagos. Pode que quieras asignarlle unha a cada remitente e así reconocer quen te está a pagar.</translation>
+        <source>These are your CoinmarketsCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Estas son as túas dIreccións de CoinmarketsCoin para recibir os pagos. Pode que quieras asignarlle unha a cada remitente e así reconocer quen te está a pagar.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -79,8 +79,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a ShadowCoin address</source>
-        <translation>Firma a mensaxe para probar que tes unha dirección ShadowCoin</translation>
+        <source>Sign a message to prove you own a CoinmarketsCoin address</source>
+        <translation>Firma a mensaxe para probar que tes unha dirección CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -94,8 +94,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified ShadowCoin address</source>
-        <translation>Verifica a mensaxe para asegurar que foi asinada por unha concreta dirección de ShadowCoin</translation>
+        <source>Verify a message to ensure it was signed with a specified CoinmarketsCoin address</source>
+        <translation>Verifica a mensaxe para asegurar que foi asinada por unha concreta dirección de CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -262,8 +262,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     </message>
     <message>
         <location line="-58"/>
-        <source>ShadowCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>ShadowCoin pecharase agora para rematar o proceso de encriptación. Recorda que encriptar a túa carteira non te protexe na totalidade do roubo das tuas moedas por infeccións de malware no teu ordenador.</translation>
+        <source>CoinmarketsCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>CoinmarketsCoin pecharase agora para rematar o proceso de encriptación. Recorda que encriptar a túa carteira non te protexe na totalidade do roubo das tuas moedas por infeccións de malware no teu ordenador.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -376,8 +376,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about ShadowCoin</source>
-        <translation>Amosa información sobre ShadowCoin</translation>
+        <source>Show information about CoinmarketsCoin</source>
+        <translation>Amosa información sobre CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -426,13 +426,13 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a ShadowCoin address</source>
-        <translation>Enviar moedas a unha dirección ShadowCoin</translation>
+        <source>Send coins to a CoinmarketsCoin address</source>
+        <translation>Enviar moedas a unha dirección CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for ShadowCoin</source>
-        <translation>Modificar opcións de configuración para ShadowCoin</translation>
+        <source>Modify configuration options for CoinmarketsCoin</source>
+        <translation>Modificar opcións de configuración para CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -471,8 +471,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     </message>
     <message>
         <location line="-200"/>
-        <source>ShadowCoin</source>
-        <translation>ShadowCoin</translation>
+        <source>CoinmarketsCoin</source>
+        <translation>CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -481,8 +481,8 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About ShadowCoin</source>
-        <translation>&amp;Sobre ShadowCoin</translation>
+        <source>&amp;About CoinmarketsCoin</source>
+        <translation>&amp;Sobre CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -538,13 +538,13 @@ Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no Op
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>ShadowCoin client</source>
-        <translation>Cliente ShadowCoin</translation>
+        <source>CoinmarketsCoin client</source>
+        <translation>Cliente CoinmarketsCoin</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to ShadowCoin network</source>
-        <translation><numerusform>%n conexión activa á red de ShadowCoin</numerusform><numerusform>%n conexións activas á red de ShadowCoin</numerusform></translation>
+        <source>%n active connection(s) to CoinmarketsCoin network</source>
+        <translation><numerusform>%n conexión activa á red de CoinmarketsCoin</numerusform><numerusform>%n conexións activas á red de CoinmarketsCoin</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -658,7 +658,7 @@ Dirección: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid ShadowCoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid CoinmarketsCoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -718,7 +718,7 @@ Dirección: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. ShadowCoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. CoinmarketsCoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1038,7 +1038,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid ShadowCoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid CoinmarketsCoin address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1057,8 +1057,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>ShadowCoin-Qt</source>
-        <translation>ShadowCoin-Qt</translation>
+        <source>CoinmarketsCoin-Qt</source>
+        <translation>CoinmarketsCoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1130,12 +1130,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start ShadowCoin after logging in to the system.</source>
+        <source>Automatically start CoinmarketsCoin after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start ShadowCoin on system login</source>
+        <source>&amp;Start CoinmarketsCoin on system login</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1155,7 +1155,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the ShadowCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the CoinmarketsCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1165,7 +1165,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the ShadowCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the CoinmarketsCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1240,7 +1240,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting ShadowCoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting CoinmarketsCoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1255,7 +1255,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show ShadowCoin addresses in the transaction list or not.</source>
+        <source>Whether to show CoinmarketsCoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1302,7 +1302,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting ShadowCoin.</source>
+        <source>This setting will take effect after restarting CoinmarketsCoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1321,7 +1321,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ShadowCoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CoinmarketsCoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1537,7 +1537,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the ShadowCoin-Qt help message to get a list with possible ShadowCoin command-line options.</source>
+        <source>Show the CoinmarketsCoin-Qt help message to get a list with possible CoinmarketsCoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1557,12 +1557,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>ShadowCoin - Debug window</source>
+        <source>CoinmarketsCoin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>ShadowCoin Core</source>
+        <source>CoinmarketsCoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1572,7 +1572,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the ShadowCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the CoinmarketsCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1582,7 +1582,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the ShadowCoin RPC console.</source>
+        <source>Welcome to the CoinmarketsCoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1656,7 +1656,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 SDC</source>
+        <source>0.00 JBS</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1726,7 +1726,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 SDC</source>
+        <source>123.456 JBS</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1741,7 +1741,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>Enter a CoinmarketsCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1841,7 +1841,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid ShadowCoin address</source>
+        <source>WARNING: Invalid CoinmarketsCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1915,7 +1915,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>Enter a CoinmarketsCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1976,7 +1976,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this ShadowCoin address</source>
+        <source>Sign the message to prove you own this CoinmarketsCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2008,7 +2008,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified ShadowCoin address</source>
+        <source>Verify the message to ensure it was signed with the specified CoinmarketsCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2019,7 +2019,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>Enter a CoinmarketsCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2029,7 +2029,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter ShadowCoin signature</source>
+        <source>Enter CoinmarketsCoin signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2600,7 +2600,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>ShadowCoin version</source>
+        <source>CoinmarketsCoin version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2610,7 +2610,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or shadowcoind</source>
+        <source>Send command to -server or coinmarketscoind</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2630,12 +2630,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: shadowcoin.conf)</source>
+        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: shadowcoind.pid)</source>
+        <source>Specify pid file (default: coinmarketscoind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2785,7 +2785,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong ShadowCoin will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CoinmarketsCoin will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2974,13 +2974,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=shadowcoinrpc
+rpcuser=coinmarketscoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;CoinmarketsCoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -3106,12 +3106,12 @@ for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  ShadowCoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s.  CoinmarketsCoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="-98"/>
-        <source>ShadowCoin</source>
+        <source>CoinmarketsCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3146,12 +3146,12 @@ for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of ShadowCoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of CoinmarketsCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart ShadowCoin to complete</source>
+        <source>Wallet needed to be rewritten: restart CoinmarketsCoin to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3221,7 +3221,7 @@ for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. ShadowCoin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. CoinmarketsCoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

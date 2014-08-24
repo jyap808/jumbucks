@@ -3,20 +3,20 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About ShadowCoin</source>
-        <translation>Om ShadowCoin</translation>
+        <source>About CoinmarketsCoin</source>
+        <translation>Om CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;ShadowCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;ShadowCoin&lt;/b&gt; versjon</translation>
+        <source>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; versjon</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The ShadowCoin developers</source>
+Copyright © 2014 The CoinmarketsCoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -64,7 +64,7 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your ShadowCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <source>These are your CoinmarketsCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation>Dette er adressene for å motta betalinger. Du ønsker kanskje å gi ulike adresser til hver avsender så du lettere kan holde øye med hvem som betaler deg.</translation>
     </message>
     <message>
@@ -79,8 +79,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a ShadowCoin address</source>
-        <translation>Signer en melding for å bevise din egen ShadowCoin adresse.</translation>
+        <source>Sign a message to prove you own a CoinmarketsCoin address</source>
+        <translation>Signer en melding for å bevise din egen CoinmarketsCoin adresse.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -94,8 +94,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified ShadowCoin address</source>
-        <translation>Verifiser en melding får å forsikre deg om at den er signert med en spesifikk ShadowCoin adresse</translation>
+        <source>Verify a message to ensure it was signed with a specified CoinmarketsCoin address</source>
+        <translation>Verifiser en melding får å forsikre deg om at den er signert med en spesifikk CoinmarketsCoin adresse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -262,7 +262,7 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="-58"/>
-        <source>ShadowCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <source>CoinmarketsCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -376,8 +376,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about ShadowCoin</source>
-        <translation>Vis info om ShadowCoin</translation>
+        <source>Show information about CoinmarketsCoin</source>
+        <translation>Vis info om CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -426,13 +426,13 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a ShadowCoin address</source>
-        <translation>Send coins til en ShadowCoin adresse</translation>
+        <source>Send coins to a CoinmarketsCoin address</source>
+        <translation>Send coins til en CoinmarketsCoin adresse</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for ShadowCoin</source>
-        <translation>Endre innstillingene til ShadowCoin</translation>
+        <source>Modify configuration options for CoinmarketsCoin</source>
+        <translation>Endre innstillingene til CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -471,8 +471,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="-200"/>
-        <source>ShadowCoin</source>
-        <translation>ShadowCoin</translation>
+        <source>CoinmarketsCoin</source>
+        <translation>CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -481,8 +481,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About ShadowCoin</source>
-        <translation>&amp;Om ShadowCoin</translation>
+        <source>&amp;About CoinmarketsCoin</source>
+        <translation>&amp;Om CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -538,13 +538,13 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>ShadowCoin client</source>
-        <translation>ShadowCoin klient</translation>
+        <source>CoinmarketsCoin client</source>
+        <translation>CoinmarketsCoin klient</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to ShadowCoin network</source>
-        <translation><numerusform>%n aktiv tilkobling til ShadowCoin nettverket</numerusform><numerusform>%n aktive tilkoblinger til ShadowCoin nettverket</numerusform></translation>
+        <source>%n active connection(s) to CoinmarketsCoin network</source>
+        <translation><numerusform>%n aktiv tilkobling til CoinmarketsCoin nettverket</numerusform><numerusform>%n aktive tilkoblinger til CoinmarketsCoin nettverket</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -658,7 +658,7 @@ Adresse: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid ShadowCoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid CoinmarketsCoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -718,7 +718,7 @@ Adresse: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. ShadowCoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. CoinmarketsCoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1040,8 +1040,8 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid ShadowCoin address.</source>
-        <translation>Den angitte adressen &quot;%1&quot; er ikke en gyldig ShadowCoin adresse.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid CoinmarketsCoin address.</source>
+        <translation>Den angitte adressen &quot;%1&quot; er ikke en gyldig CoinmarketsCoin adresse.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1059,8 +1059,8 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>ShadowCoin-Qt</source>
-        <translation>ShadowCoin-Qt</translation>
+        <source>CoinmarketsCoin-Qt</source>
+        <translation>CoinmarketsCoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1132,13 +1132,13 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start ShadowCoin after logging in to the system.</source>
+        <source>Automatically start CoinmarketsCoin after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start ShadowCoin on system login</source>
-        <translation>&amp;Start ShadowCoin ved innlogging</translation>
+        <source>&amp;Start CoinmarketsCoin on system login</source>
+        <translation>&amp;Start CoinmarketsCoin ved innlogging</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1157,7 +1157,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the ShadowCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the CoinmarketsCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1167,7 +1167,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the ShadowCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the CoinmarketsCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1242,7 +1242,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting ShadowCoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting CoinmarketsCoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1257,7 +1257,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show ShadowCoin addresses in the transaction list or not.</source>
+        <source>Whether to show CoinmarketsCoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1304,7 +1304,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting ShadowCoin.</source>
+        <source>This setting will take effect after restarting CoinmarketsCoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1323,7 +1323,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ShadowCoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CoinmarketsCoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1539,7 +1539,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the ShadowCoin-Qt help message to get a list with possible ShadowCoin command-line options.</source>
+        <source>Show the CoinmarketsCoin-Qt help message to get a list with possible CoinmarketsCoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1559,12 +1559,12 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>ShadowCoin - Debug window</source>
+        <source>CoinmarketsCoin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>ShadowCoin Core</source>
+        <source>CoinmarketsCoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1574,7 +1574,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the ShadowCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the CoinmarketsCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1584,7 +1584,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the ShadowCoin RPC console.</source>
+        <source>Welcome to the CoinmarketsCoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1658,7 +1658,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 SDC</source>
+        <source>0.00 JBS</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1728,7 +1728,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 SDC</source>
+        <source>123.456 JBS</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1743,7 +1743,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>Enter a CoinmarketsCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1843,8 +1843,8 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid ShadowCoin address</source>
-        <translation>ADVARSEL: Ugyldig ShadowCoin adresse</translation>
+        <source>WARNING: Invalid CoinmarketsCoin address</source>
+        <translation>ADVARSEL: Ugyldig CoinmarketsCoin adresse</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1917,7 +1917,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>Enter a CoinmarketsCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1978,7 +1978,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this ShadowCoin address</source>
+        <source>Sign the message to prove you own this CoinmarketsCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2010,7 +2010,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified ShadowCoin address</source>
+        <source>Verify the message to ensure it was signed with the specified CoinmarketsCoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2021,7 +2021,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a ShadowCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>Enter a CoinmarketsCoin address (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2031,7 +2031,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter ShadowCoin signature</source>
+        <source>Enter CoinmarketsCoin signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2602,8 +2602,8 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>ShadowCoin version</source>
-        <translation>ShadowCoin versjon</translation>
+        <source>CoinmarketsCoin version</source>
+        <translation>CoinmarketsCoin versjon</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2612,7 +2612,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or shadowcoind</source>
+        <source>Send command to -server or coinmarketscoind</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2632,12 +2632,12 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: shadowcoin.conf)</source>
+        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: shadowcoind.pid)</source>
+        <source>Specify pid file (default: coinmarketscoind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2787,7 +2787,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong ShadowCoin will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CoinmarketsCoin will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2976,13 +2976,13 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=shadowcoinrpc
+rpcuser=coinmarketscoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;CoinmarketsCoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -3108,13 +3108,13 @@ for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  ShadowCoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s.  CoinmarketsCoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="-98"/>
-        <source>ShadowCoin</source>
-        <translation>ShadowCoin</translation>
+        <source>CoinmarketsCoin</source>
+        <translation>CoinmarketsCoin</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -3148,12 +3148,12 @@ for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of ShadowCoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of CoinmarketsCoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart ShadowCoin to complete</source>
+        <source>Wallet needed to be rewritten: restart CoinmarketsCoin to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3223,7 +3223,7 @@ for example: alertnotify=echo %%s | mail -s &quot;ShadowCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. ShadowCoin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. CoinmarketsCoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
