@@ -62,7 +62,7 @@
 #include <QStyleFactory>
 #include <QTextStream>
 #include <QTextDocument>
-
+#include <QSettings>
 #include <iostream>
 
 extern CWallet* pwalletMain;
@@ -260,11 +260,19 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     // Clicking on "Sign Message" in the receive coins page sends you to the sign message tab
     connect(receiveCoinsPage, SIGNAL(signMessage(QString)), this, SLOT(gotoSignMessageTab(QString)));
 
+    QSettings settings;
+    QByteArray stateArray = settings.value("mainWindowState", "").toByteArray();
+    restoreState(stateArray);
+
     gotoOverviewPage();
 }
 
 BitcoinGUI::~BitcoinGUI()
 {
+    QSettings settings;
+    QByteArray stateArray = saveState();
+    settings.setValue("mainWindowState", stateArray);
+
     if(trayIcon) // Hide tray icon, as deleting will let it linger until quit (on Ubuntu)
         trayIcon->hide();
 #ifdef Q_OS_MAC
