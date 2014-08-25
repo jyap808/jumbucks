@@ -92,6 +92,10 @@ QToolButton:pressed {\
 background-color: #4A4949;\
 border: 1px solid silver;\
 }\
+QToolButton:checked {\
+background-color: #777777;\
+border: 1px solid silver;\
+}\
 QToolButton:hover {\
 background-color: #4A4949;\
 border: 1px solid gray;\
@@ -421,6 +425,7 @@ void BitcoinGUI::createToolBars()
     mainIcon->show();
 
     mainToolbar = addToolBar(tr("Tabs toolbar"));
+    mainToolbar->setObjectName("main");
     mainToolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     mainToolbar->addWidget(mainIcon);
     mainToolbar->addAction(overviewAction);
@@ -429,10 +434,13 @@ void BitcoinGUI::createToolBars()
     mainToolbar->addAction(historyAction);
     mainToolbar->addAction(addressBookAction);
     mainToolbar->addAction(messageAction);
+    mainToolbar->setContextMenuPolicy(Qt::NoContextMenu);
 
     secondaryToolbar = addToolBar(tr("Actions toolbar"));
+    secondaryToolbar->setObjectName("actions");
     secondaryToolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     secondaryToolbar->addAction(exportAction);
+    secondaryToolbar->setContextMenuPolicy(Qt::NoContextMenu);
 
     connect(mainToolbar,      SIGNAL(orientationChanged(Qt::Orientation)), this, SLOT(mainToolbarOrientation(Qt::Orientation)));
     connect(secondaryToolbar, SIGNAL(orientationChanged(Qt::Orientation)), this, SLOT(secondaryToolbarOrientation(Qt::Orientation)));
