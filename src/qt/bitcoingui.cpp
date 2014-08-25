@@ -62,7 +62,7 @@
 #include <QStyleFactory>
 #include <QTextStream>
 #include <QTextDocument>
-
+#include <QSettings>
 #include <iostream>
 
 extern CWallet* pwalletMain;
@@ -90,6 +90,10 @@ padding-bottom:5px;\
 }\
 QToolButton:pressed {\
 background-color: #4A4949;\
+border: 1px solid silver;\
+}\
+QToolButton:checked {\
+background-color: #777777;\
 border: 1px solid silver;\
 }\
 QToolButton:hover {\
@@ -260,11 +264,19 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     // Clicking on "Sign Message" in the receive coins page sends you to the sign message tab
     connect(receiveCoinsPage, SIGNAL(signMessage(QString)), this, SLOT(gotoSignMessageTab(QString)));
 
+    QSettings settings;
+    QByteArray stateArray = settings.value("mainWindowState", "").toByteArray();
+    restoreState(stateArray);
+
     gotoOverviewPage();
 }
 
 BitcoinGUI::~BitcoinGUI()
 {
+    QSettings settings;
+    QByteArray stateArray = saveState();
+    settings.setValue("mainWindowState", stateArray);
+
     if(trayIcon) // Hide tray icon, as deleting will let it linger until quit (on Ubuntu)
         trayIcon->hide();
 #ifdef Q_OS_MAC
@@ -413,6 +425,7 @@ void BitcoinGUI::createToolBars()
     mainIcon->show();
 
     mainToolbar = addToolBar(tr("Tabs toolbar"));
+    mainToolbar->setObjectName("main");
     mainToolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     mainToolbar->addWidget(mainIcon);
     mainToolbar->addAction(overviewAction);
@@ -421,10 +434,13 @@ void BitcoinGUI::createToolBars()
     mainToolbar->addAction(historyAction);
     mainToolbar->addAction(addressBookAction);
     mainToolbar->addAction(messageAction);
+    mainToolbar->setContextMenuPolicy(Qt::NoContextMenu);
 
     secondaryToolbar = addToolBar(tr("Actions toolbar"));
+    secondaryToolbar->setObjectName("actions");
     secondaryToolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     secondaryToolbar->addAction(exportAction);
+    secondaryToolbar->setContextMenuPolicy(Qt::NoContextMenu);
 
     connect(mainToolbar,      SIGNAL(orientationChanged(Qt::Orientation)), this, SLOT(mainToolbarOrientation(Qt::Orientation)));
     connect(secondaryToolbar, SIGNAL(orientationChanged(Qt::Orientation)), this, SLOT(secondaryToolbarOrientation(Qt::Orientation)));
@@ -554,7 +570,7 @@ void BitcoinGUI::createTrayIcon()
     trayIconMenu->addAction(quitAction);
 #endif
 
-    notificator = new Notificator(qApp->applicationName(), trayIcon);
+    notificator = new Notificator(qApp->applicationName(), trayIcon, this);
 }
 
 #ifndef Q_OS_MAC
