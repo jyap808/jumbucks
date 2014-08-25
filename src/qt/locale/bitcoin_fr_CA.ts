@@ -2677,8 +2677,8 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
     </message>
     <message>
         <location line="+6"/>
-        <source>Listen for connections on &lt;port&gt; (default: 51737 or testnet: 51997)</source>
-        <translation>Écouter les connexions sur le &lt;port&gt; (default: 51737 or testnet: 51997)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 51717 or testnet: 51977)</source>
+        <translation>Écouter les connexions sur le &lt;port&gt; (default: 51717 or testnet: 51977)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2737,8 +2737,8 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
     </message>
     <message>
         <location line="-87"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51736 or testnet: 51996)</source>
-        <translation>Écouter les connexions JSON-RPC sur le &lt;port&gt; (default: 51736 or testnet: 51996)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51716 or testnet: 51976)</source>
+        <translation>Écouter les connexions JSON-RPC sur le &lt;port&gt; (default: 51716 or testnet: 51976)</translation>
     </message>
     <message>
         <location line="-11"/>

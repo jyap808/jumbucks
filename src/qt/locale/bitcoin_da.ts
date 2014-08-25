@@ -2677,8 +2677,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Listen for connections on &lt;port&gt; (default: 51737 or testnet: 51997)</source>
-        <translation>Lyt efter forbindelser på &lt;port&gt; (default: 51737 eller Testnet: 51997)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 51717 or testnet: 51977)</source>
+        <translation>Lyt efter forbindelser på &lt;port&gt; (default: 51717 eller Testnet: 51977)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2737,8 +2737,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="-87"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51736 or testnet: 51996)</source>
-        <translation>Spor efter JSON-RPC-forbindelser på &lt;port&gt; (default: 51736 eller Testnet: 51996)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 51716 or testnet: 51976)</source>
+        <translation>Spor efter JSON-RPC-forbindelser på &lt;port&gt; (default: 51716 eller Testnet: 51976)</translation>
     </message>
     <message>
         <location line="-11"/>
