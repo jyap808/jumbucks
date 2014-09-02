@@ -17,7 +17,7 @@
 	<key>CFBundleExecutable</key>
 	<string>CoinmarketsCoin-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>pink.crypto.CoinmarketsCoin-Qt</string>
+	<string>com.coinmarketscoin.CoinmarketsCoin-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
