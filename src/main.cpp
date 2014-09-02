@@ -973,7 +973,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
         nSubsidy = 1 * COIN;
     else
     if (nHeight <= LAST_POW_BLOCK)
-        nSubsidy = 400 * COIN;
+        nSubsidy = 250 * COIN;
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfWorkReward() : create=%s nSubsidy=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nSubsidy);
@@ -2463,9 +2463,9 @@ bool LoadBlockIndex(bool fAllowNew)
           vMerkleTree: 26a3ff5d3d 
         */
 
-        const char* pszTimestamp = "www.cryptocoinsnews.com/news/bitlicense-regulations-forked-github-bitcoin-community/2014/07/19";
+        const char* pszTimestamp = "September 1st, 2014 - TMZ: Celebrity Nude Photo Leak - The FBI Is on the Case!";
         CTransaction txNew;
-        txNew.nTime = 1405769613;
+        txNew.nTime = 1409529600;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2476,7 +2476,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1405769613;
+        block.nTime    = 1409529600;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
         block.nNonce   = !fTestNet ? 261836 : 55887;
         
