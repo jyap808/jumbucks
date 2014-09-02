@@ -2440,15 +2440,15 @@ bool LoadBlockIndex(bool fAllowNew)
         // Genesis block
 
         /* -- mainnet
-        block.nTime = 1405769613 
-        block.nNonce = 261836 
-        block.GetHash = 00000eca234f07edc98aaf3f2a7b7478dc58992a9cd439323d099c6a590ca2bb
-        hashMerkleRoot 26a3ff5d3dc46b091e7b58b6022982e6d27dff1bab3bd1da6beb4790983c87c4
-        CBlock(hash=00000eca234f07edc98aaf3f2a7b7478dc58992a9cd439323d099c6a590ca2bb, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=26a3ff5d3dc46b091e7b58b6022982e6d27dff1bab3bd1da6beb4790983c87c4, nTime=1405769613, nBits=1e0fffff, nNonce=261836, vtx=1, vchBlockSig=)
-          Coinbase(hash=26a3ff5d3d, nTime=1405769613, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-            CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a4c5e7777772e63727970746f636f696e736e6577732e636f6d2f6e6577732f6269746c6963656e73652d726567756c6174696f6e732d666f726b65642d6769746875622d626974636f696e2d636f6d6d756e6974792f323031342f30372f3139)
+        block.nTime = 1409529600 
+        block.nNonce = 811962 
+        block.GetHash == 0000018b17ebb6160e2ce6162b68c7a63ad5fd146d376e7c976ed41b614ce692
+        hashMerkleRoot == 5b2e892e7a5a0928bd98acc06e8af20202c37a341235e81943aa8ff14b1c3eb5
+        Block(hash=0000018b17ebb6160e2ce6162b68c7a63ad5fd146d376e7c976ed41b614ce692, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=5b2e892e7a5a0928bd98acc06e8af20202c37a341235e81943aa8ff14b1c3eb5, nTime=1409529600, nBits=1e0fffff, nNonce=811962, vtx=1, vchBlockSig=)
+          Coinbase(hash=5b2e892e7a, nTime=1409529600, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+            CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a4c4e53657074656d626572203173742c2032303134202d20544d5a3a2043656c656272697479204e7564652050686f746f204c65616b202d2054686520464249204973206f6e20746865204361736521)
             CTxOut(empty)
-          vMerkleTree: 26a3ff5d3d
+          vMerkleTree: 5b2e892e7a 
         */
         
         /* -- testnet
@@ -2478,11 +2478,11 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1409529600;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = !fTestNet ? 261836 : 55887;
+        block.nNonce   = !fTestNet ? 811962 : 55887;
         
         
         //// debug print
-        assert(block.hashMerkleRoot == uint256("0x26a3ff5d3dc46b091e7b58b6022982e6d27dff1bab3bd1da6beb4790983c87c4"));
+        assert(block.hashMerkleRoot == uint256("0x5b2e892e7a5a0928bd98acc06e8af20202c37a341235e81943aa8ff14b1c3eb5"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
