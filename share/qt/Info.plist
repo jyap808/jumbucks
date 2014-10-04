@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
-<plist version="0.9">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
 <dict>
 	<key>CFBundleIconFile</key>
 	<string>bitcoin.icns</string>
@@ -18,20 +18,22 @@
 	<string>CoinmarketsCoin-Qt</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.coinmarketscoin.CoinmarketsCoin-Qt</string>
-        <key>CFBundleURLTypes</key>
-        <array>
-          <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLName</key>
-            <string>com.coinmarketscoin.CoinmarketsCoinPayment</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-              <string>coinmarketscoin</string>
-            </array>
-          </dict>
-        </array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.coinmarketscoin.CoinmarketsCoinPayment</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>coinmarketscoin</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSHighResolutionCapable</key>
 	<true/>
+	<key>LSAppNapIsDisabled</key>
+	<string>True</string>
 </dict>
 </plist>
