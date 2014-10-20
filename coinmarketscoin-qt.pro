@@ -26,19 +26,19 @@ MOC_DIR = build
 UI_DIR = build
 
 build_macosx64 {
-    QMAKE_TARGET_BUNDLE_PREFIX = co.shadowcoin
+    QMAKE_TARGET_BUNDLE_PREFIX = com.coinmarketscoin
     BOOST_LIB_SUFFIX=-mt
-    BOOST_INCLUDE_PATH=/usr/local/Cellar/boost/1.55.0_2/include
-    BOOST_LIB_PATH=/usr/local/Cellar/boost/1.55.0_2/lib
+    BOOST_INCLUDE_PATH=/usr/local/include
+    BOOST_LIB_PATH=/usr/local/lib
 
     BDB_INCLUDE_PATH=/usr/local/opt/berkeley-db4/include
-    BDB_LIB_PATH=/usr/local/Cellar/berkeley-db4/4.8.30/lib
+    BDB_LIB_PATH=/usr/local/opt/berkeley-db4/lib
 
     OPENSSL_INCLUDE_PATH=/usr/local/opt/openssl/include
     OPENSSL_LIB_PATH=/usr/local/opt/openssl/lib
 
-    MINIUPNPC_INCLUDE_PATH=/usr/local/opt/miniupnpc/include
-    MINIUPNPC_LIB_PATH=/usr/local/Cellar/miniupnpc/1.8.20131007/lib
+    MINIUPNPC_INCLUDE_PATH=/usr/local/include
+    MINIUPNPC_LIB_PATH=/usr/local/lib
 
     QRENCODE_INCLUDE_PATH=/usr/local/opt/qrencode/include
     QRENCODE_LIB_PATH=/usr/local/opt/qrencode/lib
@@ -51,8 +51,11 @@ build_macosx64 {
 
 # use: qmake "RELEASE=1"
 contains(RELEASE, 1) {
-    # Mac: compile for maximum compatibility (10.5, 32-bit)
-    macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.5 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.5.sdk
+    SDK=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+    # Mac: compile for maximum compatibility (10.7, 32-bit)
+    macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.7 -isysroot $$SDK
+    macx:QMAKE_CFLAGS += -mmacosx-version-min=10.7 -isysroot $$SDK
+    macx:QMAKE_OBJECTIVE_CFLAGS += -mmacosx-version-min=10.7 $$SDK
 
     !windows:!macx {
         # Linux: static link
