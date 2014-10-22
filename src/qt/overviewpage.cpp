@@ -8,7 +8,6 @@
 #include "transactionfilterproxy.h"
 #include "guiutil.h"
 #include "guiconstants.h"
-#include "wigglywidget.h"
 
 #include <QAbstractItemDelegate>
 #include <QPainter>
@@ -116,20 +115,6 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
-
-    // Modify backgrounds
-    QPalette palette = ui->labelFeature1->palette();
-    palette.setColor(ui->labelFeature1->foregroundRole(), Qt::red);
-    ui->labelFeature1->setPalette(palette);
-
-    WigglyWidget *wigglyWidget = new WigglyWidget;
-    ui->verticalLayoutFeature2->setAlignment(Qt::AlignHCenter);
-    ui->verticalLayoutFeature2->addWidget(wigglyWidget);
-    wigglyWidget->setMinimumSize(468, 60);
-    wigglyWidget->setMaximumSize(468, 60);
-    wigglyWidget->setStyleSheet("border: 2px solid blue; border-radius: 3px; padding: 0 8px;");
-    wigglyWidget->setText("RESERVED FEATURE - COMING SOON");
-
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)
