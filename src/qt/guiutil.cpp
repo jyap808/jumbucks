@@ -82,7 +82,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // NovaCoin: check prefix
-    if(uri.scheme() != QString("coinmarketscoin"))
+    if(uri.scheme() != QString("jumbucks"))
         return false;
 
     SendCoinsRecipient rv;
@@ -277,7 +277,7 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "CoinmarketsCoin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Jumbucks.lnk";
 }
 
 bool GetStartOnSystemStartup()
@@ -359,7 +359,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "coinmarketscoin.desktop";
+    return GetAutostartDir() / "jumbucks.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -400,7 +400,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a bitcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=CoinmarketsCoin\n";
+        optionFile << "Name=Jumbucks\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

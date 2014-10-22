@@ -1,9 +1,9 @@
-Building CoinmarketsCoin
+Building Jumbucks
 
 See doc/readme-qt.rst for instructions on building Jumbucks QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of CoinmarketsCoin.
+implementation of Jumbucks.
 
 See doc/build-*.txt for instructions on building jumbucksd,
 the intended-for-services, no-graphical-interface, reference
-implementation of CoinmarketsCoin.
+implementation of Jumbucks.

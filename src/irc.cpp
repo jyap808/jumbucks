@@ -308,7 +308,7 @@ void ThreadIRCSeed2(void* parg)
             Send(hSocket, "WHO #jbscoinTEST\r");
         } else
         {
-            // randomly join #coinmarketscoin00-#coinmarketscoin05
+            // randomly join #jbscoin00-#jbscoin05
             //int channel_number = GetRandInt(5);
 
             // Channel number is always 0 for initial release

@@ -372,7 +372,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
 
             pszGet = "GET / HTTP/1.1\r\n"
                      "Host: checkip.dyndns.org\r\n"
-                     "User-Agent: CoinmarketsCoin\r\n"
+                     "User-Agent: Jumbucks\r\n"
                      "Connection: close\r\n"
                      "\r\n";
 
