@@ -33,6 +33,8 @@
 	</array>
 	<key>NSHighResolutionCapable</key>
 	<true/>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
 	<key>LSAppNapIsDisabled</key>
 	<string>True</string>
 </dict>
