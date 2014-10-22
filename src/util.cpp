@@ -960,7 +960,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "coinmarketscoin";
+    const char* pszModule = "jumbucks";
 #endif
     if (pex)
         return strprintf(
@@ -1235,7 +1235,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                     string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Jumbucks will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
-                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("CoinmarketsCoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
+                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("Jumbucks"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
                 }
             }
         }

@@ -12,7 +12,7 @@ inFile     = bitcoinDir+"/share/qt/Info.plist"
 outFile    = "Jumbucks-Qt.app/Contents/Info.plist"
 version    = "unknown";
 
-fileForGrabbingVersion = bitcoinDir+"CoinmarketsCoin-qt.pro"
+fileForGrabbingVersion = bitcoinDir+"jumbucks-qt.pro"
 for line in open(fileForGrabbingVersion):
 	lineArr = line.replace(" ", "").split("=");
 	if lineArr[0].startswith("VERSION"):
