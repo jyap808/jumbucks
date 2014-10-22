@@ -148,6 +148,12 @@ int main(int argc, char *argv[])
     }
     ReadConfigFile(mapArgs, mapMultiArgs);
 
+#if QT_VERSION > 0x050100
+    // Generate high-dpi pixmaps
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+#endif
+
+
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
     app.setOrganizationName("CoinmarketsCoin");
