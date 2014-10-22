@@ -588,7 +588,7 @@ bool SecMsgDB::EraseSmesg(unsigned char* chKey)
 void ThreadSecureMsg(void* parg)
 {
     // -- bucket management thread
-    RenameThread("coinmarketscoin-smsg"); // Make this thread recognisable
+    RenameThread("jumbucks-smsg"); // Make this thread recognisable
     
     uint32_t delay = 0;
     
@@ -699,7 +699,7 @@ void ThreadSecureMsg(void* parg)
 void ThreadSecureMsgPow(void* parg)
 {
     // -- proof of work thread
-    RenameThread("coinmarketscoin-smsg-pow"); // Make this thread recognisable
+    RenameThread("jumbucks-smsg-pow"); // Make this thread recognisable
     
     int rv;
     std::vector<unsigned char> vchKey;

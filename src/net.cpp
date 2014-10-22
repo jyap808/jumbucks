@@ -389,7 +389,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
 void ThreadGetMyExternalIP(void* parg)
 {
     // Make this thread recognisable as the external IP detection thread
-    RenameThread("coinmarketscoin-ext-ip");
+    RenameThread("jumbucks-ext-ip");
 
     CNetAddr addrLocalHost;
     if (GetMyExternalIP(addrLocalHost))
@@ -782,7 +782,7 @@ void SocketSendData(CNode *pnode)
 void ThreadSocketHandler(void* parg)
 {
     // Make this thread recognisable as the networking thread
-    RenameThread("coinmarketscoin-net");
+    RenameThread("jumbucks-net");
 
     try
     {
@@ -1112,7 +1112,7 @@ void ThreadSocketHandler2(void* parg)
 void ThreadMapPort(void* parg)
 {
     // Make this thread recognisable as the UPnP thread
-    RenameThread("coinmarketscoin-UPnP");
+    RenameThread("jumbucks-UPnP");
 
     try
     {
@@ -1271,7 +1271,7 @@ static const char *strDNSSeed[][2] = {
 void ThreadDNSAddressSeed(void* parg)
 {
     // Make this thread recognisable as the DNS seeding thread
-    RenameThread("coinmarketscoin-dnsseed");
+    RenameThread("jumbucks-dnsseed");
 
     try
     {
@@ -1379,7 +1379,7 @@ void ThreadDumpAddress2(void* parg)
 void ThreadDumpAddress(void* parg)
 {
     // Make this thread recognisable as the address dumping thread
-    RenameThread("coinmarketscoin-adrdump");
+    RenameThread("jumbucks-adrdump");
 
     try
     {
@@ -1394,7 +1394,7 @@ void ThreadDumpAddress(void* parg)
 void ThreadOpenConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("coinmarketscoin-opencon");
+    RenameThread("jumbucks-opencon");
 
     try
     {
@@ -1575,7 +1575,7 @@ void ThreadOpenConnections2(void* parg)
 void ThreadOpenAddedConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("coinmarketscoin-opencon");
+    RenameThread("jumbucks-opencon");
 
     try
     {
@@ -1722,7 +1722,7 @@ bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOu
 void ThreadMessageHandler(void* parg)
 {
     // Make this thread recognisable as the message handling thread
-    RenameThread("coinmarketscoin-msghand");
+    RenameThread("jumbucks-msghand");
 
     try
     {
@@ -1969,7 +1969,7 @@ void static Discover()
 void StartNode(void* parg)
 {
     // Make this thread recognisable as the startup thread
-    RenameThread("coinmarketscoin-start");
+    RenameThread("jumbucks-start");
 
     if (semOutbound == NULL) {
         // initialize semaphore

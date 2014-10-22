@@ -15,9 +15,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>CoinmarketsCoin-Qt</string>
+	<string>Jumbucks-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.coinmarketscoin.CoinmarketsCoin-Qt</string>
+	<string>com.coinmarketscoin.Jumbucks-Qt</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>

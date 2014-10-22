@@ -1,7 +1,7 @@
 #ifndef QTIPCSERVER_H
 #define QTIPCSERVER_H
 
-// Define CoinmarketsCoin-Qt message queue name
+// Define Jumbucks-Qt message queue name
 #define BITCOINURI_QUEUE_NAME "CoinmarketsCoinURI"
 
 void ipcScanRelay(int argc, char *argv[]);

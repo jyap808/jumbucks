@@ -68,7 +68,7 @@ void Shutdown(void* parg)
     static bool fTaken;
 
     // Make this thread recognisable as the shutdown thread
-    RenameThread("coinmarketscoin-shutoff");
+    RenameThread("jumbucks-shutoff");
 
     bool fFirstThread = false;
     {
@@ -177,7 +177,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "coinmarketscoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "jumbucks:"))
                 fCommandLine = true;
 
         if (fCommandLine)

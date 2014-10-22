@@ -14,7 +14,7 @@ src/build.h
 #compilation and Qt preprocessor part
 *.qm
 Makefile
-coinmarketscoin-qt
+jumbucks-qt
 #resources cpp
 qrc_*.cpp
 #qt creator

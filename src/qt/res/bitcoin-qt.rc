@@ -19,13 +19,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "CoinmarketsCoin"
-            VALUE "FileDescription",    "CoinmarketsCoin-Qt (OSS GUI client for CoinmarketsCoin)"
+            VALUE "FileDescription",    "Jumbucks-Qt (OSS GUI client for CoinmarketsCoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "coinmarketscoin-qt"
+            VALUE "InternalName",       "jumbucks-qt"
             VALUE "LegalCopyright",     "2009-2014 The Bitcoin developers, 2012-2014 The NovaCoin & PPCoin developers, 2014 The BlackCoin developers, 2014 The CoinmarketsCoin developers"
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "coinmarketscoin-qt.exe"
-            VALUE "ProductName",        "CoinmarketsCoin-Qt"
+            VALUE "OriginalFilename",   "jumbucks-qt.exe"
+            VALUE "ProductName",        "Jumbucks-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

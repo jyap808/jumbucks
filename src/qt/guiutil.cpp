@@ -127,13 +127,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert coinmarketscoin:// to coinmarketscoin:
+    // Convert jumbucks:// to jumbucks:
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("coinmarketscoin://"))
+    if(uri.startsWith("jumbucks://"))
     {
-        uri.replace(0, 12, "coinmarketscoin:");
+        uri.replace(0, 12, "jumbucks:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -421,10 +421,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("CoinmarketsCoin-Qt") + " " + tr("version") + " " +
+    header = tr("Jumbucks-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  coinmarketscoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  jumbucks-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -433,7 +433,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("CoinmarketsCoin-Qt"));
+    setWindowTitle(tr("Jumbucks-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));
