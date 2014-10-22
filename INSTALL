@@ -4,6 +4,6 @@ See doc/readme-qt.rst for instructions on building CoinmarketsCoin QT,
 the intended-for-end-users, nice-graphical-interface, reference
 implementation of CoinmarketsCoin.
 
-See doc/build-*.txt for instructions on building coinmarketscoind,
+See doc/build-*.txt for instructions on building jumbucksd,
 the intended-for-services, no-graphical-interface, reference
 implementation of CoinmarketsCoin.

@@ -80,7 +80,7 @@ OBJS= \
     obj/scrypt-x86.o \
     obj/scrypt-x86_64.o
 
-all: coinmarketscoind.exe
+all: jumbucksd.exe
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
 DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
@@ -99,11 +99,11 @@ obj/scrypt-x86.o: scrypt-x86.S
 obj/scrypt-x86_64.o: scrypt-x86_64.S
 	$(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<
 
-coinmarketscoind.exe: $(OBJS:obj/%=obj/%)
+jumbucksd.exe: $(OBJS:obj/%=obj/%)
 	g++ $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 clean:
-	-del /Q coinmarketscoind
+	-del /Q jumbucksd
 	-del /Q obj\*
 
 FORCE:

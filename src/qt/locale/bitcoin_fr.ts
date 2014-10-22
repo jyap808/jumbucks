@@ -2626,8 +2626,8 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or coinmarketscoind</source>
-        <translation>Envoyer commande à -server ou coinmarketscoind</translation>
+        <source>Send command to -server or jumbucksd</source>
+        <translation>Envoyer commande à -server ou jumbucksd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2651,8 +2651,8 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: coinmarketscoind.pid)</source>
-        <translation>Spécifier le fichier pid (par défaut: coinmarketscoind.pid)</translation>
+        <source>Specify pid file (default: jumbucksd.pid)</source>
+        <translation>Spécifier le fichier pid (par défaut: jumbucksd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2991,7 +2991,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3002,7 +3002,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo
         <translation>%s, vous devez définir un mot de passe rpc &apos;rpcpassword&apos; au sein du fichier de configuration:
  %s
 Il est recommandé d&apos;utiliser le mot de passe aléatoire suivant:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (il n&apos;est pas nécessaire de retenir ce mot de passe)
 Le nom d&apos;utilisateur et le mot de passe doivent IMPERATIVEMENT être différents.

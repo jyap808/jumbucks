@@ -2624,8 +2624,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or coinmarketscoind</source>
-        <translation>Syötä komento kohteeseen -server tai coinmarketscoind</translation>
+        <source>Send command to -server or jumbucksd</source>
+        <translation>Syötä komento kohteeseen -server tai jumbucksd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2649,8 +2649,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: coinmarketscoind.pid)</source>
-        <translation>Määritä prosessitiedosto (oletus: coinmarketscoind.pid)</translation>
+        <source>Specify pid file (default: jumbucksd.pid)</source>
+        <translation>Määritä prosessitiedosto (oletus: jumbucksd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2989,7 +2989,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3000,7 +3000,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo
         <translation>%s, sinun on asetettava rpcpassword asetustiedostoon:
 %s
 On suositeltavaa, että käytät seuraavaa arvottua salasanaa:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (Sinun ei tarvitse muistaa tätä salasanaa)
 Käyttäjänimen ja salasanan EI TULE OLLA SAMOJA.

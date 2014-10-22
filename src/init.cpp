@@ -164,10 +164,10 @@ bool AppInit(int argc, char* argv[])
             // First part of help message is specific to bitcoind / RPC client
             std::string strUsage = _("CoinmarketsCoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  coinmarketscoind [options]                     " + "\n" +
-                  "  coinmarketscoind [options] <command> [params]  " + _("Send command to -server or coinmarketscoind") + "\n" +
-                  "  coinmarketscoind [options] help                " + _("List commands") + "\n" +
-                  "  coinmarketscoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  jumbucksd [options]                     " + "\n" +
+                  "  jumbucksd [options] <command> [params]  " + _("Send command to -server or jumbucksd") + "\n" +
+                  "  jumbucksd [options] help                " + _("List commands") + "\n" +
+                  "  jumbucksd [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -250,7 +250,7 @@ std::string HelpMessage()
     string strUsage = _("Options:") + "\n" +
         "  -?                     " + _("This help message") + "\n" +
         "  -conf=<file>           " + _("Specify configuration file (default: coinmarketscoin.conf)") + "\n" +
-        "  -pid=<file>            " + _("Specify pid file (default: coinmarketscoind.pid)") + "\n" +
+        "  -pid=<file>            " + _("Specify pid file (default: jumbucksd.pid)") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
         "  -wallet=<dir>          " + _("Specify wallet file (within data directory)") + "\n" +
         "  -dbcache=<n>           " + _("Set database cache size in megabytes (default: 25)") + "\n" +

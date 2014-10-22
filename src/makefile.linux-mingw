@@ -90,7 +90,7 @@ OBJS= \
     obj/scrypt-x86.o \
     obj/scrypt-x86_64.o
 
-all: coinmarketscoind.exe
+all: jumbucksd.exe
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
 DEFS += -I"$(CURDIR)/leveldb/include"
@@ -108,9 +108,9 @@ DEFS += -DHAVE_BUILD_INFO
 obj/%.o: %.cpp $(HEADERS)
 	$(CXX) -c $(CFLAGS) -o $@ $<
 
-coinmarketscoind.exe: $(OBJS:obj/%=obj/%)
+jumbucksd.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS) -lshlwapi
-	$(STRIP) coinmarketscoind.exe
+	$(STRIP) jumbucksd.exe
 
 obj/scrypt-x86.o: scrypt-x86.S
 	$(CXX) -c $(CFLAGS) -MMD -o $@ $<
@@ -120,7 +120,7 @@ obj/scrypt-x86_64.o: scrypt-x86_64.S
 
 clean:
 	-rm -f obj/*.o
-	-rm -f coinmarketscoind.exe
+	-rm -f jumbucksd.exe
 	-rm -f obj/build.h
 	cd leveldb && TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) clean && cd ..
 

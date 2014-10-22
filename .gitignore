@@ -1,6 +1,6 @@
 src/*.exe
 src/coinmarketscoin
-src/coinmarketscoind
+src/jumbucksd
 src/test_coinmarketscoin
 src/build.h
 .*.swp

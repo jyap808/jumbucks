@@ -16,7 +16,7 @@ To Build
 cd src/
 make -f makefile.unix            # Headless coinmarketscoin
 
-See readme-qt.rst for instructions on building CoinmarketsCoin QT,
+See readme-qt.rst for instructions on building Jumbucks QT,
 the graphical coinmarketscoin.
 
 Dependencies
@@ -76,14 +76,14 @@ Dependency Build Instructions: Gentoo
 emerge -av1 --noreplace boost openssl sys-libs/db
 
 Take the following steps to build (no UPnP support):
- cd ${COINMARKETSCOIN_DIR}/src
+ cd ${JUMBUCKS_DIR}/src
  make -f makefile.unix USE_UPNP=
- strip coinmarketscoind
+ strip jumbucksd
 
 
 Notes
 -----
-The release is built with GCC and then "strip coinmarketscoind" to strip the debug
+The release is built with GCC and then "strip jumbucksd" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 

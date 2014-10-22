@@ -1,6 +1,6 @@
-CoinmarketsCoin
+Jumbucks
 
-Copyright (c) 2014 CoinmarketsCoin Developers
+Copyright (c) 2014 Jumbucks Developers
 Copyright (c) 2014 BlackCoin Developers
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2013 PPCoin Developers
@@ -13,7 +13,7 @@ cryptographic software written by Eric Young (eay@cryptsoft.com).
 
 Intro
 -----
-CoinmarketsCoin is a free open source project derived from Bitcoin, with
+Jumbucks is a free open source project derived from Bitcoin, with
 the goal of providing a long-term energy-efficient scrypt-based crypto-currency.
 Built on the foundation of Bitcoin, PPCoin, NovaCoin and BlackCoin, innovations such as proof-of-stake
 help further advance the field of crypto-currency.

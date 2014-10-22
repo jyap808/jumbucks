@@ -2630,8 +2630,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or coinmarketscoind</source>
-        <translation>Envía un comando a -server o coinmarketscoind</translation>
+        <source>Send command to -server or jumbucksd</source>
+        <translation>Envía un comando a -server o jumbucksd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2658,8 +2658,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: coinmarketscoind.pid)</source>
-        <translation>Especifica un archivo pid (por defecto: coinmarketscoind.pid)</translation>
+        <source>Specify pid file (default: jumbucksd.pid)</source>
+        <translation>Especifica un archivo pid (por defecto: jumbucksd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3002,7 +3002,7 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3013,7 +3013,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo
         <translation>%s, debe establecer un rpcpassword en el fichero de configuración:
 %s
 Se recomienda utilizar la siguiente contraseña aleatoria:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (no necesita recordar este password)
 El nombre de usuario y contraseña no debe ser el mismo.

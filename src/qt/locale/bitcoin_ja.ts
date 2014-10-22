@@ -2625,8 +2625,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or coinmarketscoind</source>
-        <translation>-server か coinmarketscoindへコマンドを送る。</translation>
+        <source>Send command to -server or jumbucksd</source>
+        <translation>-server か jumbucksdへコマンドを送る。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2650,8 +2650,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: coinmarketscoind.pid)</source>
-        <translation>pid ファイルを特定する (デフォルト: coinmarketscoind.pid)</translation>
+        <source>Specify pid file (default: jumbucksd.pid)</source>
+        <translation>pid ファイルを特定する (デフォルト: jumbucksd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2990,7 +2990,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3001,7 +3001,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo
         <translation>%s, 設定ファイル：%sでrpcpasswordのパスワードを入力しなければならい
 
 このランダムパスワードのおすすめです：
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (このパサワードを覚えなくても大丈夫です)
 ユーザ名とパスワードは同じであってはなりません。

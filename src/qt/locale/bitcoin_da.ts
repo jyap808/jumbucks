@@ -2627,8 +2627,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or coinmarketscoind</source>
-        <translation>Send kommando til-server eller coinmarketscoind</translation>
+        <source>Send command to -server or jumbucksd</source>
+        <translation>Send kommando til-server eller jumbucksd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2652,8 +2652,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: coinmarketscoind.pid)</source>
-        <translation>Angiv pid fil (standard: coinmarketscoind.pid)</translation>
+        <source>Specify pid file (default: jumbucksd.pid)</source>
+        <translation>Angiv pid fil (standard: jumbucksd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2992,7 +2992,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3003,7 +3003,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo
         <translation>% s, skal du indstille et rpcpassword i konfigurationsfilen: 
 % s 
 Det anbefales at bruge følgende tilfældig adgangskode: 
-rpcuser = coinmarketscoinrpc  
+rpcuser = jumbucksrpc  
 rpcpassword =% s  
 (du behøver ikke at huske denne adgangskode)  
 Brugernavn og adgangskode må ikke være den samme.  

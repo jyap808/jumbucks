@@ -2612,7 +2612,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or coinmarketscoind</source>
+        <source>Send command to -server or jumbucksd</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2637,7 +2637,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: coinmarketscoind.pid)</source>
+        <source>Specify pid file (default: jumbucksd.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2976,7 +2976,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

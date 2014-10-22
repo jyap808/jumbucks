@@ -2624,8 +2624,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or coinmarketscoind</source>
-        <translation>Pošlji ukaz na -server ali coinmarketscoind</translation>
+        <source>Send command to -server or jumbucksd</source>
+        <translation>Pošlji ukaz na -server ali jumbucksd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2649,8 +2649,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: coinmarketscoind.pid)</source>
-        <translation>Določi pid datoteko (privzeto: coinmarketscoind.pid)</translation>
+        <source>Specify pid file (default: jumbucksd.pid)</source>
+        <translation>Določi pid datoteko (privzeto: jumbucksd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2989,7 +2989,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3000,7 +3000,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo
         <translation>%s, nastaviti morate rpcgeslo v konfiguracijski datoteki: 
  %s
 Priporočeno je, da uporabite naslednje naključno geslo:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (tega gesla si vam ni potrebno zapomniti)
 Uporabniško ime in geslo NE SMETA biti ista. 

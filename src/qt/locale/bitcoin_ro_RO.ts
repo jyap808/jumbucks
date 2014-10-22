@@ -2627,8 +2627,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or coinmarketscoind</source>
-        <translation>Trimite comanda catre server sau coinmarketscoind</translation>
+        <source>Send command to -server or jumbucksd</source>
+        <translation>Trimite comanda catre server sau jumbucksd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2652,8 +2652,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: coinmarketscoind.pid)</source>
-        <translation>Speficica fisier pid(implicit: coinmarketscoind.pid)</translation>
+        <source>Specify pid file (default: jumbucksd.pid)</source>
+        <translation>Speficica fisier pid(implicit: jumbucksd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2992,7 +2992,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3001,7 +3001,7 @@ It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo.com
 </source>
         <translation>%s, trebuie să configurați o parolă rpc în fișierul de configurare: %s
-Este recomandat să folosiți următoarea parolă generată aleator: rpcuser=coinmarketscoinrpc
+Este recomandat să folosiți următoarea parolă generată aleator: rpcuser=jumbucksrpc
 rpcpassword=%s
 (nu trebuie să țineți minte această parolă)
 Username-ul și parola NU TREBUIE să fie aceleași.

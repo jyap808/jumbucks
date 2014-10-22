@@ -2626,8 +2626,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or coinmarketscoind</source>
-        <translation>Pošli príkaz na -server alebo coinmarketscoind</translation>
+        <source>Send command to -server or jumbucksd</source>
+        <translation>Pošli príkaz na -server alebo jumbucksd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2651,8 +2651,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: coinmarketscoind.pid)</source>
-        <translation>Zadajte pid súbor (predvolené: coinmarketscoind.pid)</translation>
+        <source>Specify pid file (default: jumbucksd.pid)</source>
+        <translation>Zadajte pid súbor (predvolené: jumbucksd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2991,7 +2991,7 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -3002,7 +3002,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo
         <translation>%s, musíte nastaviť rpcpassword v konfiguračnom súbore:
  %s
 Je odporúčané použiť nasledujúce náhodné heslo:
-rpcuser=coinmarketscoinrpc
+rpcuser=jumbucksrpc
 rpcpassword=%s
 (Nemusíte si pamätať toto heslo)
 Užívateľské meno a heslo nesmú byť rovnaké. 
