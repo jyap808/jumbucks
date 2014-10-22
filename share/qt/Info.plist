@@ -7,7 +7,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>$VERSION, Copyright © 2014-$YEAR The CoinmarketsCoin developers</string>
+	<string>$VERSION, Copyright © 2014-$YEAR The Jumbucks developers</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$VERSION</string>
 	<key>CFBundleVersion</key>
@@ -17,14 +17,14 @@
 	<key>CFBundleExecutable</key>
 	<string>Jumbucks-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.coinmarketscoin.Jumbucks-Qt</string>
+	<string>com.getjumbucks.Jumbucks-Qt</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.coinmarketscoin.CoinmarketsCoinPayment</string>
+			<string>com.getjumbucks.CoinmarketsCoinPayment</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>coinmarketscoin</string>

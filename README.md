@@ -1,7 +1,7 @@
 
-CoinmarketsCoin development tree
+Jumbucks development tree
 
-CoinmarketsCoin is a PoS-based cryptocurrency.
+Jumbucks is a PoS-based cryptocurrency.
 
 Development process
 ===========================

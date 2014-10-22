@@ -96,7 +96,7 @@ void Shutdown(void* parg)
         delete pwalletMain;
         NewThread(ExitTimeout, NULL);
         MilliSleep(50);
-        printf("CoinmarketsCoin exited\n\n");
+        printf("Jumbucks exited\n\n");
         fExit = true;
 #ifndef QT_GUI
         // ensure non-UI client gets exited here, but let Bitcoin-Qt reach 'return 0;' in bitcoin.cpp
@@ -162,7 +162,7 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("CoinmarketsCoin version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("Jumbucks version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
                   "  jumbucksd [options]                     " + "\n" +
                   "  jumbucksd [options] <command> [params]  " + _("Send command to -server or jumbucksd") + "\n" +
@@ -524,7 +524,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     // ********************************************************* Step 4: application initialization: dir lock, daemonize, pidfile, debug log
     // Sanity check
     if (!InitSanityCheck())
-        return InitError(_("Initialization sanity check failed. CoinmarketsCoin is shutting down."));
+        return InitError(_("Initialization sanity check failed. Jumbucks is shutting down."));
 
     std::string strDataDir = GetDataDir().string();
     std::string strWalletFileName = GetArg("-wallet", "wallet.dat");
@@ -539,7 +539,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     if (file) fclose(file);
     static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
     if (!lock.try_lock())
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s.  CoinmarketsCoin is probably already running."), strDataDir.c_str()));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s.  Jumbucks is probably already running."), strDataDir.c_str()));
 
 #if !defined(WIN32) && !defined(QT_GUI)
     if (fDaemon)
@@ -566,7 +566,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("CoinmarketsCoin version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
+    printf("Jumbucks version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
     printf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
     if (!fLogTimestamps)
         printf("Startup time: %s\n", DateTimeStrFormat("%x %H:%M:%S", GetTime()).c_str());
@@ -575,7 +575,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     std::ostringstream strErrors;
 
     if (fDaemon)
-        fprintf(stdout, "CoinmarketsCoin server starting\n");
+        fprintf(stdout, "Jumbucks server starting\n");
 
     int64_t nStart;
 
@@ -810,7 +810,7 @@ bool AppInit2(boost::thread_group& threadGroup)
             strErrors << _("Error loading wallet.dat: Wallet requires newer version of CoinmarketsCoin") << "\n";
         else if (nLoadWalletRet == DB_NEED_REWRITE)
         {
-            strErrors << _("Wallet needed to be rewritten: restart CoinmarketsCoin to complete") << "\n";
+            strErrors << _("Wallet needed to be rewritten: restart Jumbucks to complete") << "\n";
             printf("%s", strErrors.str().c_str());
             return InitError(strErrors.str());
         }

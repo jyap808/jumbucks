@@ -24,11 +24,11 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter an CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter an Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter an CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)"));
-    ui->signatureIn_VM->setPlaceholderText(tr("Enter CoinmarketsCoin signature"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter an Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)"));
+    ui->signatureIn_VM->setPlaceholderText(tr("Enter Jumbucks signature"));
 #endif
 
     GUIUtil::setupAddressWidget(ui->addressIn_SM, this);

@@ -47,6 +47,6 @@ make -f makefile.osx
 Run:
   ./jumbucksd --help  # for a list of command-line options.
 Run
-  ./jumbucksd -daemon # to start the coinmarketscoin daemon.
+  ./jumbucksd -daemon # to start the jumbucks daemon.
 Run
   ./jumbucksd help # When the daemon is running, to get a list of RPC commands

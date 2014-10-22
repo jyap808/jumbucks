@@ -26,7 +26,7 @@ MOC_DIR = build
 UI_DIR = build
 
 build_macosx64 {
-    QMAKE_TARGET_BUNDLE_PREFIX = com.coinmarketscoin
+    QMAKE_TARGET_BUNDLE_PREFIX = com.getjumbucks
     BOOST_LIB_SUFFIX=-mt
     BOOST_INCLUDE_PATH=/usr/local/include
     BOOST_LIB_PATH=/usr/local/lib
