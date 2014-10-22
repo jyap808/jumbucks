@@ -3,24 +3,24 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About CoinmarketsCoin</source>
-        <translation>Om CoinmarketsCoin</translation>
+        <source>About Jumbucks</source>
+        <translation>Om Jumbucks</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; version</translation>
+        <source>&lt;b&gt;Jumbucks&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Jumbucks&lt;/b&gt; version</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The CoinmarketsCoin developers</source>
+Copyright © 2014 The Jumbucks developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The CoinmarketsCoin developers</translation>
+Copyright © 2014 The Jumbucks developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -67,8 +67,8 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your CoinmarketsCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dette er dine CoinmarketsCoin adresser til at modtage betalinger. Du ønsker måske at give en anden en til af hver afsender, så du kan holde styr på hvem der betaler dig.</translation>
+        <source>These are your Jumbucks addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Dette er dine Jumbucks adresser til at modtage betalinger. Du ønsker måske at give en anden en til af hver afsender, så du kan holde styr på hvem der betaler dig.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -82,8 +82,8 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a CoinmarketsCoin address</source>
-        <translation>Signerer en meddelelse for at bevise du ejer en CoinmarketsCoin adresse</translation>
+        <source>Sign a message to prove you own a Jumbucks address</source>
+        <translation>Signerer en meddelelse for at bevise du ejer en Jumbucks adresse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -97,8 +97,8 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified CoinmarketsCoin address</source>
-        <translation>Bekræft en meddelelse for at sikre, den blev underskrevet med en specificeret CoinmarketsCoin adresse</translation>
+        <source>Verify a message to ensure it was signed with a specified Jumbucks address</source>
+        <translation>Bekræft en meddelelse for at sikre, den blev underskrevet med en specificeret Jumbucks adresse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -265,8 +265,8 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     </message>
     <message>
         <location line="-58"/>
-        <source>CoinmarketsCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>CoinmarketsCoin lukker nu for at afslutte krypteringen. Husk at en krypteret  tegnebog ikke fuldt ud beskytter dine mønter mod at blive stjålet af malware som har inficeret din computer.</translation>
+        <source>Jumbucks will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Jumbucks lukker nu for at afslutte krypteringen. Husk at en krypteret  tegnebog ikke fuldt ud beskytter dine mønter mod at blive stjålet af malware som har inficeret din computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -379,8 +379,8 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about CoinmarketsCoin</source>
-        <translation>Vis oplysninger om CoinmarketsCoin</translation>
+        <source>Show information about Jumbucks</source>
+        <translation>Vis oplysninger om Jumbucks</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -429,13 +429,13 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a CoinmarketsCoin address</source>
-        <translation>Send mønter til en CoinmarketsCoin adresse</translation>
+        <source>Send coins to a Jumbucks address</source>
+        <translation>Send mønter til en Jumbucks adresse</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for CoinmarketsCoin</source>
-        <translation>Ændre indstillingsmuligheder for CoinmarketsCoin</translation>
+        <source>Modify configuration options for Jumbucks</source>
+        <translation>Ændre indstillingsmuligheder for Jumbucks</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -474,8 +474,8 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     </message>
     <message>
         <location line="-200"/>
-        <source>CoinmarketsCoin</source>
-        <translation>CoinmarketsCoin</translation>
+        <source>Jumbucks</source>
+        <translation>Jumbucks</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -484,8 +484,8 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About CoinmarketsCoin</source>
-        <translation>&amp;Om CoinmarketsCoin</translation>
+        <source>&amp;About Jumbucks</source>
+        <translation>&amp;Om Jumbucks</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -541,13 +541,13 @@ Produktet indeholder software, som er udviklet af OpenSSL Project til brug i Ope
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>CoinmarketsCoin client</source>
-        <translation>CoinmarketsCoin klient</translation>
+        <source>Jumbucks client</source>
+        <translation>Jumbucks klient</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to CoinmarketsCoin network</source>
-        <translation><numerusform>%n aktiv forbindelse til CoinmarketsCoin netværk</numerusform><numerusform>%n aktive forbindelser til CoinmarketsCoin netværk</numerusform></translation>
+        <source>%n active connection(s) to Jumbucks network</source>
+        <translation><numerusform>%n aktiv forbindelse til Jumbucks netværk</numerusform><numerusform>%n aktive forbindelser til Jumbucks netværk</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -661,8 +661,8 @@ Adresse: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid CoinmarketsCoin address or malformed URI parameters.</source>
-        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig CoinmarketsCoin adresse eller misdannede URI parametre.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Jumbucks address or malformed URI parameters.</source>
+        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Jumbucks adresse eller misdannede URI parametre.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -721,7 +721,7 @@ Adresse: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. CoinmarketsCoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Jumbucks can no longer continue safely and will quit.</source>
         <translation>Der opstod en fejl under forsøg på at gemme dataene i tegnebogen til den nye placering.</translation>
     </message>
 </context>
@@ -1055,8 +1055,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid CoinmarketsCoin address.</source>
-        <translation>Den indtastede adresse &quot;%1&quot; er ikke en gyldig CoinmarketsCoin adresse.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Jumbucks address.</source>
+        <translation>Den indtastede adresse &quot;%1&quot; er ikke en gyldig Jumbucks adresse.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1074,8 +1074,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>CoinmarketsCoin-Qt</source>
-        <translation>CoinmarketsCoin-Qt</translation>
+        <source>Jumbucks-Qt</source>
+        <translation>Jumbucks-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1147,13 +1147,13 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start CoinmarketsCoin after logging in to the system.</source>
-        <translation>Automatisk start CoinmarketsCoin efter at have logget ind på systemet.</translation>
+        <source>Automatically start Jumbucks after logging in to the system.</source>
+        <translation>Automatisk start Jumbucks efter at have logget ind på systemet.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start CoinmarketsCoin on system login</source>
-        <translation>&amp;Start CoinmarketsCoin ved systems login</translation>
+        <source>&amp;Start Jumbucks on system login</source>
+        <translation>&amp;Start Jumbucks ved systems login</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1172,8 +1172,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the CoinmarketsCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatisk åbne CoinmarketsCoin klient-port på routeren. Dette virker kun, når din router understøtter UPnP og er det er aktiveret.</translation>
+        <source>Automatically open the Jumbucks client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatisk åbne Jumbucks klient-port på routeren. Dette virker kun, når din router understøtter UPnP og er det er aktiveret.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1182,8 +1182,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the CoinmarketsCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Opret forbindelse til CoinmarketsCoin netværk via en SOCKS proxy (fx ved tilslutning gennem Tor).</translation>
+        <source>Connect to the Jumbucks network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Opret forbindelse til Jumbucks netværk via en SOCKS proxy (fx ved tilslutning gennem Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1257,8 +1257,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting CoinmarketsCoin.</source>
-        <translation>Sproget i brugergrænsefladen kan indstilles her. Denne indstilling vil træde i kraft efter genstart af CoinmarketsCoin tegnebog.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Jumbucks.</source>
+        <translation>Sproget i brugergrænsefladen kan indstilles her. Denne indstilling vil træde i kraft efter genstart af Jumbucks tegnebog.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1272,8 +1272,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show CoinmarketsCoin addresses in the transaction list or not.</source>
-        <translation>Få vist CoinmarketsCoin adresser på listen over transaktioner eller ej.</translation>
+        <source>Whether to show Jumbucks addresses in the transaction list or not.</source>
+        <translation>Få vist Jumbucks adresser på listen over transaktioner eller ej.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1319,8 +1319,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting CoinmarketsCoin.</source>
-        <translation>Denne indstilling vil træde i kraft efter genstart af CoinmarketsCoin.</translation>
+        <source>This setting will take effect after restarting Jumbucks.</source>
+        <translation>Denne indstilling vil træde i kraft efter genstart af Jumbucks.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1338,8 +1338,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CoinmarketsCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>De viste oplysninger kan være forældet. Din tegnebog synkroniserer automatisk med CoinmarketsCoin netværket efter en forbindelse er etableret, men denne proces er ikke afsluttet endnu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Jumbucks network after a connection is established, but this process has not completed yet.</source>
+        <translation>De viste oplysninger kan være forældet. Din tegnebog synkroniserer automatisk med Jumbucks netværket efter en forbindelse er etableret, men denne proces er ikke afsluttet endnu.</translation>
     </message>
     <message>
         <location line="-160"/>
@@ -1554,8 +1554,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the CoinmarketsCoin-Qt help message to get a list with possible CoinmarketsCoin command-line options.</source>
-        <translation>Vis CoinmarketsCoin-Qt hjælpe besked for at få en liste med mulige CoinmarketsCoin kommandolinjeparametre.</translation>
+        <source>Show the Jumbucks-Qt help message to get a list with possible Jumbucks command-line options.</source>
+        <translation>Vis Jumbucks-Qt hjælpe besked for at få en liste med mulige Jumbucks kommandolinjeparametre.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1574,13 +1574,13 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>CoinmarketsCoin - Debug window</source>
-        <translation>CoinmarketsCoin - Debug vindue</translation>
+        <source>Jumbucks - Debug window</source>
+        <translation>Jumbucks - Debug vindue</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>CoinmarketsCoin Core</source>
-        <translation>CoinmarketsCoin Kerne</translation>
+        <source>Jumbucks Core</source>
+        <translation>Jumbucks Kerne</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1589,8 +1589,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the CoinmarketsCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Åbn CoinmarketsCoin debug logfilen fra den nuværende data mappe. Dette kan tage et par sekunder for store logfiler.</translation>
+        <source>Open the Jumbucks debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Åbn Jumbucks debug logfilen fra den nuværende data mappe. Dette kan tage et par sekunder for store logfiler.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1599,8 +1599,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the CoinmarketsCoin RPC console.</source>
-        <translation>Velkommen til CoinmarketsCoin RPC-konsol.</translation>
+        <source>Welcome to the Jumbucks RPC console.</source>
+        <translation>Velkommen til Jumbucks RPC-konsol.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1758,8 +1758,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Indtast en CoinmarketsCoin-adresse (f.eks JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Indtast en Jumbucks-adresse (f.eks JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1858,8 +1858,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid CoinmarketsCoin address</source>
-        <translation>ADVARSEL: Ugyldig CoinmarketsCoin adresse</translation>
+        <source>WARNING: Invalid Jumbucks address</source>
+        <translation>ADVARSEL: Ugyldig Jumbucks adresse</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1932,8 +1932,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Indtast en CoinmarketsCoin-adresse (f.eks JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Indtast en Jumbucks-adresse (f.eks JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
 </context>
 <context>
@@ -1993,8 +1993,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this CoinmarketsCoin address</source>
-        <translation>Underskriv brevet for at bevise du ejer denne CoinmarketsCoin adresse</translation>
+        <source>Sign the message to prove you own this Jumbucks address</source>
+        <translation>Underskriv brevet for at bevise du ejer denne Jumbucks adresse</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2025,8 +2025,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified CoinmarketsCoin address</source>
-        <translation>Kontroller meddelelsen for at sikre, at den blev indgået med den angivne CoinmarketsCoin adresse</translation>
+        <source>Verify the message to ensure it was signed with the specified Jumbucks address</source>
+        <translation>Kontroller meddelelsen for at sikre, at den blev indgået med den angivne Jumbucks adresse</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2036,8 +2036,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Indtast en CoinmarketsCoin-adresse (f.eks JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Indtast en Jumbucks-adresse (f.eks JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2046,8 +2046,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter CoinmarketsCoin signature</source>
-        <translation>Indtast CoinmarketsCoin underskrift</translation>
+        <source>Enter Jumbucks signature</source>
+        <translation>Indtast Jumbucks underskrift</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2617,8 +2617,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>CoinmarketsCoin version</source>
-        <translation>CoinmarketsCoin version</translation>
+        <source>Jumbucks version</source>
+        <translation>Jumbucks version</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2802,8 +2802,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CoinmarketsCoin will not work properly.</source>
-        <translation>Advarsel: Kontroller venligst, at computerens dato og klokkeslæt er korrekt! Hvis dit ur er forkert vil CoinmarketsCoin ikke fungere korrekt.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Jumbucks will not work properly.</source>
+        <translation>Advarsel: Kontroller venligst, at computerens dato og klokkeslæt er korrekt! Hvis dit ur er forkert vil Jumbucks ikke fungere korrekt.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -2998,7 +2998,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;CoinmarketsCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo.com
 </source>
         <translation>% s, skal du indstille et rpcpassword i konfigurationsfilen: 
 % s 
@@ -3009,7 +3009,7 @@ rpcpassword =% s
 Brugernavn og adgangskode må ikke være den samme.  
 Hvis filen ikke findes, skal du oprette den med filtilladelser ejer-læsbar-kun. 
 Det kan også anbefales at sætte alertnotify så du får besked om problemer; 
-for eksempel: alertnotify = echo%% s | mail-s &quot;CoinmarketsCoin Alert&quot; admin@foo.com 
+for eksempel: alertnotify = echo%% s | mail-s &quot;Jumbucks Alert&quot; admin@foo.com 
 </translation>
     </message>
     <message>
@@ -3134,13 +3134,13 @@ for eksempel: alertnotify = echo%% s | mail-s &quot;CoinmarketsCoin Alert&quot; 
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  CoinmarketsCoin is probably already running.</source>
-        <translation>Kan ikke få en lås på data mappe% s. CoinmarketsCoin kører sikkert allerede.</translation>
+        <source>Cannot obtain a lock on data directory %s.  Jumbucks is probably already running.</source>
+        <translation>Kan ikke få en lås på data mappe% s. Jumbucks kører sikkert allerede.</translation>
     </message>
     <message>
         <location line="-98"/>
-        <source>CoinmarketsCoin</source>
-        <translation>CoinmarketsCoin</translation>
+        <source>Jumbucks</source>
+        <translation>Jumbucks</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -3174,13 +3174,13 @@ for eksempel: alertnotify = echo%% s | mail-s &quot;CoinmarketsCoin Alert&quot; 
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of CoinmarketsCoin</source>
-        <translation>Fejl ved indlæsning af wallet.dat: Wallet kræver en nyere version af CoinmarketsCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Jumbucks</source>
+        <translation>Fejl ved indlæsning af wallet.dat: Wallet kræver en nyere version af Jumbucks</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart CoinmarketsCoin to complete</source>
-        <translation>Det er nødvendig for wallet at blive omskrevet: Genstart CoinmarketsCoin for fuldføre</translation>
+        <source>Wallet needed to be rewritten: restart Jumbucks to complete</source>
+        <translation>Det er nødvendig for wallet at blive omskrevet: Genstart Jumbucks for fuldføre</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3249,8 +3249,8 @@ for eksempel: alertnotify = echo%% s | mail-s &quot;CoinmarketsCoin Alert&quot; 
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. CoinmarketsCoin is probably already running.</source>
-        <translation>Kunne ikke binde sig til% s på denne computer. CoinmarketsCoin kører sikkert allerede.</translation>
+        <source>Unable to bind to %s on this computer. Jumbucks is probably already running.</source>
+        <translation>Kunne ikke binde sig til% s på denne computer. Jumbucks kører sikkert allerede.</translation>
     </message>
     <message>
         <location line="-97"/>

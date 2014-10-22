@@ -3,24 +3,24 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About CoinmarketsCoin</source>
-        <translation>Sobre CoinmarketsCoin</translation>
+        <source>About Jumbucks</source>
+        <translation>Sobre Jumbucks</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; version</source>
-        <translation>versió &lt;b&gt;CoinmarketsCoin&lt;/b&gt;</translation>
+        <source>&lt;b&gt;Jumbucks&lt;/b&gt; version</source>
+        <translation>versió &lt;b&gt;Jumbucks&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The CoinmarketsCoin developers</source>
+Copyright © 2014 The Jumbucks developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The CoinmarketsCoin developers</translation>
+Copyright © 2014 The Jumbucks developers</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -62,8 +62,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your CoinmarketsCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Aquestes són les teves adreces de CoinmarketsCoin per rebre els pagaments. És possible que vulgueu donar una diferent a cada remitent per a poder realitzar un seguiment de qui li está pagant.</translation>
+        <source>These are your Jumbucks addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Aquestes són les teves adreces de Jumbucks per rebre els pagaments. És possible que vulgueu donar una diferent a cada remitent per a poder realitzar un seguiment de qui li está pagant.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -77,8 +77,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a CoinmarketsCoin address</source>
-        <translation>Signar un missatge per demostrar que és propietari d&apos;una adreça CoinmarketsCoin</translation>
+        <source>Sign a message to prove you own a Jumbucks address</source>
+        <translation>Signar un missatge per demostrar que és propietari d&apos;una adreça Jumbucks</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -92,8 +92,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified CoinmarketsCoin address</source>
-        <translation>Comproveu el missatge per assegurar-se que es va signar amb una adreça CoinmarketsCoin especificada.</translation>
+        <source>Verify a message to ensure it was signed with a specified Jumbucks address</source>
+        <translation>Comproveu el missatge per assegurar-se que es va signar amb una adreça Jumbucks especificada.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -260,8 +260,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-58"/>
-        <source>CoinmarketsCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>CoinmarketsCoin tancarà ara per acabar el procés de xifrat. Recordeu que l&apos;encriptació del seu moneder no pot protegir completament les seves monedes de ser robades pel malware que pugui infectar al seu equip.</translation>
+        <source>Jumbucks will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Jumbucks tancarà ara per acabar el procés de xifrat. Recordeu que l&apos;encriptació del seu moneder no pot protegir completament les seves monedes de ser robades pel malware que pugui infectar al seu equip.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -374,8 +374,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about CoinmarketsCoin</source>
-        <translation>Mostra informació sobre CoinmarketsCoin</translation>
+        <source>Show information about Jumbucks</source>
+        <translation>Mostra informació sobre Jumbucks</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -424,13 +424,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a CoinmarketsCoin address</source>
-        <translation>Enviar monedes a una adreça CoinmarketsCoin</translation>
+        <source>Send coins to a Jumbucks address</source>
+        <translation>Enviar monedes a una adreça Jumbucks</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for CoinmarketsCoin</source>
-        <translation>Modificar les opcions de configuració per a CoinmarketsCoin</translation>
+        <source>Modify configuration options for Jumbucks</source>
+        <translation>Modificar les opcions de configuració per a Jumbucks</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -469,8 +469,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-200"/>
-        <source>CoinmarketsCoin</source>
-        <translation>CoinmarketsCoin</translation>
+        <source>Jumbucks</source>
+        <translation>Jumbucks</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -479,8 +479,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About CoinmarketsCoin</source>
-        <translation>&amp;Sobre CoinmarketsCoin</translation>
+        <source>&amp;About Jumbucks</source>
+        <translation>&amp;Sobre Jumbucks</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -536,13 +536,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>CoinmarketsCoin client</source>
-        <translation>Client CoinmarketsCoin</translation>
+        <source>Jumbucks client</source>
+        <translation>Client Jumbucks</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to CoinmarketsCoin network</source>
-        <translation><numerusform>%n conexió activa a la xarxa CoinmarketsCoin</numerusform><numerusform>%n conexions actives a la xarxa CoinmarketsCoin</numerusform></translation>
+        <source>%n active connection(s) to Jumbucks network</source>
+        <translation><numerusform>%n conexió activa a la xarxa Jumbucks</numerusform><numerusform>%n conexions actives a la xarxa Jumbucks</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -652,8 +652,8 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid CoinmarketsCoin address or malformed URI parameters.</source>
-        <translation>l&apos;URI no es pot analitzar! Això pot ser causat per una adreça CoinmarketsCoin no vàlida o paràmetres URI malformats.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Jumbucks address or malformed URI parameters.</source>
+        <translation>l&apos;URI no es pot analitzar! Això pot ser causat per una adreça Jumbucks no vàlida o paràmetres URI malformats.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -712,8 +712,8 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. CoinmarketsCoin can no longer continue safely and will quit.</source>
-        <translation>S&apos;ha produït un error fatal. CoinmarketsCoin ja no pot continuar de forma segura i es tancarà.</translation>
+        <source>A fatal error occurred. Jumbucks can no longer continue safely and will quit.</source>
+        <translation>S&apos;ha produït un error fatal. Jumbucks ja no pot continuar de forma segura i es tancarà.</translation>
     </message>
 </context>
 <context>
@@ -1046,8 +1046,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid CoinmarketsCoin address.</source>
-        <translation>La direcció introduïda &quot;%1&quot; no és una adreça CoinmarketsCoin vàlida.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Jumbucks address.</source>
+        <translation>La direcció introduïda &quot;%1&quot; no és una adreça Jumbucks vàlida.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1065,8 +1065,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>CoinmarketsCoin-Qt</source>
-        <translation>CoinmarketsCoin-Qt</translation>
+        <source>Jumbucks-Qt</source>
+        <translation>Jumbucks-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1138,13 +1138,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start CoinmarketsCoin after logging in to the system.</source>
-        <translation>Inicia automàticament CoinmarketsCoin després d&apos;entrar en el sistema.</translation>
+        <source>Automatically start Jumbucks after logging in to the system.</source>
+        <translation>Inicia automàticament Jumbucks després d&apos;entrar en el sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start CoinmarketsCoin on system login</source>
-        <translation>&amp;Iniciar CoinmarketsCoin amb l&apos;inici de sessió</translation>
+        <source>&amp;Start Jumbucks on system login</source>
+        <translation>&amp;Iniciar Jumbucks amb l&apos;inici de sessió</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1163,8 +1163,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the CoinmarketsCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obrir automàticament el port de client CoinmarketsCoin en el router. Això només funciona quan el router és compatible amb UPnP i està habilitat.</translation>
+        <source>Automatically open the Jumbucks client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obrir automàticament el port de client Jumbucks en el router. Això només funciona quan el router és compatible amb UPnP i està habilitat.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1173,8 +1173,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the CoinmarketsCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connecteu-vos a la xarxa CoinmarketsCoin través d&apos;un proxy SOCKS (per exemple, quan es connecta a través de Tor).</translation>
+        <source>Connect to the Jumbucks network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connecteu-vos a la xarxa Jumbucks través d&apos;un proxy SOCKS (per exemple, quan es connecta a través de Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1248,8 +1248,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting CoinmarketsCoin.</source>
-        <translation>L&apos;idioma de la interfície d&apos;usuari es pot configurar aquí. Aquesta configuració s&apos;aplicarà després de reiniciar CoinmarketsCoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Jumbucks.</source>
+        <translation>L&apos;idioma de la interfície d&apos;usuari es pot configurar aquí. Aquesta configuració s&apos;aplicarà després de reiniciar Jumbucks.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1263,8 +1263,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show CoinmarketsCoin addresses in the transaction list or not.</source>
-        <translation>Per mostrar CoinmarketsCoin adreces a la llista de transaccions o no.</translation>
+        <source>Whether to show Jumbucks addresses in the transaction list or not.</source>
+        <translation>Per mostrar Jumbucks adreces a la llista de transaccions o no.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1310,8 +1310,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting CoinmarketsCoin.</source>
-        <translation>Aquesta configuració s&apos;aplicarà després de reiniciar CoinmarketsCoin.</translation>
+        <source>This setting will take effect after restarting Jumbucks.</source>
+        <translation>Aquesta configuració s&apos;aplicarà després de reiniciar Jumbucks.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1329,8 +1329,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CoinmarketsCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La informació mostrada pot estar fora de data. El seu moneder es sincronitza automàticament amb la xarxa CoinmarketsCoin després d&apos;establir una connexió, però aquest procés no s&apos;ha completat encara.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Jumbucks network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot estar fora de data. El seu moneder es sincronitza automàticament amb la xarxa Jumbucks després d&apos;establir una connexió, però aquest procés no s&apos;ha completat encara.</translation>
     </message>
     <message>
         <location line="-160"/>
@@ -1545,8 +1545,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the CoinmarketsCoin-Qt help message to get a list with possible CoinmarketsCoin command-line options.</source>
-        <translation>Mostra el missatge d&apos;ajuda de CoinmarketsCoin-Qt per obtenir una llista amb les possibles opcions de línia d&apos;ordres CoinmarketsCoin.</translation>
+        <source>Show the Jumbucks-Qt help message to get a list with possible Jumbucks command-line options.</source>
+        <translation>Mostra el missatge d&apos;ajuda de Jumbucks-Qt per obtenir una llista amb les possibles opcions de línia d&apos;ordres Jumbucks.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1565,13 +1565,13 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>CoinmarketsCoin - Debug window</source>
-        <translation>CoinmarketsCoin - Finestra Depuració</translation>
+        <source>Jumbucks - Debug window</source>
+        <translation>Jumbucks - Finestra Depuració</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>CoinmarketsCoin Core</source>
-        <translation>Nucli CoinmarketsCoin</translation>
+        <source>Jumbucks Core</source>
+        <translation>Nucli Jumbucks</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1580,8 +1580,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the CoinmarketsCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Obriu el fitxer de registre de depuració CoinmarketsCoin des del directori de dades actual. Això pot trigar uns segons en els arxius de registre de grans dimensions.</translation>
+        <source>Open the Jumbucks debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Obriu el fitxer de registre de depuració Jumbucks des del directori de dades actual. Això pot trigar uns segons en els arxius de registre de grans dimensions.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1590,8 +1590,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the CoinmarketsCoin RPC console.</source>
-        <translation>Benvingut a la consola RPC de CoinmarketsCoin.</translation>
+        <source>Welcome to the Jumbucks RPC console.</source>
+        <translation>Benvingut a la consola RPC de Jumbucks.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1749,8 +1749,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Introdueix una adreça CoinmarketsCoin (p.ex. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Introdueix una adreça Jumbucks (p.ex. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1849,8 +1849,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid CoinmarketsCoin address</source>
-        <translation>ADVERTÈNCIA: Direcció CoinmarketsCoin invàlida</translation>
+        <source>WARNING: Invalid Jumbucks address</source>
+        <translation>ADVERTÈNCIA: Direcció Jumbucks invàlida</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1923,8 +1923,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Introdueix una adreça CoinmarketsCoin (p.ex. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Introdueix una adreça Jumbucks (p.ex. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
 </context>
 <context>
@@ -1984,8 +1984,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this CoinmarketsCoin address</source>
-        <translation>Signar un missatge per demostrar que és propietari d&apos;aquesta adreça CoinmarketsCoin</translation>
+        <source>Sign the message to prove you own this Jumbucks address</source>
+        <translation>Signar un missatge per demostrar que és propietari d&apos;aquesta adreça Jumbucks</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2016,8 +2016,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified CoinmarketsCoin address</source>
-        <translation>Comproveu el missatge per assegurar-se que es va signar amb l&apos;adreça CoinmarketsCoin especificada.</translation>
+        <source>Verify the message to ensure it was signed with the specified Jumbucks address</source>
+        <translation>Comproveu el missatge per assegurar-se que es va signar amb l&apos;adreça Jumbucks especificada.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2027,8 +2027,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Introdueix una adreça CoinmarketsCoin (p.ex. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Introdueix una adreça Jumbucks (p.ex. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2037,8 +2037,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter CoinmarketsCoin signature</source>
-        <translation>Introduïu la signatura CoinmarketsCoin</translation>
+        <source>Enter Jumbucks signature</source>
+        <translation>Introduïu la signatura Jumbucks</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2608,8 +2608,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>CoinmarketsCoin version</source>
-        <translation>versió CoinmarketsCoin</translation>
+        <source>Jumbucks version</source>
+        <translation>versió Jumbucks</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2793,8 +2793,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CoinmarketsCoin will not work properly.</source>
-        <translation>Avís: Comproveu que la data i hora de l&apos;equip siguin correctes! Si el seu rellotge és erroni CoinmarketsCoin no funcionarà correctament.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Jumbucks will not work properly.</source>
+        <translation>Avís: Comproveu que la data i hora de l&apos;equip siguin correctes! Si el seu rellotge és erroni Jumbucks no funcionarà correctament.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -2989,7 +2989,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;CoinmarketsCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo.com
 </source>
         <translation>%s, ha d&apos;establir un rpcpassword al fitxer de configuració:
 %s
@@ -3000,7 +3000,7 @@ rpcpassword=%s
 El nom d&apos;usuari i contrasenya NO HA DE SER el mateix.
 Si no hi ha l&apos;arxiu, s&apos;ha de crear amb els permisos de només lectura per al propietari.
 També es recomana establir alertnotify per a que se li notifiquin els problemes;
-per exemple: alertnotify=echo %%s | mail -s &quot;CoinmarketsCoin Alert&quot; admin@foo.com
+per exemple: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3126,13 +3126,13 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  CoinmarketsCoin is probably already running.</source>
-        <translation>No es pot obtenir un bloqueig en el directori de dades %s. CoinmarketsCoin probablement ja estigui en funcionament.</translation>
+        <source>Cannot obtain a lock on data directory %s.  Jumbucks is probably already running.</source>
+        <translation>No es pot obtenir un bloqueig en el directori de dades %s. Jumbucks probablement ja estigui en funcionament.</translation>
     </message>
     <message>
         <location line="-98"/>
-        <source>CoinmarketsCoin</source>
-        <translation>CoinmarketsCoin</translation>
+        <source>Jumbucks</source>
+        <translation>Jumbucks</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -3166,13 +3166,13 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of CoinmarketsCoin</source>
-        <translation>Error en carregar wallet.dat: El moneder requereix la versió més recent de CoinmarketsCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Jumbucks</source>
+        <translation>Error en carregar wallet.dat: El moneder requereix la versió més recent de Jumbucks</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart CoinmarketsCoin to complete</source>
-        <translation>El moneder necessita ser reescrita: reiniciar CoinmarketsCoin per completar</translation>
+        <source>Wallet needed to be rewritten: restart Jumbucks to complete</source>
+        <translation>El moneder necessita ser reescrita: reiniciar Jumbucks per completar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3241,8 +3241,8 @@ Executar una ordre quan es rep un avís rellevant (%s en cmd es substitueix per 
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. CoinmarketsCoin is probably already running.</source>
-        <translation>No es pot enllaçar a %s en aquest equip. CoinmarketsCoin probablement ja estigui en funcionament.</translation>
+        <source>Unable to bind to %s on this computer. Jumbucks is probably already running.</source>
+        <translation>No es pot enllaçar a %s en aquest equip. Jumbucks probablement ja estigui en funcionament.</translation>
     </message>
     <message>
         <location line="-97"/>

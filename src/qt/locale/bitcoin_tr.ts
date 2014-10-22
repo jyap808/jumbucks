@@ -3,20 +3,20 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About CoinmarketsCoin</source>
-        <translation>CoinmarketsCoin Hakkında</translation>
+        <source>About Jumbucks</source>
+        <translation>Jumbucks Hakkında</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;CoinmarketsCoin&lt;/b&gt; versiyonu</translation>
+        <source>&lt;b&gt;Jumbucks&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Jumbucks&lt;/b&gt; versiyonu</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The CoinmarketsCoin developers</source>
+Copyright © 2014 The Jumbucks developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -64,8 +64,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your CoinmarketsCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Bunlar, ödeme almak için CoinmarketsCoin adreslerinizdir. Her bir göndericiye farklı birini verebilir, böylece size kimin ödeme yaptığını takip edebilirsiniz.</translation>
+        <source>These are your Jumbucks addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Bunlar, ödeme almak için Jumbucks adreslerinizdir. Her bir göndericiye farklı birini verebilir, böylece size kimin ödeme yaptığını takip edebilirsiniz.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -79,8 +79,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a CoinmarketsCoin address</source>
-        <translation>Bir CoinmarketsCoin adresine sahip olduğunu ispatlamak için bir mesaj imzala</translation>
+        <source>Sign a message to prove you own a Jumbucks address</source>
+        <translation>Bir Jumbucks adresine sahip olduğunu ispatlamak için bir mesaj imzala</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -94,8 +94,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified CoinmarketsCoin address</source>
-        <translation>Mesajın, belirli bir CoinmarketsCoin adresiyle imzalandığından emin olmak için onu doğrula</translation>
+        <source>Verify a message to ensure it was signed with a specified Jumbucks address</source>
+        <translation>Mesajın, belirli bir Jumbucks adresiyle imzalandığından emin olmak için onu doğrula</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -262,8 +262,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-58"/>
-        <source>CoinmarketsCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>CoinmarketsCoin, şifreleme işlemini tamamlamak için şimdi kapatılacak. Cüzdanınızı şifrelemenin; coinlerinizin, bilgisayarınızı etkileyen zararlı yazılımlar tarafından çalınmasını bütünüyle engelleyemeyebileceğini unutmayınız.</translation>
+        <source>Jumbucks will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Jumbucks, şifreleme işlemini tamamlamak için şimdi kapatılacak. Cüzdanınızı şifrelemenin; coinlerinizin, bilgisayarınızı etkileyen zararlı yazılımlar tarafından çalınmasını bütünüyle engelleyemeyebileceğini unutmayınız.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -376,8 +376,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about CoinmarketsCoin</source>
-        <translation>CoinmarketsCoin hakkındaki bilgiyi göster</translation>
+        <source>Show information about Jumbucks</source>
+        <translation>Jumbucks hakkındaki bilgiyi göster</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -426,13 +426,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-62"/>
-        <source>Send coins to a CoinmarketsCoin address</source>
-        <translation>Bir CoinmarketsCoin adresine coin gönder</translation>
+        <source>Send coins to a Jumbucks address</source>
+        <translation>Bir Jumbucks adresine coin gönder</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for CoinmarketsCoin</source>
-        <translation>CoinmarketsCoin yapılandırma seçeneklerini değiştir</translation>
+        <source>Modify configuration options for Jumbucks</source>
+        <translation>Jumbucks yapılandırma seçeneklerini değiştir</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -471,8 +471,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-200"/>
-        <source>CoinmarketsCoin</source>
-        <translation>CoinmarketsCoin</translation>
+        <source>Jumbucks</source>
+        <translation>Jumbucks</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -481,8 +481,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+178"/>
-        <source>&amp;About CoinmarketsCoin</source>
-        <translation>CoinmarketsCoin &amp;Hakkında</translation>
+        <source>&amp;About Jumbucks</source>
+        <translation>Jumbucks &amp;Hakkında</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -538,13 +538,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>CoinmarketsCoin client</source>
-        <translation>CoinmarketsCoin istemcisi</translation>
+        <source>Jumbucks client</source>
+        <translation>Jumbucks istemcisi</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to CoinmarketsCoin network</source>
-        <translation><numerusform>CoinmarketsCoin ağına %n etkin bağlantı</numerusform><numerusform>CoinmarketsCoin ağına %n etkin bağlantı</numerusform></translation>
+        <source>%n active connection(s) to Jumbucks network</source>
+        <translation><numerusform>Jumbucks ağına %n etkin bağlantı</numerusform><numerusform>Jumbucks ağına %n etkin bağlantı</numerusform></translation>
     </message>
     <message>
         <location line="+40"/>
@@ -658,8 +658,8 @@ Adres: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid CoinmarketsCoin address or malformed URI parameters.</source>
-        <translation>URI ayrıştırılamadı! Bu, geçersiz bir CoinmarketsCoin adresi veya hatalı URI parametreleri nedeniyle olabilir.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Jumbucks address or malformed URI parameters.</source>
+        <translation>URI ayrıştırılamadı! Bu, geçersiz bir Jumbucks adresi veya hatalı URI parametreleri nedeniyle olabilir.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -718,8 +718,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. CoinmarketsCoin can no longer continue safely and will quit.</source>
-        <translation>Önemli bir hata oluştu. CoinmarketsCoin artık güvenli bir şekilde devam edemez ve şimdi kapatılacak.</translation>
+        <source>A fatal error occurred. Jumbucks can no longer continue safely and will quit.</source>
+        <translation>Önemli bir hata oluştu. Jumbucks artık güvenli bir şekilde devam edemez ve şimdi kapatılacak.</translation>
     </message>
 </context>
 <context>
@@ -1052,8 +1052,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid CoinmarketsCoin address.</source>
-        <translation>Girilen %1 adresi, geçerli bir CoinmarketsCoin adresi değildir.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Jumbucks address.</source>
+        <translation>Girilen %1 adresi, geçerli bir Jumbucks adresi değildir.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1071,8 +1071,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>CoinmarketsCoin-Qt</source>
-        <translation>CoinmarketsCoin-Qt</translation>
+        <source>Jumbucks-Qt</source>
+        <translation>Jumbucks-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1144,13 +1144,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start CoinmarketsCoin after logging in to the system.</source>
-        <translation>Sisteme giriş yaptıktan sonra CoinmarketsCoin&apos;i otomatik olarak başlat</translation>
+        <source>Automatically start Jumbucks after logging in to the system.</source>
+        <translation>Sisteme giriş yaptıktan sonra Jumbucks&apos;i otomatik olarak başlat</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start CoinmarketsCoin on system login</source>
-        <translation>Sisteme girişte CoinmarketsCoin&apos;i &amp;başlat</translation>
+        <source>&amp;Start Jumbucks on system login</source>
+        <translation>Sisteme girişte Jumbucks&apos;i &amp;başlat</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1169,8 +1169,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the CoinmarketsCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönelticide CoinmarketsCoin istemci portunu otomatik olarak aç. Bu, sadece yönelticiniz UPnP&apos;i desteklediğinde ve etkin olduğunda çalışır.</translation>
+        <source>Automatically open the Jumbucks client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönelticide Jumbucks istemci portunu otomatik olarak aç. Bu, sadece yönelticiniz UPnP&apos;i desteklediğinde ve etkin olduğunda çalışır.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1179,8 +1179,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the CoinmarketsCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>CoinmarketsCoin ağına bir SOCKS vekil sunucusu yoluyla bağlan (örn. Tor yoluyla bağlanıldığında)</translation>
+        <source>Connect to the Jumbucks network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Jumbucks ağına bir SOCKS vekil sunucusu yoluyla bağlan (örn. Tor yoluyla bağlanıldığında)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1254,8 +1254,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting CoinmarketsCoin.</source>
-        <translation>Kullanıcı arabirimi dili buradan ayarlanabilir. Ayar, CoinmarketsCoin yeniden başlatıldığında etkin olacaktır.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Jumbucks.</source>
+        <translation>Kullanıcı arabirimi dili buradan ayarlanabilir. Ayar, Jumbucks yeniden başlatıldığında etkin olacaktır.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1269,8 +1269,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show CoinmarketsCoin addresses in the transaction list or not.</source>
-        <translation>CoinmarketsCoin adresinin işlem listesinde gösterilmesi veya gösterilmemesi</translation>
+        <source>Whether to show Jumbucks addresses in the transaction list or not.</source>
+        <translation>Jumbucks adresinin işlem listesinde gösterilmesi veya gösterilmemesi</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1316,8 +1316,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting CoinmarketsCoin.</source>
-        <translation>Bu ayar, CoinmarketsCoin&apos;i yeniden başlattıktan sonra etkin olacaktır.</translation>
+        <source>This setting will take effect after restarting Jumbucks.</source>
+        <translation>Bu ayar, Jumbucks&apos;i yeniden başlattıktan sonra etkin olacaktır.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1335,8 +1335,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+33"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CoinmarketsCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Görüntülenen bilginin tarihi geçmiş olabilir. Cüzdanınız, bağlantı kurulduktan sonra otomatik olarak CoinmarketsCoin ağı ile senkronize olur ancak bu süreç, henüz tamamlanmamıştır.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Jumbucks network after a connection is established, but this process has not completed yet.</source>
+        <translation>Görüntülenen bilginin tarihi geçmiş olabilir. Cüzdanınız, bağlantı kurulduktan sonra otomatik olarak Jumbucks ağı ile senkronize olur ancak bu süreç, henüz tamamlanmamıştır.</translation>
     </message>
     <message>
         <location line="-160"/>
@@ -1551,8 +1551,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the CoinmarketsCoin-Qt help message to get a list with possible CoinmarketsCoin command-line options.</source>
-        <translation>Muhtemel CoinmarketsCoin komut satırı seçeneklerinin bir listesini getirmek için CoinmarketsCoin-Qt yardım mesajını göster</translation>
+        <source>Show the Jumbucks-Qt help message to get a list with possible Jumbucks command-line options.</source>
+        <translation>Muhtemel Jumbucks komut satırı seçeneklerinin bir listesini getirmek için Jumbucks-Qt yardım mesajını göster</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1571,13 +1571,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>CoinmarketsCoin - Debug window</source>
-        <translation>CoinmarketsCoin - Hata ayıklama penceresi</translation>
+        <source>Jumbucks - Debug window</source>
+        <translation>Jumbucks - Hata ayıklama penceresi</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>CoinmarketsCoin Core</source>
-        <translation>CoinmarketsCoin Core</translation>
+        <source>Jumbucks Core</source>
+        <translation>Jumbucks Core</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1586,8 +1586,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the CoinmarketsCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>CoinmarketsCoin hata ayıklama günlük kütüğü dosyasını, mevcut veri klasöründen aç. Bu işlem, büyük günlük kütüğü dosyaları için birkaç saniye sürebilir.</translation>
+        <source>Open the Jumbucks debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Jumbucks hata ayıklama günlük kütüğü dosyasını, mevcut veri klasöründen aç. Bu işlem, büyük günlük kütüğü dosyaları için birkaç saniye sürebilir.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1596,8 +1596,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the CoinmarketsCoin RPC console.</source>
-        <translation>CoinmarketsCoin RPC konsoluna hoş geldiniz.</translation>
+        <source>Welcome to the Jumbucks RPC console.</source>
+        <translation>Jumbucks RPC konsoluna hoş geldiniz.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1755,8 +1755,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Bir CoinmarketsCoin adresi gir (örn: JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Bir Jumbucks adresi gir (örn: JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1855,8 +1855,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid CoinmarketsCoin address</source>
-        <translation>UYARI: Geçersiz CoinmarketsCoin adresi</translation>
+        <source>WARNING: Invalid Jumbucks address</source>
+        <translation>UYARI: Geçersiz Jumbucks adresi</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1929,8 +1929,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Bir CoinmarketsCoin adresi girin (örn: JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Bir Jumbucks adresi girin (örn: JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
 </context>
 <context>
@@ -1990,8 +1990,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this CoinmarketsCoin address</source>
-        <translation>Bu CoinmarketsCoin adresine sahip olduğunuzu ispatlamak için mesajı imzala</translation>
+        <source>Sign the message to prove you own this Jumbucks address</source>
+        <translation>Bu Jumbucks adresine sahip olduğunuzu ispatlamak için mesajı imzala</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2022,8 +2022,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified CoinmarketsCoin address</source>
-        <translation>Mesajın, belirtilen CoinmarketsCoin adresiyle imzalandığından emin olmak için onu doğrula</translation>
+        <source>Verify the message to ensure it was signed with the specified Jumbucks address</source>
+        <translation>Mesajın, belirtilen Jumbucks adresiyle imzalandığından emin olmak için onu doğrula</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2033,8 +2033,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a CoinmarketsCoin address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
-        <translation>Bir CoinmarketsCoin adresi girin (örn: JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
+        <source>Enter a Jumbucks address (e.g. JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <translation>Bir Jumbucks adresi girin (örn: JXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2043,8 +2043,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter CoinmarketsCoin signature</source>
-        <translation>CoinmarketsCoin imzası gir</translation>
+        <source>Enter Jumbucks signature</source>
+        <translation>Jumbucks imzası gir</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2614,8 +2614,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+33"/>
-        <source>CoinmarketsCoin version</source>
-        <translation>CoinmarketsCoin versiyonu</translation>
+        <source>Jumbucks version</source>
+        <translation>Jumbucks versiyonu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2799,8 +2799,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+61"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CoinmarketsCoin will not work properly.</source>
-        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olduğunu kontrol ediniz! Saatiniz yanlış ise, CoinmarketsCoin düzgün çalışmayacaktır.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Jumbucks will not work properly.</source>
+        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olduğunu kontrol ediniz! Saatiniz yanlış ise, Jumbucks düzgün çalışmayacaktır.</translation>
     </message>
     <message>
         <location line="-31"/>
@@ -2995,7 +2995,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;CoinmarketsCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Jumbucks Alert&quot; admin@foo.com
 </source>
         <translation>%s, konfigürasyon dosyasında bir rpcpassword belirlemelisiniz:
  %s
@@ -3006,7 +3006,7 @@ rpcpassword=%s
 Kullanıcı adı ve parola aynı OLMAMALIDIR.
 Dosya mevcut değilse, dosyayı sadece-kullanıcı-okuyabilir dosya izniyle yaratınız.
 alertnotify ayarlamanız da ayrıca tavsiye edilir böylece sorunlar, size bildirilir;
-örneğin: alertnotify=echo %%s | mail -s &quot;CoinmarketsCoin Uyarısı&quot; admin@foo.com
+örneğin: alertnotify=echo %%s | mail -s &quot;Jumbucks Uyarısı&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3131,12 +3131,12 @@ alertnotify ayarlamanız da ayrıca tavsiye edilir böylece sorunlar, size bildi
     </message>
     <message>
         <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  CoinmarketsCoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s.  Jumbucks is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="-98"/>
-        <source>CoinmarketsCoin</source>
+        <source>Jumbucks</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3171,12 +3171,12 @@ alertnotify ayarlamanız da ayrıca tavsiye edilir böylece sorunlar, size bildi
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of CoinmarketsCoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Jumbucks</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart CoinmarketsCoin to complete</source>
+        <source>Wallet needed to be rewritten: restart Jumbucks to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3246,7 +3246,7 @@ alertnotify ayarlamanız da ayrıca tavsiye edilir böylece sorunlar, size bildi
     </message>
     <message>
         <location line="+122"/>
-        <source>Unable to bind to %s on this computer. CoinmarketsCoin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. Jumbucks is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
