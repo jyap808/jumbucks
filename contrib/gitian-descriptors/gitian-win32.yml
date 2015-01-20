@@ -1,74 +1,111 @@
 ---
-name: "ppcoin"
+name: "jumbucks"
 suites:
-- "lucid"
+- "precise"
 architectures:
-- "i386"
-packages: 
-- "mingw32"
+- "amd64"
+packages:
+- "mingw-w64"
+- "g++-mingw-w64"
 - "git-core"
 - "unzip"
 - "nsis"
 - "faketime"
-reference_datetime: "2011-01-30 00:00:00"
+- "autoconf2.13"
+- "libtool"
+- "automake"
+- "pkg-config"
+- "bsdmainutils"
+reference_datetime: "2013-06-01 00:00:00"
 remotes:
-- "url": "https://github.com/ppcoin/ppcoin.git"
-  "dir": "ppcoin"
+- "url": "https://github.com/jyap808/jumbucks.git"
+  "dir": "jumbucks"
 files:
-- "qt-win32-4.7.4-gitian.zip"
-- "boost-win32-1.47.0-gitian.zip"
-- "ppcoin-deps-0.0.1.zip"
+- "qt-win32-5.2.0-gitian-r3.zip"
+- "qt-win64-5.2.0-gitian-r3.zip"
+- "boost-win32-1.55.0-gitian-r6.zip"
+- "boost-win64-1.55.0-gitian-r6.zip"
+- "bitcoin-deps-win32-gitian-r13.zip"
+- "bitcoin-deps-win64-gitian-r13.zip"
+- "protobuf-win32-2.5.0-gitian-r4.zip"
+- "protobuf-win64-2.5.0-gitian-r4.zip"
 script: |
-  #
-  mkdir $HOME/qt
-  cd $HOME/qt
-  unzip ../build/qt-win32-4.7.4-gitian.zip
-  cd $HOME/build/
-  export PATH=$PATH:$HOME/qt/bin/
-  #
-  mkdir boost_1_47_0
-  cd boost_1_47_0
-  mkdir -p stage/lib
-  unzip ../boost-win32-1.47.0-gitian.zip
-  cd bin/$GBUILD_BITS
-  for lib in *; do
-    i586-mingw32msvc-ar rc ../../stage/lib/libboost_${lib}-mt-s.a $lib/*.o
-    i586-mingw32msvc-ranlib ../../stage/lib/libboost_${lib}-mt-s.a
-  done
-  cd ../..
-  mv include/boost .
-  cd ..
-  #
-  unzip ppcoin-deps-0.0.1.zip
-  #
-  find -type f | xargs touch --date="$REFERENCE_DATETIME"
-  #
-  cd ppcoin
+  # Defines
+  export TZ=UTC
+  INDIR=$HOME/build
+  OPTFLAGS='-O2'
+  TEMPDIR="$HOME/tempdir"
+  NEEDDIST=1
+  # Qt: workaround for determinism in resource ordering
+  #  Qt5's rcc uses a QHash to store the files for the resource.
+  #  A security fix in QHash makes the ordering of keys to be different on every run
+  #  (https://qt.gitorious.org/qt/qtbase/commit/c01eaa438200edc9a3bbcd8ae1e8ded058bea268).
+  #  This is good in general but qrc shouldn't be doing a traversal over a randomized container.
+  #  The thorough solution would be to use QMap instead of QHash, but this requires patching Qt.
+  #  For now luckily there is a test mode that forces a fixed seed.
+  export QT_RCC_TEST=1
+  for BITS in 32 64; do # for architectures
+    #
+    STAGING=$HOME/staging${BITS}
+    BUILDDIR=$HOME/build${BITS}
+    BINDIR=$OUTDIR/$BITS
+    if [ "$BITS" == "32" ]; then
+      HOST=i686-w64-mingw32
+    else
+      HOST=x86_64-w64-mingw32
+    fi
+    export PATH=$STAGING/host/bin:$PATH
+    mkdir -p $STAGING $BUILDDIR $BINDIR
+    #
+    cd $STAGING
+    unzip $INDIR/qt-win${BITS}-5.2.0-gitian-r3.zip
+    unzip $INDIR/boost-win${BITS}-1.55.0-gitian-r6.zip
+    unzip $INDIR/bitcoin-deps-win${BITS}-gitian-r13.zip
+    unzip $INDIR/protobuf-win${BITS}-2.5.0-gitian-r4.zip
+    if [ "$NEEDDIST" == "1" ]; then
+      # Make source code archive which is architecture independent so it only needs to be done once
+      cd $HOME/build/jumbucks
+      #chmod +x autogen.sh
+      #chmod +x share/genbuild.sh
+      #chmod 755 src/leveldb/build_detect_platform
+      #./autogen.sh
+      #./configure --bindir=$OUTDIR --prefix=$STAGING --host=$HOST --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include ${OPTFLAGS}" LDFLAGS="-L$STAGING/lib ${OPTFLAGS}" CXXFLAGS="-frandom-seed=instantcoin ${OPTFLAGS}"
+      $HOME/staging${BITS}/host/bin/qmake MINIUPNPC_LIB_PATH=$STAGING MINIUPNPC_INCLUDE_PATH=$STAGING BDB_LIB_PATH=$STAGING BDB_INCLUDE_PATH=$STAGING BOOST_LIB_PATH=$STAGING BOOST_INCLUDE_PATH=$STAGING BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$STAGING OPENSSL_INCLUDE_PATH=$STAGING QRENCODE_LIB_PATH=$STAGING QRENCODE_INCLUDE_PATH=$STAGING USE_QRCODE=1 INCLUDEPATH=$STAGING DEFINES=BOOST_THREAD_USE_LIB BITCOIN_NEED_QT_PLUGINS=0 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=jumbucks USE_BUILD_INFO=1 USE_SSE2=1
+      make $MAKEOPTS install
+      cd ..
+      tar -zcvf jumbucks.tar.gz jumbucks
+      DISTNAME=`echo jumbucks.tar.gz`
+      NEEDDIST=0
+    fi
+    # Build platform-dependent executables from source archive
+    cd $BUILDDIR
+    mkdir -p distsrc
+    cd distsrc
+    git clone https://github.com/jyap808/jumbucks.git
+    mv jumbucks/* .
+    rm -rf jumbucks
+    #chmod +x autogen.sh
+    #chmod +x share/genbuild.sh
+    #chmod 755 src/leveldb/build_detect_platform
+    #./autogen.sh
+    #./configure --enable-upnp-default --bindir=$BINDIR --prefix=$STAGING --host=$HOST --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include ${OPTFLAGS}" LDFLAGS="-L$STAGING/lib ${OPTFLAGS}" CXXFLAGS="-frandom-seed=instantcoin ${OPTFLAGS}"
+    $HOME/staging${BITS}/host/bin/qmake MINIUPNPC_LIB_PATH=$STAGING MINIUPNPC_INCLUDE_PATH=$STAGING BDB_LIB_PATH=$STAGING BDB_INCLUDE_PATH=$STAGING BOOST_LIB_PATH=$STAGING BOOST_INCLUDE_PATH=$STAGING BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$STAGING OPENSSL_INCLUDE_PATH=$STAGING QRENCODE_LIB_PATH=$STAGING QRENCODE_INCLUDE_PATH=$STAGING USE_QRCODE=1 INCLUDEPATH=$STAGING DEFINES=BOOST_THREAD_USE_LIB BITCOIN_NEED_QT_PLUGINS=0 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=jumbucks USE_BUILD_INFO=1 USE_SSE2=1
+    export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
+    export FAKETIME=$REFERENCE_DATETIME
+    make $MAKEOPTS
+    #make deploy
+    #make install
+    #cp -f jumbucks-*setup*.exe $BINDIR/
+    $HOST-strip release/jumbucks-qt.exe
+    cp release/jumbucks-qt.exe $BINDIR/
+    unset LD_PRELOAD
+    unset FAKETIME
+  done # for BITS in
+
+  # sort distribution tar file and normalize user/group/mtime information for deterministic output
   mkdir -p $OUTDIR/src
-  git archive HEAD | tar -x -C $OUTDIR/src
-  cp $OUTDIR/src/doc/README_windows.txt $OUTDIR/readme.txt
-  cp $OUTDIR/src/COPYING $OUTDIR/license.txt
-  export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
-  export FAKETIME=$REFERENCE_DATETIME
-  export TZ=UTC
-  $HOME/qt/src/bin/qmake -spec unsupported/win32-g++-cross MINIUPNPC_LIB_PATH=$HOME/build/miniupnpc MINIUPNPC_INCLUDE_PATH=$HOME/build/ BDB_LIB_PATH=$HOME/build/db-4.8.30.NC/build_unix BDB_INCLUDE_PATH=$HOME/build/db-4.8.30.NC/build_unix BOOST_LIB_PATH=$HOME/build/boost_1_47_0/stage/lib BOOST_INCLUDE_PATH=$HOME/build/boost_1_47_0 BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$HOME/build/openssl-1.0.1b OPENSSL_INCLUDE_PATH=$HOME/build/openssl-1.0.1b/include QRENCODE_LIB_PATH=$HOME/build/qrencode-3.2.0/.libs QRENCODE_INCLUDE_PATH=$HOME/build/qrencode-3.2.0 USE_QRCODE=1 INCLUDEPATH=$HOME/build DEFINES=BOOST_THREAD_USE_LIB BITCOIN_NEED_QT_PLUGINS=1 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=ppcoin QMAKE_LFLAGS=-frandom-seed=ppcoin USE_BUILD_INFO=1
-  make $MAKEOPTS
-  cp release/ppcoin-qt.exe $OUTDIR/
-  #
-  cd src
-  export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
-  export FAKETIME=$REFERENCE_DATETIME
-  export TZ=UTC
-  make -f makefile.linux-mingw $MAKEOPTS DEPSDIR=$HOME/build ppcoind.exe USE_UPNP=1 DEBUGFLAGS="-frandom-seed=ppcoin"
-  i586-mingw32msvc-strip ppcoind.exe
-  mkdir $OUTDIR/daemon
-  cp ppcoind.exe $OUTDIR/daemon
-  cd ..
-  mkdir nsis
-  git archive HEAD | tar -x -C nsis
-  cd nsis/src
-  mkdir ../release
-  cp ../../release/* ../release/
-  cp ../../src/*.exe .
-  makensis ../share/setup.nsi
-  cp ../share/ppcoin-*-win32-setup.exe $OUTDIR/
+  rm -rf $TEMPDIR
+  mkdir -p $TEMPDIR
+  cd $TEMPDIR
+  tar -xvf $HOME/build/$DISTNAME | sort | tar --no-recursion -cT /dev/stdin --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 --mtime="$REFERENCE_DATETIME" | gzip -n > $OUTDIR/src/$DISTNAME
+
