@@ -190,7 +190,7 @@ void SecMsgBucket::hashBucket()
     hash = XXH32_digest(state);
     
     if (fDebugSmsg)
-        printf("Hashed %"PRIszu" messages, hash %u\n", setTokens.size(), hash);
+        printf("Hashed %u messages, hash %u\n", setTokens.size(), hash);
 };
 
 
@@ -620,7 +620,7 @@ void ThreadSecureMsg(void* parg)
             while (it != smsgBuckets.end())
             {
                 //if (fDebugSmsg)
-                //    printf("Checking bucket %"PRId64", size %"PRIszu" \n", it->first, it->second.setTokens.size());
+                //    printf("Checking bucket %"PRId64", size %u \n", it->first, it->second.setTokens.size());
                 if (it->first < cutoffTime)
                 {
                     if (fDebugSmsg)
@@ -945,10 +945,10 @@ int SecureMsgBuildBucketSet()
         nMessages += tokenSet.size();
         
         if (fDebugSmsg)
-            printf("Bucket %"PRId64" contains %"PRIszu" messages.\n", fileTime, tokenSet.size());
+            printf("Bucket %"PRId64" contains %u messages.\n", fileTime, tokenSet.size());
     };
     
-    printf("Processed %u files, loaded %"PRIszu" buckets containing %u messages.\n", nFiles, smsgBuckets.size(), nMessages);
+    printf("Processed %u files, loaded %u buckets containing %u messages.\n", nFiles, smsgBuckets.size(), nMessages);
     
     return 0;
 };
@@ -1062,7 +1062,7 @@ int SecureMsgReadIni()
         };
     };
     
-    printf("Loaded %"PRIszu" addresses.\n", smsgAddresses.size());
+    printf("Loaded %u addresses.\n", smsgAddresses.size());
     
     fclose(fp);
     
@@ -1425,7 +1425,7 @@ bool SecureMsgReceiveData(CNode* pfrom, std::string strCommand, CDataStream& vRe
             if (fDebugSmsg)
             {
                 printf("peer bucket %"PRId64" %u %u.\n", time, ncontent, hash);
-                printf("this bucket %"PRId64" %"PRIszu" %u.\n", time, smsgBuckets[time].setTokens.size(), smsgBuckets[time].hash);
+                printf("this bucket %"PRId64" %u %u.\n", time, smsgBuckets[time].setTokens.size(), smsgBuckets[time].hash);
             };
             
             if (smsgBuckets[time].nLockCount > 0)
@@ -1511,7 +1511,7 @@ bool SecureMsgReceiveData(CNode* pfrom, std::string strCommand, CDataStream& vRe
             try {
                 vchDataOut.resize(8 + 16 * tokenSet.size());
             } catch (std::exception& e) {
-                printf("vchDataOut.resize %"PRIszu" threw: %s.\n", 8 + 16 * tokenSet.size(), e.what());
+                printf("vchDataOut.resize %u threw: %s.\n", 8 + 16 * tokenSet.size(), e.what());
                 continue;
             };
             memcpy(&vchDataOut[0], &time, 8);
@@ -1604,8 +1604,8 @@ bool SecureMsgReceiveData(CNode* pfrom, std::string strCommand, CDataStream& vRe
         {
             if (fDebugSmsg)
             {
-                printf("Asking peer for  %"PRIszu" messages.\n", (vchDataOut.size() - 8) / 16);
-                printf("Locking bucket %"PRIszu" for peer %u.\n", time, pfrom->smsgData.nPeerId);
+                printf("Asking peer for  %u messages.\n", (vchDataOut.size() - 8) / 16);
+                printf("Locking bucket %u for peer %u.\n", time, pfrom->smsgData.nPeerId);
             };
             smsgBuckets[time].nLockCount   = 3; // lock this bucket for at most 3 * SMSG_THREAD_DELAY seconds, unset when peer sends smsgMsg
             smsgBuckets[time].nLockPeerId  = pfrom->smsgData.nPeerId;
@@ -1674,7 +1674,7 @@ bool SecureMsgReceiveData(CNode* pfrom, std::string strCommand, CDataStream& vRe
                     || vchBunch.size() >= 96000)
                 {
                     if (fDebugSmsg)
-                        printf("Break bunch %u, %"PRIszu".\n", nBunch, vchBunch.size());
+                        printf("Break bunch %u, %u.\n", nBunch, vchBunch.size());
                     break; // end here, peer will send more want messages if needed.
                 };
             };
@@ -1697,7 +1697,7 @@ bool SecureMsgReceiveData(CNode* pfrom, std::string strCommand, CDataStream& vRe
         vRecv >> vchData;
         
         if (fDebugSmsg)
-            printf("smsgMsg vchData.size() %"PRIszu".\n", vchData.size());
+            printf("smsgMsg vchData.size() %u.\n", vchData.size());
         
         SecureMsgReceive(pfrom, vchData);
     } else
@@ -1709,7 +1709,7 @@ bool SecureMsgReceiveData(CNode* pfrom, std::string strCommand, CDataStream& vRe
         
         if (vchData.size() < 8)
         {
-            printf("smsgMatch, not enough data %"PRIszu".\n", vchData.size());
+            printf("smsgMatch, not enough data %u.\n", vchData.size());
             pfrom->Misbehaving(1);
             return false;
         };
@@ -1763,7 +1763,7 @@ bool SecureMsgReceiveData(CNode* pfrom, std::string strCommand, CDataStream& vRe
         
         if (vchData.size() < 8)
         {
-            printf("smsgIgnore, not enough data %"PRIszu".\n", vchData.size());
+            printf("smsgIgnore, not enough data %u.\n", vchData.size());
             pfrom->Misbehaving(1);
             return false;
         };
@@ -1858,7 +1858,7 @@ bool SecureMsgSendData(CNode* pto, bool fSendTrickle)
                 try {
                     vchData.resize(vchData.size() + 16);
                 } catch (std::exception& e) {
-                    printf("vchData.resize %"PRIszu" threw: %s.\n", vchData.size() + 16, e.what());
+                    printf("vchData.resize %u threw: %s.\n", vchData.size() + 16, e.what());
                     continue;
                 };
                 memcpy(p, &it->first, 8);
@@ -3333,7 +3333,7 @@ int SecureMsgEncrypt(SecureMessage& smsg, std::string& addressFrom, std::string&
     
     if (message.size() > SMSG_MAX_MSG_BYTES)
     {
-        printf("Message is too long, %"PRIszu".\n", message.size());
+        printf("Message is too long, %u.\n", message.size());
         return 2;
     };
     
@@ -3601,7 +3601,7 @@ int SecureMsgSend(std::string& addressFrom, std::string& addressTo, std::string&
         std::ostringstream oss;
         oss << message.size() << " > " << SMSG_MAX_MSG_BYTES;
         sError = "Message is too long, " + oss.str();
-        printf("Message is too long, %"PRIszu".\n", message.size());
+        printf("Message is too long, %u.\n", message.size());
         return 1;
     };
     
