@@ -65,11 +65,6 @@ script: |
     if [ "$NEEDDIST" == "1" ]; then
       # Make source code archive which is architecture independent so it only needs to be done once
       cd $HOME/build/jumbucks
-      #chmod +x autogen.sh
-      #chmod +x share/genbuild.sh
-      #chmod 755 src/leveldb/build_detect_platform
-      #./autogen.sh
-      #./configure --bindir=$OUTDIR --prefix=$STAGING --host=$HOST --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include ${OPTFLAGS}" LDFLAGS="-L$STAGING/lib ${OPTFLAGS}" CXXFLAGS="-frandom-seed=instantcoin ${OPTFLAGS}"
       $HOME/staging${BITS}/host/bin/qmake MINIUPNPC_LIB_PATH=$STAGING MINIUPNPC_INCLUDE_PATH=$STAGING BDB_LIB_PATH=$STAGING BDB_INCLUDE_PATH=$STAGING BOOST_LIB_PATH=$STAGING BOOST_INCLUDE_PATH=$STAGING BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$STAGING OPENSSL_INCLUDE_PATH=$STAGING QRENCODE_LIB_PATH=$STAGING QRENCODE_INCLUDE_PATH=$STAGING USE_QRCODE=1 INCLUDEPATH=$STAGING DEFINES=BOOST_THREAD_USE_LIB BITCOIN_NEED_QT_PLUGINS=0 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=jumbucks USE_BUILD_INFO=1 USE_SSE2=1
       make $MAKEOPTS install
       cd ..
@@ -81,21 +76,11 @@ script: |
     cd $BUILDDIR
     mkdir -p distsrc
     cd distsrc
-    git clone https://github.com/jyap808/jumbucks.git
-    mv jumbucks/* .
-    rm -rf jumbucks
-    #chmod +x autogen.sh
-    #chmod +x share/genbuild.sh
-    #chmod 755 src/leveldb/build_detect_platform
-    #./autogen.sh
-    #./configure --enable-upnp-default --bindir=$BINDIR --prefix=$STAGING --host=$HOST --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include ${OPTFLAGS}" LDFLAGS="-L$STAGING/lib ${OPTFLAGS}" CXXFLAGS="-frandom-seed=instantcoin ${OPTFLAGS}"
+    tar --strip-components=1 -xvf /home/ubuntu/build/jumbucks.tar.gz
     $HOME/staging${BITS}/host/bin/qmake MINIUPNPC_LIB_PATH=$STAGING MINIUPNPC_INCLUDE_PATH=$STAGING BDB_LIB_PATH=$STAGING BDB_INCLUDE_PATH=$STAGING BOOST_LIB_PATH=$STAGING BOOST_INCLUDE_PATH=$STAGING BOOST_LIB_SUFFIX=-mt-s BOOST_THREAD_LIB_SUFFIX=_win32-mt-s OPENSSL_LIB_PATH=$STAGING OPENSSL_INCLUDE_PATH=$STAGING QRENCODE_LIB_PATH=$STAGING QRENCODE_INCLUDE_PATH=$STAGING USE_QRCODE=1 INCLUDEPATH=$STAGING DEFINES=BOOST_THREAD_USE_LIB BITCOIN_NEED_QT_PLUGINS=0 QMAKE_LRELEASE=lrelease QMAKE_CXXFLAGS=-frandom-seed=jumbucks USE_BUILD_INFO=1 USE_SSE2=1
     export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
     export FAKETIME=$REFERENCE_DATETIME
     make $MAKEOPTS
-    #make deploy
-    #make install
-    #cp -f jumbucks-*setup*.exe $BINDIR/
     $HOST-strip release/jumbucks-qt.exe
     cp release/jumbucks-qt.exe $BINDIR/
     unset LD_PRELOAD
