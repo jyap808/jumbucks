@@ -1861,7 +1861,7 @@ Value liststealthaddresses(const Array& params, bool fHelp)
             throw runtime_error("Failed: Wallet must be unlocked.");
     };
     
-    Object result;
+    Array result;
     
     std::set<CStealthAddress>::iterator it;
     for (it = pwalletMain->stealthAddresses.begin(); it != pwalletMain->stealthAddresses.end(); ++it)
@@ -1869,17 +1869,21 @@ Value liststealthaddresses(const Array& params, bool fHelp)
         if (it->scan_secret.size() < 1)
             continue; // stealth address is not owned
         
+        Object obj;
+
         if (fShowSecrets)
+        { 
+            obj.push_back(Pair("label", it->label));
+            obj.push_back(Pair("address", it->Encoded()));
+            obj.push_back(Pair("scan-secret", HexStr(it->scan_secret.begin(), it->scan_secret.end())));
+            obj.push_back(Pair("spend-secret", HexStr(it->spend_secret.begin(), it->spend_secret.end())));
+            result.push_back(obj);
+        } 
+        else
         {
-            Object objA;
-            objA.push_back(Pair("Label        ", it->label));
-            objA.push_back(Pair("Address      ", it->Encoded()));
-            objA.push_back(Pair("Scan Secret  ", HexStr(it->scan_secret.begin(), it->scan_secret.end())));
-            objA.push_back(Pair("Spend Secret ", HexStr(it->spend_secret.begin(), it->spend_secret.end())));
-            result.push_back(Pair("Stealth Address", objA));
-        } else
-        {
-            result.push_back(Pair("Stealth Address", it->Encoded() + " - " + it->label));
+            obj.push_back(Pair("label", it->label));
+            obj.push_back(Pair("address", it->Encoded()));
+            result.push_back(obj);
         };
     };
     
