@@ -1264,8 +1264,8 @@ void MapPort()
 // The second name should resolve to a list of seed addresses.
 
 static const char *strDNSSeed[][2] = {
-    {"seed1.coinmarketscoin.com", "seed1.coinmarketscoin.com"},
-    {"dnsseed1.coinmarketscoin.com", "dnsseed1.coinmarketscoin.com"},
+    {"seed1.getjumbucks.com", "seed1.getjumbucks.com"},
+    {"dnsseed1.getjumbucks.com", "dnsseed1.getjumbucks.com"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
