@@ -315,7 +315,7 @@ static const CRPCCommand vRPCCommands[] =
     { "clearwallettransactions",&clearwallettransactions,false,  false},
     { "scanforalltxns",         &scanforalltxns,         false,  false},
     { "scanforstealthtxns",     &scanforstealthtxns,     false,  false},
-    
+    { "getwalletinfo",          &getwalletinfo,          true,   false},
     
     { "smsgenable",             &smsgenable,             false,  false},
     { "smsgdisable",            &smsgdisable,            false,  false},
