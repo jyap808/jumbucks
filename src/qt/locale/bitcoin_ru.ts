@@ -16,10 +16,10 @@
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
-Copyright © 2014 The Jumbucks developers</source>
+Copyright © 2014-2015 The Jumbucks developers</source>
         <translation>Все права защищены © 2009-2014 Разработчики Bitcoin
 Все права защищены © 2012-2014 Разработчики NovaCoin
-Все права защищены © 2014 Разработчики Jumbucks</translation>
+Все права защищены © 2014-2015 Разработчики Jumbucks</translation>
     </message>
     <message>
         <location line="+15"/>
