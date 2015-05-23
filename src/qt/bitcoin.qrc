@@ -47,8 +47,6 @@
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
         <file alias="splash">res/images/splash.png</file>
-        <file alias="sdc-vertical">res/images/sdc-vertical.png</file>
-        <file alias="sdc-horizontal">res/images/sdc-horizontal.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
