@@ -2646,8 +2646,8 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Spécifier le fichier de configuration (par défaut: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Spécifier le fichier de configuration (par défaut: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

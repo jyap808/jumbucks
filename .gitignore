@@ -1,7 +1,7 @@
 src/*.exe
-src/coinmarketscoin
+src/jumbucks
 src/jumbucksd
-src/test_coinmarketscoin
+src/test_jumbucks
 src/build.h
 .*.swp
 *.*~*

@@ -2647,8 +2647,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Specifica fisier de configurare(implicit: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Specifica fisier de configurare(implicit: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

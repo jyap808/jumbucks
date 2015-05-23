@@ -2644,8 +2644,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Določi konfiguracijsko datoteko (privzeto: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Določi konfiguracijsko datoteko (privzeto: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -249,7 +249,7 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n" +
         "  -?                     " + _("This help message") + "\n" +
-        "  -conf=<file>           " + _("Specify configuration file (default: coinmarketscoin.conf)") + "\n" +
+        "  -conf=<file>           " + _("Specify configuration file (default: jumbucks.conf)") + "\n" +
         "  -pid=<file>            " + _("Specify pid file (default: jumbucksd.pid)") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
         "  -wallet=<dir>          " + _("Specify wallet file (within data directory)") + "\n" +

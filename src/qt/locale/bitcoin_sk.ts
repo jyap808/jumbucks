@@ -2646,8 +2646,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Zadajte konfiguračný súbor (predvolené: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Zadajte konfiguračný súbor (predvolené: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

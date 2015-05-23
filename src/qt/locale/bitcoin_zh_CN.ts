@@ -2643,8 +2643,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>指定配置文件(默认: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>指定配置文件(默认: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -79,6 +79,6 @@ cp *.h miniupnpc/
 Jumbucks
 -------
 DOS prompt:
-cd \coinmarketscoin\src
+cd \jumbucks\src
 mingw32-make -f makefile.mingw
 strip jumbucksd.exe

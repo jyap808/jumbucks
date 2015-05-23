@@ -2638,8 +2638,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Especifiqueu el fitxer de configuració (per defecte: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Especifiqueu el fitxer de configuració (per defecte: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

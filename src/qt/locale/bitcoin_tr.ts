@@ -2644,8 +2644,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Konfigürasyon dosyasını belirt (varsayılan: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Konfigürasyon dosyasını belirt (varsayılan: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

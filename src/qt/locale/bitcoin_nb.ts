@@ -2632,7 +2632,7 @@ Dette betyr at det trengs en avgift på minimum %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>

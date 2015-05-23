@@ -2647,8 +2647,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Angiv konfigurationsfil (default: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Angiv konfigurationsfil (default: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

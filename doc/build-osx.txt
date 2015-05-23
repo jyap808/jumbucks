@@ -41,7 +41,7 @@ sudo port install qrencode
 
 4.  Now you should be able to build jumbucksd:
 
-cd coinmarketscoin/src
+cd jumbucks/src
 make -f makefile.osx
 
 Run:

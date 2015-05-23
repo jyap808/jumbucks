@@ -990,13 +990,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\CoinmarketsCoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\CoinmarketsCoin
-    // Mac: ~/Library/Application Support/CoinmarketsCoin
-    // Unix: ~/.coinmarketscoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Jumbucks
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Jumbucks
+    // Mac: ~/Library/Application Support/Jumbucks
+    // Unix: ~/.jumbucks
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "CoinmarketsCoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Jumbucks";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1008,10 +1008,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "CoinmarketsCoin";
+    return pathRet / "Jumbucks";
 #else
     // Unix
-    return pathRet / ".coinmarketscoin";
+    return pathRet / ".jumbucks";
 #endif
 #endif
 }
@@ -1053,7 +1053,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "coinmarketscoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "jumbucks.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }

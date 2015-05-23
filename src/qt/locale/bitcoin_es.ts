@@ -2653,8 +2653,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Especifica un archivo de configuración (por defecto: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Especifica un archivo de configuración (por defecto: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -2646,13 +2646,13 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Selecteer configuratie bestand (standaard: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Selecteer configuratie bestand (standaard: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify pid file (default: jumbucksd.pid)</source>
-        <translation>Selecteer pid bestand (standaard: coinmarketscoin.conf)</translation>
+        <translation>Selecteer pid bestand (standaard: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+2"/>

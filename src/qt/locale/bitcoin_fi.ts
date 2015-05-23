@@ -2644,8 +2644,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Määritä asetustiedosto (oletus: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Määritä asetustiedosto (oletus: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -2648,8 +2648,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: coinmarketscoin.conf)</source>
-        <translation>Ange konfigurationsfilen (standard: coinmarketscoin.conf)</translation>
+        <source>Specify configuration file (default: jumbucks.conf)</source>
+        <translation>Ange konfigurationsfilen (standard: jumbucks.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
