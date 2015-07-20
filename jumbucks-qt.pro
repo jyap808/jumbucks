@@ -25,7 +25,7 @@ OBJECTS_DIR = build
 MOC_DIR = build
 UI_DIR = build
 
-build_macosx64 {
+#build_macosx64 {
     QMAKE_TARGET_BUNDLE_PREFIX = com.getjumbucks
     BOOST_LIB_SUFFIX=-mt
     BOOST_INCLUDE_PATH=/usr/local/include
@@ -44,18 +44,24 @@ build_macosx64 {
     QRENCODE_LIB_PATH=/usr/local/opt/qrencode/lib
 
     DEFINES += IS_ARCH_64
-    QMAKE_CXXFLAGS += -arch x86_64 -stdlib=libc++
-    QMAKE_CFLAGS += -arch x86_64
+    QMAKE_CXXFLAGS += -arch x86_64 -stdlib=libc++ -Wno-deprecated
+    QMAKE_CFLAGS += -arch x86_64 -Wno-deprecated
     QMAKE_LFLAGS += -arch x86_64 -stdlib=libc++
-}
+
+    SDK=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+    # Mac: compile for maximum compatibility (10.9, 32-bit)
+    QMAKE_CXXFLAGS += -mmacosx-version-min=10.9 -isysroot $$SDK
+    QMAKE_CFLAGS += -mmacosx-version-min=10.9 -isysroot $$SDK
+    QMAKE_OBJECTIVE_CFLAGS += -mmacosx-version-min=10.9 $$SDK
+#}
 
 # use: qmake "RELEASE=1"
 contains(RELEASE, 1) {
-    SDK=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
-    # Mac: compile for maximum compatibility (10.7, 32-bit)
-    macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.7 -isysroot $$SDK
-    macx:QMAKE_CFLAGS += -mmacosx-version-min=10.7 -isysroot $$SDK
-    macx:QMAKE_OBJECTIVE_CFLAGS += -mmacosx-version-min=10.7 $$SDK
+    SDK=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+    # Mac: compile for maximum compatibility (10.9, 32-bit)
+    QMAKE_CXXFLAGS += -mmacosx-version-min=10.9 -isysroot $$SDK
+    QMAKE_CFLAGS += -mmacosx-version-min=10.9 -isysroot $$SDK
+    QMAKE_OBJECTIVE_CFLAGS += -mmacosx-version-min=10.9 $$SDK
 
     !windows:!macx {
         # Linux: static link
