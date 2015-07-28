@@ -250,36 +250,8 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(const QList<SendCoinsRecipie
                     
                     if (rcp.narration.length() > 0)
                     {
-                        std::string sNarr = rcp.narration.toStdString();
-                        
-                        if (sNarr.length() > 24)
-                        {
-                            printf("Narration is too long.\n");
-                            return NarrationTooLong;
-                        };
-                        
-                        std::vector<unsigned char> vchNarr;
-                        
-                        SecMsgCrypter crypter;
-                        crypter.SetKey(&secretShared.e[0], &ephem_pubkey[0]);
-                        
-                        if (!crypter.Encrypt((uint8_t*)&sNarr[0], sNarr.length(), vchNarr))
-                        {
-                            printf("Narration encryption failed.\n");
-                            return Aborted;
-                        };
-                        
-                        if (vchNarr.size() > 48)
-                        {
-                            printf("Encrypted narration is too long.\n");
-                            return Aborted;
-                        };
-                        
-                        if (vchNarr.size() > 0)
-                            scriptP = scriptP << OP_RETURN << vchNarr;
-                        
-                        int pos = vecSend.size()-1;
-                        mapStealthNarr[pos] = sNarr;
+                        printf("Narration is too long.\n");
+                        return NarrationTooLong;
                     };
                     
                     vecSend.push_back(make_pair(scriptP, 0));

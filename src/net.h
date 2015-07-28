@@ -177,32 +177,6 @@ public:
 };
 
 
-
-
-class SecMsgNode
-{
-public:
-    SecMsgNode()
-    {
-        lastSeen        = 0;
-        lastMatched     = 0;
-        ignoreUntil     = 0;
-        nWakeCounter    = 0;
-        nPeerId         = 0;
-        fEnabled        = false;
-    };
-    
-    ~SecMsgNode() {};
-    
-    int64_t                     lastSeen;
-    int64_t                     lastMatched;
-    int64_t                     ignoreUntil;
-    uint32_t                    nWakeCounter;
-    uint32_t                    nPeerId;
-    bool                        fEnabled;
-    
-};
-
 /** Information about a peer */
 class CNode
 {
@@ -267,8 +241,6 @@ public:
     std::vector<CInv> vInventoryToSend;
     CCriticalSection cs_inventory;
     std::multimap<int64_t, CInv> mapAskFor;
-
-    SecMsgNode smsgData;
 
     // Ping time measurement:
     // The pong reply we're expecting, or 0 if no pong expected.

@@ -19,7 +19,6 @@
 #include "util.h"
 #include "walletdb.h"
 #include "stealth.h"
-#include "smessage.h"
 
 extern bool fWalletUnlockStakingOnly;
 extern bool fConfChange;

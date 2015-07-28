@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = jumbucks-qt
 VERSION = 1.8.0.0
-INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
+INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
@@ -196,7 +196,6 @@ HEADERS += src/qt/bitcoingui.h \
     src/scrypt.h \
     src/pbkdf2.h \
     src/serialize.h \
-    src/smessage.h \
     src/main.h \
     src/miner.h \
     src/net.h \
@@ -250,13 +249,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/version.h \
     src/netbase.h \
     src/clientversion.h \
-    src/threadsafety.h \
-    src/qt/messagepage.h \
-    src/qt/messagemodel.h \
-    src/qt/sendmessagesdialog.h \
-    src/qt/sendmessagesentry.h \
-    src/qt/plugins/mrichtexteditor/mrichtextedit.h \
-    src/qt/qvalidatedtextedit.h 
+    src/threadsafety.h
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/transactiontablemodel.cpp \
@@ -273,7 +266,6 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/alert.cpp \
     src/version.cpp \
     src/sync.cpp \
-    src/smessage.cpp \
     src/util.cpp \
     src/netbase.cpp \
     src/key.cpp \
@@ -307,7 +299,6 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/rpcwallet.cpp \
     src/rpcblockchain.cpp \
     src/rpcrawtransaction.cpp \
-    src/rpcsmessage.cpp \
     src/qt/overviewpage.cpp \
     src/qt/csvmodelwriter.cpp \
     src/crypter.cpp \
@@ -321,12 +312,6 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/qtipcserver.cpp \
     src/qt/rpcconsole.cpp \
     src/qt/trafficgraphwidget.cpp \
-    src/qt/messagepage.cpp \
-    src/qt/messagemodel.cpp \
-    src/qt/sendmessagesdialog.cpp \
-    src/qt/sendmessagesentry.cpp \
-    src/qt/qvalidatedtextedit.cpp \
-    src/qt/plugins/mrichtexteditor/mrichtextedit.cpp \
     src/noui.cpp \
     src/kernel.cpp \
     src/scrypt-arm.S \
@@ -352,11 +337,7 @@ FORMS += \
     src/qt/forms/sendcoinsentry.ui \
     src/qt/forms/askpassphrasedialog.ui \
     src/qt/forms/rpcconsole.ui \
-    src/qt/forms/optionsdialog.ui \
-    src/qt/forms/messagepage.ui \
-    src/qt/forms/sendmessagesentry.ui \
-    src/qt/forms/sendmessagesdialog.ui \
-    src/qt/plugins/mrichtexteditor/mrichtextedit.ui
+    src/qt/forms/optionsdialog.ui
 
 contains(USE_QRCODE, 1) {
 HEADERS += src/qt/qrcodedialog.h

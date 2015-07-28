@@ -317,24 +317,6 @@ static const CRPCCommand vRPCCommands[] =
     { "scanforstealthtxns",     &scanforstealthtxns,     false,  false},
     { "getwalletinfo",          &getwalletinfo,          true,   false},
     
-    { "smsgenable",             &smsgenable,             false,  false},
-    { "smsgdisable",            &smsgdisable,            false,  false},
-    { "smsglocalkeys",          &smsglocalkeys,          false,  false},
-    { "smsgoptions",            &smsgoptions,            false,  false},
-    { "smsgscanchain",          &smsgscanchain,          false,  false},
-    { "smsgscanbuckets",        &smsgscanbuckets,        false,  false},
-    { "smsgaddkey",             &smsgaddkey,             false,  false},
-    { "smsggetpubkey",          &smsggetpubkey,          false,  false},
-    { "smsgsend",               &smsgsend,               false,  false},
-    { "smsgsendanon",           &smsgsendanon,           false,  false},
-    { "smsginbox",              &smsginbox,              false,  false},
-    { "smsgoutbox",             &smsgoutbox,             false,  false},
-    { "smsgbuckets",            &smsgbuckets,            false,  false},
-    
-    
-    
-    
-    
 };
 
 CRPCTable::CRPCTable()

@@ -11,7 +11,6 @@
 #include "init.h"
 #include "ui_interface.h"
 #include "kernel.h"
-#include "smessage.h"
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
@@ -3301,9 +3300,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         
         if (block.nDoS)
             pfrom->Misbehaving(block.nDoS);
-        
-        if (fSecMsgEnabled)
-            SecureMsgScanBlock(block);
     }
 
 
@@ -3446,9 +3442,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 
     else
     {
-        if (fSecMsgEnabled)
-            SecureMsgReceiveData(pfrom, strCommand, vRecv);
-        
         // Ignore unknown commands for extensibility
     }
 
@@ -3750,9 +3743,6 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
         }
         if (!vGetData.empty())
             pto->PushMessage("getdata", vGetData);
-        
-        if (fSecMsgEnabled)
-            SecureMsgSendData(pto, fSendTrickle); // should be in cs_main?
     }
     
     

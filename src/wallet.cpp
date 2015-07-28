@@ -192,7 +192,6 @@ bool CWallet::Unlock(const SecureString& strWalletPassphrase)
         }
         
         UnlockStealthAddresses(vMasterKey);
-        SecureMsgWalletUnlocked();
         return true;
     }
     return false;
@@ -2080,20 +2079,8 @@ bool CWallet::SendStealthMoneyToDestination(CStealthAddress& sxAddress, int64_t 
     std::vector<unsigned char> vchNarr;
     if (sNarr.length() > 0)
     {
-        SecMsgCrypter crypter;
-        crypter.SetKey(&secretShared.e[0], &ephem_pubkey[0]);
-        
-        if (!crypter.Encrypt((uint8_t*)&sNarr[0], sNarr.length(), vchNarr))
-        {
-            sError = "Narration encryption failed.";
-            return false;
-        };
-        
-        if (vchNarr.size() > 48)
-        {
-            sError = "Encrypted narration is too long.";
-            return false;
-        };
+        sError = "Encrypted narration is too long.";
+        return false;
     };
     
     // -- Parse Bitcoin address
@@ -2303,25 +2290,6 @@ bool CWallet::FindStealthTransactions(const CTransaction& tx, mapValue_t& mapNar
                     std::string sLabel = it->Encoded();
                     SetAddressBookName(keyID, sLabel);
                     nFoundStealth++;
-                };
-                
-                if (txout.scriptPubKey.GetOp(itTxA, opCode, vchENarr)
-                    && opCode == OP_RETURN
-                    && txout.scriptPubKey.GetOp(itTxA, opCode, vchENarr)
-                    && vchENarr.size() > 0)
-                {
-                    SecMsgCrypter crypter;
-                    crypter.SetKey(&sShared.e[0], &vchEphemPK[0]);
-                    std::vector<uint8_t> vchNarr;
-                    if (!crypter.Decrypt(&vchENarr[0], vchENarr.size(), vchNarr))
-                    {
-                        printf("Decrypt narration failed.\n");
-                        continue;
-                    };
-                    std::string sNarr = std::string(vchNarr.begin(), vchNarr.end());
-                    
-                    snprintf(cbuf, sizeof(cbuf), "n_%d", nOutputId);
-                    mapNarr[cbuf] = sNarr;
                 };
                 
                 txnMatch = true;
@@ -2759,7 +2727,6 @@ bool CWallet::SetAddressBookName(const CTxDestination& address, const string& st
     if (fOwned)
     {
         const CBitcoinAddress& caddress = address;
-        SecureMsgWalletKeyChanged(caddress.ToString(), strName, nMode);
     }
     NotifyAddressBookChanged(this, address, strName, fOwned, nMode);
     
@@ -2781,7 +2748,6 @@ bool CWallet::DelAddressBookName(const CTxDestination& address)
     if (fOwned)
     {
         const CBitcoinAddress& caddress = address;
-        SecureMsgWalletKeyChanged(caddress.ToString(), sName, CT_DELETED);
     }
     NotifyAddressBookChanged(this, address, "", fOwned, CT_DELETED);
 
