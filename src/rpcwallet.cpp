@@ -2288,25 +2288,26 @@ Value getwalletinfo(const Array& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "getwalletinfo\n"
-            "Returns an object containing various wallet state info.\n"
-            "\nResult:\n"
-            "{\n"
-            " \"walletversion\": xxxxx, (numeric) the wallet version\n"
-            " \"balance\": xxxxxxx, (numeric) the total jumbucks balance of the wallet\n"
-            " \"txcount\": xxxxxxx, (numeric) the total number of transactions in the wallet\n"
-            " \"keypoololdest\": xxxxxx, (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool\n"
-            " \"keypoolsize\": xxxx, (numeric) how many new keys are pre-generated\n"
-            " \"unlocked_until\": ttt, (numeric) the timestamp in seconds since epoch (midnight Jan 1 1970 GMT) that the wallet is unlocked for transfers, or 0 if the wallet is locked\n"
-            "}\n"
+            "Returns an object containing various state info.\n"
         );
 
     Object obj;
     obj.push_back(Pair("walletversion", pwalletMain->GetVersion()));
     obj.push_back(Pair("balance", ValueFromAmount(pwalletMain->GetBalance())));
+    obj.push_back(Pair("newmint", ValueFromAmount(pwalletMain->GetNewMint())));
+    obj.push_back(Pair("stake", ValueFromAmount(pwalletMain->GetStake())));
     obj.push_back(Pair("txcount", (int)pwalletMain->mapWallet.size()));
     obj.push_back(Pair("keypoololdest", (boost::int64_t)pwalletMain->GetOldestKeyPoolTime()));
     obj.push_back(Pair("keypoolsize", (int)pwalletMain->GetKeyPoolSize()));
     if (pwalletMain->IsCrypted())
-        obj.push_back(Pair("unlocked_until", (boost::int64_t)nWalletUnlockTime));
+    {
+        obj.push_back(Pair("locked", pwalletMain->IsLocked()));
+        if (!pwalletMain->IsLocked())
+        {
+            obj.push_back(Pair("unlocked_until", (boost::int64_t)nWalletUnlockTime));
+            obj.push_back(Pair("staking_only", fWalletUnlockStakingOnly));
+        }
+    }
+    obj.push_back(Pair("paytxfee", ValueFromAmount(nTransactionFee)));
     return obj;
 }
