@@ -1013,23 +1013,20 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, int nHeight)
     int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
     int64_t nSubsidyLimit = MAX_STAKE_BLOCK_REWARD * COIN;
 
-    if (nHeight >= 250000)
+    if (pindexBest->nTime >= 1472688000) // Thu, 01 Sep 2016 00:00:00 UTC
     {
-        if (nHeight >= YEARLY_BLOCKCOUNT * 2)
-        {
-            // Year 2. 5% interest and MAX_STAKE_BLOCK_REWARD = 2.5
-            nSubsidy = nCoinAge * 5 * CENT * 33 / (365 * 33 + 8);
-            nSubsidyLimit = 2.5 * COIN;
-        }
-        if (nHeight >= YEARLY_BLOCKCOUNT * 10)
-        {
-            // Year 10. 2% interest and MAX_STAKE_BLOCK_REWARD = 1
-            nSubsidy = nCoinAge * 2 * CENT * 33 / (365 * 33 + 8);
-            nSubsidyLimit = 1 * COIN;
-        }
-
-        nSubsidy = min(nSubsidy, nSubsidyLimit);
+        // Year 2. 5% interest and MAX_STAKE_BLOCK_REWARD = 2.5
+        nSubsidy = nCoinAge * 5 * CENT * 33 / (365 * 33 + 8);
+        nSubsidyLimit = 2.5 * COIN;
     }
+    if (pindexBest->nTime >= 1725148800) // Sun, 01 Sep 2024 00:00:00 UTC
+    {
+        // Year 10. 2% interest and MAX_STAKE_BLOCK_REWARD = 1
+        nSubsidy = nCoinAge * 2 * CENT * 33 / (365 * 33 + 8);
+        nSubsidyLimit = 1 * COIN;
+    }
+
+    nSubsidy = min(nSubsidy, nSubsidyLimit);
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
