@@ -1026,7 +1026,8 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, int nHeight)
         nSubsidyLimit = 1 * COIN;
     }
 
-    nSubsidy = min(nSubsidy, nSubsidyLimit);
+    if (nHeight >= 250000)
+        nSubsidy = min(nSubsidy, nSubsidyLimit);
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
