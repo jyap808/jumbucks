@@ -2169,6 +2169,32 @@ bool CBlock::AcceptBlock()
     return true;
 }
 
+bool CBlock::AcceptBlockFromExternalBlockFile()
+{
+    AssertLockHeld(cs_main);
+
+    uint256 hashProof;
+
+    // PoW is checked in CheckBlock()
+    if (IsProofOfWork())
+    {
+        hashProof = GetPoWHash();
+    }
+
+    // Write block to history file
+    if (!CheckDiskSpace(::GetSerializeSize(*this, SER_DISK, CLIENT_VERSION)))
+        return error("AcceptBlock() : out of disk space");
+    unsigned int nFile = -1;
+    unsigned int nBlockPos = 0;
+    if (!WriteToDisk(nFile, nBlockPos))
+        return error("AcceptBlock() : WriteToDisk failed");
+    if (!AddToBlockIndex(nFile, nBlockPos, hashProof))
+        return error("AcceptBlock() : AddToBlockIndex failed");
+
+    return true;
+}
+
+
 uint256 CBlockIndex::GetBlockTrust() const
 {
     CBigNum bnTarget;
@@ -2301,6 +2327,20 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
 
     return true;
 }
+
+bool ProcessBlockFromExternalBlockFile(CNode* pfrom, CBlock* pblock)
+{
+    AssertLockHeld(cs_main);
+
+    // Store to disk
+    if (!pblock->AcceptBlockFromExternalBlockFile())
+        return error("ProcessBlockFromExternalBlockFile() : AcceptBlockFromExternalBlockFile FAILED");
+
+    printf("ProcessBlockFromExternalBlockFile: ACCEPTED\n");
+
+    return true;
+}
+
 
 // novacoin: attempt to generate suitable proof-of-stake
 bool CBlock::SignBlock(CWallet& wallet, int64_t nFees)
@@ -2674,7 +2714,7 @@ bool LoadExternalBlockFile(FILE* fileIn)
                 {
                     CBlock block;
                     blkdat >> block;
-                    if (ProcessBlock(NULL,&block))
+                    if (ProcessBlockFromExternalBlockFile(NULL,&block))
                     {
                         nLoaded++;
                         nPos += 4 + nSize;
